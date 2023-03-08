@@ -15,7 +15,8 @@
 
 ### Svåra frågor
 - 4.16, 4.17
-### Förbätta
+- 6.5 fel?
+### Förbättra
 
 
 ### Oklart

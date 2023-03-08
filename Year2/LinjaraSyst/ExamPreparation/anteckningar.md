@@ -24,7 +24,16 @@
     - Gär öaplace
 - Om det är en hög grad där nere, så kan jag ta varje term där uppe för sig. Och sedan förkorta bort
 - Om jag har något in nämnaren av funktionen som är av hög grad och inte kan faktoriseras: faktorisera då med imaginära tal
-- 
+- Om man inte kan göra ensidig laplace, även om man multipkicerar med theta:
+    - Om det står att en kausal lösning söks så kan man göra laplace direkt
+    - Begyenslevärderna kan även antas vara 0 (as per kausalitet)
+- Om jag inte kan lösa ekvationssytemet genom laplace
+    - Gör kramers regel
+    - alternativt laplace och sedan kramers regel 
+- i faltning så blir t nästan som en konstant i ijntegralen
+- Då jag beräknar faltningar:
+    - Alternativt: Gör laplace och sedan invers, alternativt integral
+
 
 
 ### Lärt mig
