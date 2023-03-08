@@ -12,7 +12,6 @@ Note that labs are not included, and are placed as private repositories
 
 ## Missing subjects
 - Endimisionell analys 1
-- Utvärdering av programvarusystem
 - Additions to Datkom
 - Flerdim
 - LinAlg
