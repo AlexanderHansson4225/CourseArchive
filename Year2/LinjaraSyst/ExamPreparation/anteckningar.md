@@ -11,6 +11,7 @@
       - Alternativt...
 - För differentialekvationer. Får absolut inte göra laplace utan försäkring att den är kausal i defininitionsmängden. 
 - Om jag löser en integral ekvation (som en diff ekv) kolla y(0)
+- Glöm inte kolla begynelsevärdena
 
 ### Tips
 - Gör både geometrisk och algebraisk derivering
@@ -35,6 +36,7 @@
 - i faltning så blir t nästan som en konstant i ijntegralen
 - Då jag beräknar faltningar:
     - Alternativt: Gör laplace och sedan invers, alternativt integral
+- "Kan systemet vara linjärt" kolla om en + andra blir tredje
 
 
 

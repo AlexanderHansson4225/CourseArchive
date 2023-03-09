@@ -11,6 +11,8 @@
 - Faktorisering av imaginära tal (se uppg 4.16)
 - Vad man gör om begynelsevärden inte finns. 
 - Förstå labben
+- Hur man kollar om ett system är LTI
+    - Eller kan man utgå från det?
 ### Skippat
 - Föreläsning 1
 
