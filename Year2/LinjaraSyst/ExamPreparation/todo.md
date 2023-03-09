@@ -13,6 +13,8 @@
 - Förstå labben
 - Hur man kollar om ett system är LTI
     - Eller kan man utgå från det?
+- Skriv in om frekvensfunktion och amplitudfunktionen
+    - Se svaret på 7.3 e,f
 ### Skippat
 - Föreläsning 1
 
