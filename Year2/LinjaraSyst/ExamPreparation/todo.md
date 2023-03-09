@@ -10,6 +10,7 @@
 - Gör ett overview dokument över olika sätt att lösa frågor
 - Faktorisering av imaginära tal (se uppg 4.16)
 - Vad man gör om begynelsevärden inte finns. 
+- Förstå labben
 ### Skippat
 - Föreläsning 1
 

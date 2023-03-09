@@ -1,7 +1,8 @@
 # Anteckningar
 ### Tänk på på tenta / Glöm ej / Dubbelkolla
 - Gör substitutionen f(t)dir(t) = f(0)dir(t)
-- Glöm inte krav sigma större än 0
+- Glöm inte krav sigma större än 0 
+- Glöm inte krav t >= 0
 - Checka så svaret är rätt eller rimligt
     - För derivator, kolla med begynelsevärderna.     
 - Ta även bort theta om det är så att du har gjort ensidig laplace
@@ -9,6 +10,7 @@
       - Om t är reelt kan vi lösa för positiva värden och se vilken av dem som passar på de negativa
       - Alternativt...
 - För differentialekvationer. Får absolut inte göra laplace utan försäkring att den är kausal i defininitionsmängden. 
+- Om jag löser en integral ekvation (som en diff ekv) kolla y(0)
 
 ### Tips
 - Gör både geometrisk och algebraisk derivering
