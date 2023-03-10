@@ -40,3 +40,6 @@
 - "Kan systemet vara linjärt" kolla om en + andra blir tredje
 
 
+### Övrigt
+- Skriv ... som ett system av diff ekvationer. gör u = y, v = y' och så vidare.
+- System är S eller bara fint ord för ekvationssystem

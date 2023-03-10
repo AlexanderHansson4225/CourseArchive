@@ -11,15 +11,20 @@
     - Se svaret på 7.3 e,f
 - För 2, gör ett exemel för både icke diagnaliserbar och där egenvärderna är imaginära. 
 - Skriv krav till allt
+- Ordna lösningarna av system av differential ekvationer
+- Skriv ner 9.1, 9.2
 ### Skippat
 - Föreläsning 1
 - Repetition Linalg. + fl 11 om linalg
     - Gör ett seperat dokument med det 
 - eAt har mycket information om A
+- Kap 8 övn. 
 
 ### Svåra frågor
 - 4.16, 4.17
-- 6.5 fel?
+- 6.5 fel? 
+- 9.3
+  - Skriv du1 = u2, du2 = ...
 ### Förbättra
 - Faktorisering av imaginära tal (se uppg 4.16)
 
@@ -32,7 +37,6 @@
 - Vad gör man om man har multipla egenvärden?
     - Det borde väll ändå gå att diagnalisera?
 - Vad man gör om begynelsevärden inte finns. 
-- är pos sem def <=> lambda >= 0?
 
 ### Vill ta med till på tenta
 - Regler för derivering
