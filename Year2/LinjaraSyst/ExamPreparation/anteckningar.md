@@ -12,6 +12,7 @@
 - För differentialekvationer. Får absolut inte göra laplace utan försäkring att den är kausal i defininitionsmängden. 
 - Om jag löser en integral ekvation (som en diff ekv) kolla y(0)
 - Glöm inte kolla begynelsevärdena
+- - När jag ritar en graf med språng, så hamnar språngpilarna i grafen av derivatan av funktionen som har hopp i sig, inte i den som har hopp i sig
 
 ### Tips
 - Gör både geometrisk och algebraisk derivering
@@ -39,6 +40,3 @@
 - "Kan systemet vara linjärt" kolla om en + andra blir tredje
 
 
-
-### Lärt mig
-- När jag ritar en graf med språng, så hamnar språngpilarna i grafen av derivatan av funktionen som har hopp i sig, inte i den som har hopp i sig

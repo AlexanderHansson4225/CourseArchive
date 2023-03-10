@@ -15,6 +15,7 @@
     - Eller kan man utgå från det?
 - Skriv in om frekvensfunktion och amplitudfunktionen
     - Se svaret på 7.3 e,f
+- Är det omm eller om. 
 ### Skippat
 - Föreläsning 1
 
@@ -26,6 +27,7 @@
 
 ### Oklart
 Varfär blir intergrallen av f och d samma som any f och p delta?
+Kan man skippa s-1Ds om man vet lambda 1 och lambda 2? Om bara använda s-1Ds om man har multipla egenvärden?
 
 
 ### Vill ta med till på tenta
