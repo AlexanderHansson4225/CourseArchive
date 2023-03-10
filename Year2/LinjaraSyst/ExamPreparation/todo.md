@@ -16,6 +16,11 @@
 - Skriv in om frekvensfunktion och amplitudfunktionen
     - Se svaret på 7.3 e,f
 - Är det omm eller om. 
+- Vad gör man om man har multipla egenvärden?
+    - Det borde väll ändå gå att diagnalisera?
+- För 2, gör ett exemel för både icke diagnaliserbar och där egenvärderna är imaginära. 
+- eAt har mycket information om A
+- Skriv krav till allt
 ### Skippat
 - Föreläsning 1
 
