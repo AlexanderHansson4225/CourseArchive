@@ -32,6 +32,7 @@
 - Vad gör man om man har multipla egenvärden?
     - Det borde väll ändå gå att diagnalisera?
 - Vad man gör om begynelsevärden inte finns. 
+- är pos sem def <=> lambda >= 0?
 
 ### Vill ta med till på tenta
 - Regler för derivering

@@ -1,14 +1,15 @@
 # Plan:
-1. Förenkla föreläsningarna / förstå dom (klar 10/3)
-2. Gör väsentliga övningar (klar 10/3)
-3. Extententor
+1.1 Förenkla föreläsningarna / förstå dom (klar 10/3)  
+1.2 Gör väsentliga övningar (klar 10/3)  
+2.1 Beta av  
+2.2 Extententor  
+3. Lösblad
 
 
 
 # Tidsplan
-10/3: Klar med grundläggande förståelse av föreläsningarna och övningarna.
-11/3: Klar med mer avancerad förståelse
-12/3: Börja extentaplugga
+10/3: Klar med grundläggande förståelse av föreläsningarna och övningarna.  
+11/3: Börja extentaplugga & beta av
 
 Skriv ner allt viktigt på lösblad. När?
 
@@ -20,3 +21,5 @@ Skriv ner allt viktigt på lösblad. När?
 ## Parallelisering
 Parallelisera med att anteckningar som jag får ta med mig
 - Speciellt med "förenkla föreläsningarna"
+
+Parallelisera beta av och extentor
