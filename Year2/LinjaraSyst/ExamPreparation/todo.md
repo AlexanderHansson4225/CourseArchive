@@ -1,6 +1,7 @@
 # Todo
 - Restore förlorade anteckningar
 ### Todo
+- Skriv hur man löser typiska uppgifter
 - Svara på frågan med algebraisk derivering & den med geometrisk derivering
 - Kolla på repetitionen av integrerande faktor igen
 - Skaffa en bättre förklaring på kausala system
@@ -23,8 +24,11 @@
 ### Svåra frågor
 - 4.16, 4.17
 - 6.5 fel? 
-- 9.3
   - Skriv du1 = u2, du2 = ...
+- 9.3
+- 2b 2022
+- varför blir 2c fel?
+  - varför går det inte att handlägga så?
 ### Förbättra
 - Faktorisering av imaginära tal (se uppg 4.16)
 

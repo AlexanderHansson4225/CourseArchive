@@ -38,8 +38,19 @@
 - Då jag beräknar faltningar:
     - Alternativt: Gör laplace och sedan invers, alternativt integral
 - "Kan systemet vara linjärt" kolla om en + andra blir tredje
+- Överkomplicera inte. Om det finns en B2 lösning fast den inkluderar theta, använd då den
+- Om jag tror att det inte är något, ex den inte är tidsinvariant, så kan jag försöka hittta ett motexempel
+- Om möjligt, undvik ax+B i handpåläggningen och använd istllet A/s + B/s²
 
-
-### Övrigt
-- Skriv ... som ett system av diff ekvationer. gör u = y, v = y' och så vidare.
+### Från extentor
+- Skriv ... som ett system av diff ekvationer. gör u = y, v = y' 
 - System är S eller bara fint ord för ekvationssystem
+- Det är ok att bara skriva derivata av delta utan att förenkla
+- Behöver inte alltid göra laplace när jag ska deriver
+  - Se ex fråga 1 2022. Gör bara multiplikationssatsen
+- Kolla om dom är linjärt oberoende mha scalarproduktet = 0
+  - Måste man kolla linjärt oberoende?
+  - Vad gör man om man har multipla egenvärden?
+- Var nogrann med division med noll
+  - Är ... en diagonalmatris? En fylld med bara 0:or är det
+
