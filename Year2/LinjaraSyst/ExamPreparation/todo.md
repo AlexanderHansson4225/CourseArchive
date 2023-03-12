@@ -13,7 +13,10 @@
 - För 2, gör ett exemel för både icke diagnaliserbar och där egenvärderna är imaginära. 
 - Skriv krav till allt
 - Ordna lösningarna av system av differential ekvationer
-- Skriv ner 9.1, 9.2
+- Skriv ner 9.1, 9.2, 9.3
+- Krav för när man använder di är när den är symmetrisk tror jag
+- Skriv de allra viktigaste sakerna på en sida
+- Kolla discord
 ### Skippat
 - Föreläsning 1
 - Repetition Linalg. + fl 11 om linalg
@@ -21,7 +24,8 @@
 - eAt har mycket information om A
 - Kap 8 övn. 
 - Läs boken
-- Kolla på labbarna
+- Di
+- Kolla på labbarna      m
 
 ### Svåra frågor
 - 4.16, 4.17
