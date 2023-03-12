@@ -20,6 +20,8 @@
     - Gör ett seperat dokument med det 
 - eAt har mycket information om A
 - Kap 8 övn. 
+- Läs boken
+- Kolla på labbarna
 
 ### Svåra frågor
 - 4.16, 4.17
@@ -29,8 +31,10 @@
 - 2b 2022
 - varför blir 2c fel?
   - varför går det inte att handlägga så?
+- I 2022.4c så får jag -theta. Men ska man då ta bort theta, för att systemet är kausalt?
 ### Förbättra
 - Faktorisering av imaginära tal (se uppg 4.16)
+- Träna mer på diagnalisering med SAS-1. När jag faktiskt ska använda det
 
 ### Oklart
 - Varfär blir intergrallen av f och d samma som any f och p delta?
