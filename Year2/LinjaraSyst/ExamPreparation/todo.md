@@ -17,6 +17,13 @@
 - Krav för när man använder di är när den är symmetrisk tror jag
 - Skriv de allra viktigaste sakerna på en sida
 - Kolla discord
+- Rita systemen egenskaper
+Utnyttja standardisering
+- Skriv ner "resonans egenvärde s.138"
+- Svara på alla instuderingsfrågor
+  - Kolla även på vilket sätt de har dykit upp på tentor
+- Kolla på pappret som jag skrev med olof
+
 ### Skippat
 - Föreläsning 1
 - Repetition Linalg. + fl 11 om linalg
@@ -36,9 +43,13 @@
 - varför blir 2c fel?
   - varför går det inte att handlägga så?
 - I 2022.4c så får jag -theta. Men ska man då ta bort theta, för att systemet är kausalt?
+- 21.2b
 ### Förbättra
 - Faktorisering av imaginära tal (se uppg 4.16)
 - Träna mer på diagnalisering med SAS-1. När jag faktiskt ska använda det
+- Bli bättre på primitiva av f
+- Fråga med y(0)=a
+- Fråga om dämpad
 
 ### Oklart
 - Varfär blir intergrallen av f och d samma som any f och p delta?
@@ -53,5 +64,11 @@
 ### Vill ta med till på tenta
 - Regler för derivering
 - Regler för integration
+
+### Övrigt
+- Man kan inte antar LTI
+  - Lättaste
+- Skilj på system diff och vanliga diff
+
 
 
