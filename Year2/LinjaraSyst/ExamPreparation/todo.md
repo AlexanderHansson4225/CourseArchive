@@ -1,5 +1,4 @@
 # Todo
-- Restore förlorade anteckningar
 ### Todo
 - Skriv hur man löser typiska uppgifter
 - Svara på frågan med algebraisk derivering & den med geometrisk derivering
@@ -23,6 +22,8 @@ Utnyttja standardisering
 - Svara på alla instuderingsfrågor
   - Kolla även på vilket sätt de har dykit upp på tentor
 - Kolla på pappret som jag skrev med olof
+- Skriv ner variabelbytet i 21/04/09 5c
+- Läs kapitel 9
 
 ### Skippat
 - Föreläsning 1
@@ -43,13 +44,17 @@ Utnyttja standardisering
 - varför blir 2c fel?
   - varför går det inte att handlägga så?
 - I 2022.4c så får jag -theta. Men ska man då ta bort theta, för att systemet är kausalt?
-- 21.2b
+- 21.2b, 21.2a
+- 3d
+- 6c - e
 ### Förbättra
 - Faktorisering av imaginära tal (se uppg 4.16)
 - Träna mer på diagnalisering med SAS-1. När jag faktiskt ska använda det
+  - Kolla på skillnad när jag använde S-1 och ST
 - Bli bättre på primitiva av f
 - Fråga med y(0)=a
 - Fråga om dämpad
+- Vad görs om man har dubletter av lambda?
 
 ### Oklart
 - Varfär blir intergrallen av f och d samma som any f och p delta?
