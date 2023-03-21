@@ -58,9 +58,10 @@ Solved easiest by dynamic programming
 
 ### Bipartite graph mathing
 The nodes are partitioned in two sets  
-No edges between nodes in the same set
+No edges between nodes in the same set  
+...tror inte detta var så viktigt i nuläget
 
-### Hash map
+## Hash map
 Open adressing
 - Hashfunktionen ger en index
 - Förvarar nyckeln och datan i olika tabeller
@@ -73,12 +74,12 @@ Seperate chaining
 
 Load factor:
 a = n/m = antal element stored / storlek på tabellen
-### Seperate chaining
+## Seperate chaining
 - Seperate chaining allows higher load factor but is slower to search (speciellt vid hög load factor)
   - Avoidance method: move frequently used elements to the front of the list
   - List tend to be slower because the data is spread out in the ram, meaning that the chance that the data is in the cache is lower  
 
-### Open adressing
+## Open adressing
 - Open adressing allows lower load factor but is faster to search
   - In array, the data is stored in a contigous manner (i en bunt, där varje element ligger efter varandra), meaning that the chance that the data is in the cache is higher
 - Load factor has to be as low as possible, and always lower than one
@@ -94,6 +95,61 @@ a = n/m = antal element stored / storlek på tabellen
 
 **Clustering**: When a lot of elements are placed in a row, meaning that the next element is placed in the next slot
 - Side effect: An increased amount of unsuccessful searches
-
+- Dvs du söker första positionen: Den är upptagen
+- Söker nästa position: Den är upptagen
+- etc
+- Clustering casues a lot of unsuccessful searches
 ### Quadratic probing (open adresesing method)
-- 
+- Quadratic probing is a method of open adressing
+- Instead of simply adding pos+i (pos+1, pos+2, pos+3, pos+4) we instead add i² (pos+1, pos+4, pos+9, pos+16)
+- A maximum of load factor is set
+- (Tip: when debugging the hashFunction x -> 0 is good)
+- Fattade inte detta helt
+
+### Double hashing (open adresesing method)
+- Double hashing is a method of open adressing
+- Have two hash functions
+- h(k,i) = h1(k) + i*h2(k)
+  - where k is the key, i is the number of collisions, and h1 and h2 are the two hash functions
+- If clustering occurs, the second hash function will be used to spread the elements out
+  - Avoids clustering
+- Chosing h2:
+  - Let h2 be relativly prime to prime
+    - Achived by m = 2^n
+    - ...
+  
+## Graphs
+- A graph is a set of nodes and edges
+- Can be directed or undirected
+  - Dvs om man kan gå i båda riktningarna eller i bara en riktning
+- Ofta i kursen: n antalet noder, m antalet kanter
+
+### Graph representation
+Two main ways of representing a graph:
+
+### Adjacency matrix
+- A matrix where the rows and columns represent the nodes
+- If there is an edge between two nodes i and j, the value of (i,j) is 1, otherwise 0
+- Fördel: Easy to check if there is an edge between two nodes
+- Nackdel: Diffucult to figure out all neighboars of a node
+- Optimization: Store only the upper or lower triangle of the matrix  
+### Adjacency list
+- A list where each node has a list of its neighbors
+- Fördel: Easy to figure out all neighboars of a node
+- Nackdel: Diffucult to check if there is an edge between two nodes
+
+### Path and connectivity
+- A path is a sequence of nodes where each node is connected to the next node
+- An undirected graph is connected if there is a path between every pair of nodes
+
+### Trees
+- A tree is a connected undirected graph without cycles
+- A tree always has n-1 edges
+- In a rooted tree, there is a special node called the root
+
+## Grafsökning
+### Depth first search (DFS)
+- Start at a node and visit all nodes that are reachable from that node
+- Numerera noderna med så kallade "djupet först nummer"
+- Görs lättast med rekursion 
+  - `function DFS = forall(osökta noder): DFS(nästa nod)`
