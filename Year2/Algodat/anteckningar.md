@@ -95,3 +95,5 @@ a = n/m = antal element stored / storlek på tabellen
 **Clustering**: When a lot of elements are placed in a row, meaning that the next element is placed in the next slot
 - Side effect: An increased amount of unsuccessful searches
 
+### Quadratic probing (open adresesing method)
+- 
