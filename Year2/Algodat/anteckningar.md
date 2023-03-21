@@ -153,3 +153,8 @@ Two main ways of representing a graph:
 - Numerera noderna med så kallade "djupet först nummer"
 - Görs lättast med rekursion 
   - `function DFS = forall(osökta noder): DFS(nästa nod)`
+
+tror att:  
+Cycle: Go to a lower index som inte är besökt
+Forward: Go to a higher index som inte är besökt
+Cross: 
