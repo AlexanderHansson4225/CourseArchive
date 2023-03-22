@@ -11,7 +11,7 @@
 - Glasgow Haskell Compiler (GHC)
   - Run repl through ghci
 - Consider installing Haskell Platform or haskell-stack
-
+---
 ### What is functional programming?
 - Language entirely made up by functions
     - A relation is a function iff
@@ -52,8 +52,10 @@ Follow lines are functions that takes a list as a parameter
 ### Higher ordered functions
 A function that takes a function as a parameter is called a higher ordered function.
 
+```
 `ackumulate f i [] = i`  
 `ackumulate f i (x:xs) = f x (ackumulate f i xs)`  
+```
 
 `ackumulate (+) 0 [1,2,3]` ger 6 because `1 + (0 + (2 + (0 + (3 + 0))))`  
 
@@ -80,9 +82,11 @@ ger output x, x+y, x+y+z
 Needs a state to keep track of the previous value.
 
 **Running sums**  
-`runningSums xs = theSolution   
+```
+runningSums xs = theSolution   
   where    
-    theSolution = 0 : zipWith (+) xs (0:theSolution)`
+    theSolution = 0 : zipWith (+) xs (0:theSolution)
+```
 
 `runningSums [1,2,3]` ger `[1,3,6]`
 
@@ -93,7 +97,7 @@ xs (which is out former output) + the current input (called solution)
 Note zipwith:
 Takes two lists and a function and applies the function to the two lists elementwise.
 so `zipWith (+) [1,2,3] [4,5,6]` ger `[5,7,9]`
-
+---
 ### Typing
 Haskell is strong and statically types
 Type declarations are optional
@@ -102,7 +106,7 @@ Type declarations are optional
 Enforced conventionen:
 - Type names: begin with a capital letter
 - Variable/expression names: begin with a lower case letter
-
+---
 ### Operators and functions
 - Operators: 2 + 3
 - Functions: and [True, False, True]
@@ -141,4 +145,140 @@ doublePlusOne = (+1).(2*)
 
 ### Lambda expressions
 `incAll = map (\i->i+1)`
-\ is used for 
+\ is used for lambda expressions in Haskell
+så man har map functionen (addera med 1) till alla element i listan som ges efter incAll
+
+**Note map**  
+`map f xs` ger en lista där alla element i xs har applicerats på funktionen f.
+
+ex `map (+2) [1,2,3]` ger `[3,4,5]`
+---
+### Pattern-based definitions
+count :: Int -> String
+count 1 = "one"
+count 2 = "two"
+count _ = "many"
+
+
+one function can have many equations, depending on the input.
+
+**Guards**
+```
+count :: Int -> String  
+count n | n == 1 = "one"  
+        | n == 2 = "two"  
+        | n < 0 = "negative"  
+        | otherwise = "many" 
+```
+---
+### Indentation
+- Indentationdenotes continuation, unless brace notation is used
+- Some keywords (let, where, do, of) can be used to begin layout block
+- More about this later
+---
+### Polynmorphic types
+The type of (.)
+(f.g) x = f (g x)
+is 
+(b -> c) -> (a -> b) -> (a -> c)
+
+So if f takes us from b to c  
+g takes us from a to b  
+then (f.g) takes us from a to c  
+
+Polymorphic types are types that can be used for many different types.
+
+(go from b to c of going to a to b is going from a to c)
+
+### Tuples
+Fixed number of elements, may be of different types:
+Pairs:
+
+### Lists
+```
+[1,2,3]
+[1..10]
+[1,3..10]
+[2..] :: [Int]
+```
+
+**Sidenote**   
+.. is a function that takes two parameters and returns a list of all the numbers between the two parameters. 
+
+**Sidenote**  
+Lists kind of behave like ints
+```
+func [] = 0
+func (x:xs) = x + func xs
+```
+
+**Some standard list functions**  
+filter even [1..10] ger [2,4,6,8,10]
+
+map doublePlusOne [1..3] ger [3,5,7]
+
+fold: Hängde inte riktigt med här
+
+zipWith (+) [1,2,3] [4,5,6] ger [5,7,9]
+
+zip [1,2,3] [4,5,6] ger [(1,4),(2,5),(3,6)]
+
+
+### Strings
+Strings are lists of characters
+String = [Char]
+`"hello"` is the same as ['h','e','l','l','o']
+
+### List comprehensions
+```
+allIntPairs = [(i,j) | i <- [0..], j <- [0..i]]
+```
+gives all pairs of integers where the first element is less than or equal to the second element.
+---
+### Type synonyms
+```
+type Name = String
+type Age = Int
+type Person = (Name, Age)
+```
+Mostly nice for documenation
+### Enumurated types
+
+data is an enumurated type
+
+```
+data Color =
+  Red | Green | Blue | Yellow |
+  Cyan | Magenta | White | Black
+
+data Price = Euro Int Int | Dollar Int Int
+```
+
+**Pattern matching with enumurated types**
+```
+complement :: Color -> Color
+complement Red = Cyan
+complement Green = Magenta
+complement _ = Yellow
+```
+
+**Recursive type definitions**  
+
+```
+data intTree = IntEmpty | IntNode Int intTree intTree
+```
+
+or polymorphic version:
+```
+data Tree a = Empty | Node a (Tree a) (Tree a)
+```
+
+### Qualified types
+the type of `elem x xs = any (==x) xs` is `Eq a => a -> [a] -> Bool`
+
+ex `elem 2 [1,2,3]` ger True because 2 is in the list
+
+---
+
+
+
