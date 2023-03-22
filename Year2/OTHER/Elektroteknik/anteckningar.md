@@ -4,6 +4,8 @@ Tenta om man vill ha 4:a eller 5:a
 Kursbok:  
 https://lucris.lub.lu.se/ws/portalfiles/portal/133569346/main.pdf 
 
+* Tror jag skippade lite från föreläsning 1 och 2
+
 # Föreläsning 1
 ### Basics
 puls, frekvens och våglängd formel
@@ -24,7 +26,6 @@ Note to self: Kolla upp förra boken?
 * Ström: `i = dq / dt` dvs tidsförändring av laddning q (C) per tidsenhet (s)
 * Spänning / potential: Den potentiella energi som finns för laddning. Mäts i volt. Då en laddning q rör sig genom kretsen ändras dess potentiella energi
 * Effekt: Energi per tidsenhet i en komponent. Mäts i watt. `P = U * I`
-* Nät: består av gremar som sammanbinds i knytpunkter
 
 ---
 ### Kritchoffs ström- och spänningslagar
@@ -73,4 +74,15 @@ Dvs adderas konduktanserna i parallellkopplingen
 R = R1 * R2 / (R1 + R2)
 ```
 
+### Nät
+* Nät: består av grenar som sammanbinds i knytpunkter. En gren måste innehålla åtminstoende en komponent.
+* Node: En punkt där två grenar möts
+* Väsentlig nod: En nod som har minst tre grenar som går in i den
+
+![Image](Screenshot%20from%202023-03-22%2020-36-01.png)
+
+---
+### Nollställning
+Spännignskälla: Nollställs genom kortslutning (ingen spänning)  
+Strömkälla: Nollställs genom ett avbrott (ingen ström)
 
