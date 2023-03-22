@@ -94,9 +94,10 @@ I pseuocode:
 xs (which is out former output) + the current input (called solution)
 - (0:theSolution) is the previous output (theSolution) with a 0 in front of it, so that the first element is 0.
 
-Note zipwith:
-Takes two lists and a function and applies the function to the two lists elementwise.
+Note zipwith:  
+Takes two lists and a function and applies the function to the two lists elementwise.  
 so `zipWith (+) [1,2,3] [4,5,6]` ger `[5,7,9]`
+
 ---
 ### Typing
 Haskell is strong and statically types
