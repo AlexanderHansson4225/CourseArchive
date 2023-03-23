@@ -84,12 +84,25 @@ Notera energi är effekten vid varje tidspunkt summerat
 Effekt=Tryck*flöde*...
 ```
 
+
 ### Effekt
 Alternativt:
 ```
 P = U*I
 ```
 ---
+### Elektriska kretsar
+* En elektrisk krets utgörs av
+  * Enjukda jinoinenter
+    * Fysiska föremål
+    * Identifierbara anslutningspunkter
+
+### Ledare och noder
+* Ledare: Anses beräknas vara ideala
+  * Rå = 0
+  * E = 0
+  * i tillåts vara obegränsad
+
 ### Seriekoppling
 Samma ström i går genom alla komponenter
 Om komponenterna har resistanserna R1, R2, ..., Rn så blir resistansen i seriekopplingen R = R1 + R2 + ... + Rn
@@ -145,5 +158,11 @@ Induktans
 * Magnetiska fält
 * Strömtrög
 
+
+---
+### Krichoffs strömlag
+Ström in = ström ut (in i en nod)
+Dvs om ström in är i1 och i2 och ström ut är i3 så:
+* `i1+i2=i3`
 ### Kondensator
 Tog detta väldigt snabbt. Se slides
