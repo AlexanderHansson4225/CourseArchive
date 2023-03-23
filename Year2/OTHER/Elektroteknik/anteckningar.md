@@ -73,12 +73,24 @@ R =  ro*4*l/(4*pi*diameter^2) blir 2 ohm
 
 ---
 ### Energi och effekt
-Effekt är energi per tidsenhet.
-```
-P = U * I
+* Effekt är energi per tidsenhet.
+* Mäts i joule eller Ws
 
 ```
+V*A=J/C*C/s=J/s=W
 
+```
+Notera energi är effekten vid varje tidspunkt summerat
+* Angpende vatten:
+```
+Effekt=Tryck*flöde*...
+```
+
+### Effekt
+Alternativt:
+```
+P = U*I
+```
 ---
 ### Seriekoppling
 Samma ström i går genom alla komponenter
