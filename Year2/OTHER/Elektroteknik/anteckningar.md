@@ -34,10 +34,10 @@ Note to self: Kolla upp förra boken?
 * Komponenter är verkliga komponenter. Kan behöva använda sig av flera kretselement för att beskriva komponenter
 
 ### Enheter
-* Ohm: R = U / I där R är resistansen, U är spänningen och I är strömmen. Linjär
+* Ω: R = U / I där R är resistansen, U är spänningen och I är strömmen. Linjär
 * Kapacitet: C = Q / U där C är kapacitansen, Q är laddningen och U är spänningen. Linjär
 * Induktans: L = U / I där L är induktansen, U är spänningen och I är strömmen
-* Resitivitet (ρ) (motståndsförmåga);har enhet 1/σ dvs Ohm meter
+* Resitivitet (ρ) (motståndsförmåga);har enhet 1/σ dvs Ωm
 * σ tror jag är ledningsförmåga. 
 
 ### Konduktans
@@ -47,7 +47,7 @@ Note to self: Kolla upp förra boken?
 G = 1/R
 ```
 
-Den har enheten siemens (S) = 1/ohm
+Den har enheten siemens (S) = 1/Ω
 
 ### Transporten
 * J (A/m^2) drivs av E
