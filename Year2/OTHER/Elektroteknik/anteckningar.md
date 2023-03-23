@@ -27,8 +27,6 @@ Note to self: Kolla upp förra boken?
 * Spänning / potential: Den potentiella energi som finns för laddning. Mäts i volt. Då en laddning q rör sig genom kretsen ändras dess potentiella energi
 * Effekt: Energi per tidsenhet i en komponent. Mäts i watt. `P = U * I`
 
----
-### Kritchoffs ström- och spänningslagar
 
 ---
 ### Kretselement / komponenter
@@ -128,4 +126,8 @@ R = R1 * R2 / (R1 + R2)
 ### Nollställning
 Spännignskälla: Nollställs genom kortslutning (ingen spänning)  
 Strömkälla: Nollställs genom ett avbrott (ingen ström)
-
+--- 
+### Kritchoffs späningslag
+Om man går runt i en slinga (cykel) så blir summan av spänningarna noll
+Dvs om man går runt medurs eller moturs och kommer till samma punkt:
+Spänning är samna som innan man gick
