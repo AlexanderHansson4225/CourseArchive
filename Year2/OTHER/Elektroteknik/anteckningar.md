@@ -34,8 +34,8 @@ Note to self: Kolla upp förra boken?
 * Komponenter är verkliga komponenter. Kan behöva använda sig av flera kretselement för att beskriva komponenter
 
 ### Enheter
-* Ohm: R = U / I där R är resistansen, U är spänningen och I är strömmen
-* Kapacitet: C = Q / U där C är kapacitansen, Q är laddningen och U är spänningen. 
+* Ohm: R = U / I där R är resistansen, U är spänningen och I är strömmen. Linjär
+* Kapacitet: C = Q / U där C är kapacitansen, Q är laddningen och U är spänningen. Linjär
 * Induktans: L = U / I där L är induktansen, U är spänningen och I är strömmen
 * Resitivitet (rå) (motståndsförmåga);har enhet 1/sigma dvs Ohm meter
 * Sigma tror jag är ledningsförmåga. 
@@ -115,6 +115,10 @@ Dvs adderas konduktanserna i parallellkopplingen
 R = R1 * R2 / (R1 + R2)
 ```
 
+Notera även att för spänningar över komponenter:
+v1=v2=-v3
+Givet v3 är bakvänd satt
+
 ### Nät
 * Nät: består av grenar som sammanbinds i knytpunkter. En gren måste innehålla åtminstoende en komponent.
 * Node: En punkt där två grenar möts
@@ -131,3 +135,15 @@ Strömkälla: Nollställs genom ett avbrott (ingen ström)
 Om man går runt i en slinga (cykel) så blir summan av spänningarna noll
 Dvs om man går runt medurs eller moturs och kommer till samma punkt:
 Spänning är samna som innan man gick
+--- 
+### Kapacitant, induktans
+Kapacitans
+* Elektriska fält
+* Spänningströg
+
+Induktans
+* Magnetiska fält
+* Strömtrög
+
+### Kondensator
+Tog detta väldigt snabbt. Se slides
