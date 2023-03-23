@@ -37,12 +37,12 @@ Note to self: Kolla upp förra boken?
 * Ohm: R = U / I där R är resistansen, U är spänningen och I är strömmen. Linjär
 * Kapacitet: C = Q / U där C är kapacitansen, Q är laddningen och U är spänningen. Linjär
 * Induktans: L = U / I där L är induktansen, U är spänningen och I är strömmen
-* Resitivitet (rå) (motståndsförmåga);har enhet 1/sigma dvs Ohm meter
-* Sigma tror jag är ledningsförmåga. 
+* Resitivitet (ρ) (motståndsförmåga);har enhet 1/σ dvs Ohm meter
+* σ tror jag är ledningsförmåga. 
 
 ### Konduktans
 * Konduktans är motsatsen till resistans   
-* Ledningsförmåga (sigma): Alla material kan leda
+* Ledningsförmåga (σ): Alla material kan leda
 ```
 G = 1/R
 ```
@@ -52,21 +52,21 @@ Den har enheten siemens (S) = 1/ohm
 ### Transporten
 * J (A/m^2) drivs av E
 ```
-J=rå*E
+J=ρ*E
 ```  
 * E är ...?
 
 ### Hur räknas motståndet/resistansen?
 Om materialet är l lång och tvärsnitt A.  
-* `R=V/I=rå*l/A`
+* `R=V/I=ρ*l/A`
 
 ### Resistans exempel
 
 ```
-rå = 10^(-5) ohm meter
+ρ = 10^(-5) Ω meter
 l = 50*10^(-3) meter
 diameter = 0.5*10^(-3) meter
-R =  ro*4*l/(4*pi*diameter^2) blir 2 ohm
+R =  ro*4*l/(4*pi*diameter^2) blir 2 Ω
 ```
 
 ---
@@ -99,7 +99,7 @@ P = U*I
 
 ### Ledare och noder
 * Ledare: Anses beräknas vara ideala
-  * Rå = 0
+  * ρ = 0
   * E = 0
   * i tillåts vara obegränsad
 
@@ -140,13 +140,13 @@ Givet v3 är bakvänd satt
 ![Image](Screenshot%20from%202023-03-22%2020-36-01.png)
 
 ---
-### Nollställning
-Spännignskälla: Nollställs genom kortslutning (ingen spänning)  
-Strömkälla: Nollställs genom ett avbrott (ingen ström)
+### Nollställning  
+* Spännignskälla: Nollställs genom kortslutning (ingen spänning)    
+* *Strömkälla: Nollställs genom ett avbrott (ingen ström)
 --- 
-### Kritchoffs späningslag
-Om man går runt i en slinga (cykel) så blir summan av spänningarna noll
-Dvs om man går runt medurs eller moturs och kommer till samma punkt:
+### Kritchoffs späningslag (KVL)
+* Om man går runt i en slinga (cykel) så blir summan av spänningarna noll
+  * Dvs om man går runt medurs eller moturs och kommer till samma punkt:
 Spänning är samna som innan man gick
 --- 
 ### Kapacitant, induktans
@@ -160,8 +160,8 @@ Induktans
 
 
 ---
-### Krichoffs strömlag
-Ström in = ström ut (in i en nod)
+### Krichoffs strömlag  (KCL)
+* Ström in = ström ut (in i en nod)  
 Dvs om ström in är i1 och i2 och ström ut är i3 så:
 * `i1+i2=i3`
 ### Kondensator
