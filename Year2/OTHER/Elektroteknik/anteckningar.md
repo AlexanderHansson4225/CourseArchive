@@ -39,15 +39,24 @@ Note to self: Kolla upp förra boken?
 * Ohm: R = U / I där R är resistansen, U är spänningen och I är strömmen
 * Kapacitet: C = Q / U där C är kapacitansen, Q är laddningen och U är spänningen. 
 * Induktans: L = U / I där L är induktansen, U är spänningen och I är strömmen
+* Resitivitet (rå) (motståndsförmåga);har enhet 1/sigma dvs Ohm meter
+* Sigma tror jag är ledningsförmåga. 
 
 ### Konduktans
-* Konduktans är motsatsen till resistans    
+* Konduktans är motsatsen till resistans   
+* Ledningsförmåga: Alla material kan leda
 ```
 G = 1/R
 ```
 
 Den har enheten siemens (S) = 1/ohm
 
+### Transporten
+* J (A/m^2) drivs av E
+```
+J=rå*E
+```
+E är ...?
 ---
 ### Seriekoppling
 Samma ström i går genom alla komponenter
