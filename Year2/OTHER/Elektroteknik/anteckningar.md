@@ -55,13 +55,31 @@ Den har enheten siemens (S) = 1/ohm
 * J (A/m^2) drivs av E
 ```
 J=rå*E
-```
-E är ...?
----
-###. Hur räknas motståndet/resistansen?
-Om materialet är l lång och tvärsnitt A.  
-R=V/I=rå*l/A
+```  
+* E är ...?
 
+### Hur räknas motståndet/resistansen?
+Om materialet är l lång och tvärsnitt A.  
+* `R=V/I=rå*l/A`
+
+### Resistans exempel
+
+```
+rå = 10^(-5) ohm meter
+l = 50*10^(-3) meter
+diameter = 0.5*10^(-3) meter
+R =  ro*4*l/(4*pi*diameter^2) blir 2 ohm
+```
+
+---
+### Energi och effekt
+Effekt är energi per tidsenhet.
+```
+P = U * I
+
+```
+
+---
 ### Seriekoppling
 Samma ström i går genom alla komponenter
 Om komponenterna har resistanserna R1, R2, ..., Rn så blir resistansen i seriekopplingen R = R1 + R2 + ... + Rn
