@@ -5,7 +5,7 @@ Kursbok:
 https://lucris.lub.lu.se/ws/portalfiles/portal/133569346/main.pdf 
 
 * Tror jag skippade lite från föreläsning 1 och 2
-
+* Ej kunna matematika härledning av formler men förstå viss tanke bakom det
 # Föreläsning 1
 ### Basics
 puls, frekvens och våglängd formel
@@ -44,7 +44,7 @@ Note to self: Kolla upp förra boken?
 
 ### Konduktans
 * Konduktans är motsatsen till resistans   
-* Ledningsförmåga: Alla material kan leda
+* Ledningsförmåga (sigma): Alla material kan leda
 ```
 G = 1/R
 ```
@@ -58,6 +58,10 @@ J=rå*E
 ```
 E är ...?
 ---
+###. Hur räknas motståndet/resistansen?
+Om materialet är l lång och tvärsnitt A.  
+R=V/I=rå*l/A
+
 ### Seriekoppling
 Samma ström i går genom alla komponenter
 Om komponenterna har resistanserna R1, R2, ..., Rn så blir resistansen i seriekopplingen R = R1 + R2 + ... + Rn
