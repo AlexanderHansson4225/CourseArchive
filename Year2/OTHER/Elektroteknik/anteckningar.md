@@ -23,7 +23,7 @@ Note to self: Kolla upp förra boken?
 # Föreläsning 2
 ### Begrepp
 * Noder: Punkter där komponenter kopplas ihop via anslutningar
-* Ström: `i = dq / dt` dvs tidsförändring av laddning q (C) per tidsenhet (s)
+* Ström: `i = dq / dt` dvs tidsförändring av laddning q (C) per tidsenhet (s). Alt. i=U/R. Mäts i ampere (A)
 * Spänning / potential: Den potentiella energi som finns för laddning. Mäts i volt. Då en laddning q rör sig genom kretsen ändras dess potentiella energi
 * Effekt: Energi per tidsenhet i en komponent. Mäts i watt. `P = U * I`
 
@@ -97,6 +97,9 @@ P = U*I
     * Fysiska föremål
     * Identifierbara anslutningspunkter
 
+### Spänning 
+![Image](Screenshot%20from%202023-03-22%2020-35-52.png) 
+
 ### Ledare och noder
 * Ledare: Anses beräknas vara ideala
   * ρ = 0
@@ -166,3 +169,4 @@ Dvs om ström in är i1 och i2 och ström ut är i3 så:
 * `i1+i2=i3`
 ### Kondensator
 Tog detta väldigt snabbt. Se slides
+
