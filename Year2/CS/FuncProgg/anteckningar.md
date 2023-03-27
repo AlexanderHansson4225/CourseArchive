@@ -366,3 +366,59 @@ somethingsRandom rs = do
 
 * The (pick r rs) is used to extract a random element from the list rs. Something of just type IO Float isnt very useful, so we use the return function to turn it into an I/O action that returns a random element from the list rs.
 
+### Modules
+Each Haskell prgram is collection of modules   
+A module is a an organization unit, controlling the namespace   
+One module must be called Main and must export value main  
+
+### Importing
+```
+import A
+import A() as B
+```
+---
+
+### Enum functions
+```
+fromEnum :: Enum a => a -> Int
+-- Returns the integer code for the given value. The integers returned are in the ascending order of constructors in the data declaration.
+
+toEnum :: Enum a => Int -> a
+-- Returns the value corresponding to the given integer code. The argument must be in the range returned by fromEnum. If it is not, the result is unspecified.
+
+enumFrom :: Enum a => a -> [a]
+-- Returns an infinite list of successive values from the given one.
+-- for example, enumFrom 'a' returns the string ['a'..'z']
+
+enumFromTo :: Enum a => a -> a -> [a]
+-- Returns a list of all values in the specified range, including both endpoints.
+
+enumFromThen :: Enum a => a -> a -> [a]
+-- Returns an infinite list of values in the specified range, where the first two values are given. For example, enumFromThen 'a' 'c' returns the string ['a','c'..'z'].
+```
+
+### Union types
+```
+data Either a b = Left a | Right b
+```
+
+"mixing apples and pears"
+need to define what you do with apples and what you do with pears:
+```
+either :: (a -> c) -> (b -> c) -> Either a b -> c
+```
+So depending on if you have an apple or a pear, you do something different.
+
+### Maybe
+```
+data Maybe a = Nothing | Just a
+
+-- Taking care of nothing:
+
+maybe :: b -> (a -> b) -> Maybe a -> b
+maybe 0 (+1) (Just 1) = 2
+```
+Either we have success or we have failure.
+Depending on the case, we get Nothing or Just a.
+
+
