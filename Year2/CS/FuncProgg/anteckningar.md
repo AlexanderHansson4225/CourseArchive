@@ -262,6 +262,7 @@ complement Red = Cyan
 complement Green = Magenta
 complement _ = Yellow
 ```
+Takes a color and returns the complement of that color.
 
 **Recursive type definitions**  
 
@@ -280,6 +281,70 @@ the type of `elem x xs = any (==x) xs` is `Eq a => a -> [a] -> Bool`
 ex `elem 2 [1,2,3]` ger True because 2 is in the list
 
 ---
+### Referens och innehållslikhet
+- Kom ihåg att de inte alltid är samma sak, även i haskell
+
+Solution?
+
+**Type classes**   
+This is how we define that Eq is a type class.
+A type class is a set of types that have some common properties.
+
+```
+class Eq a where
+  (==), (/=) :: a -> a -> Bool
+  x /= y = not (x == y)
+  x == y = not (x /= y)
+```
+
+(obviously built in to haskell)
+
+**Class instances**
+This is how we define that Bool is an instance of Eq
+
+```
+instance Eq Bool where
+  False == False = True
+  True == True = True
+  _ == _ = False
+```
+(obviously built in to haskell)
+
+**Subclassing type classes**
+```
+class (Eq a) => Ord a where
+  (<), (<=), (>=), (>) ...
+```
+
+Defining an order (meaning ord is a subclass of Eq)
+
+
+---
+
+### Input/output
+The abstract datatype IO a of I/O actions
+```
+putChar :: Char -> IO ()
+getChar :: IO Char
+
+```
+
+IO tells us there are side effects, and that the result is not a value of type a, but a value of type IO a. 
+DVS it is similiar to void?
+
+**The do notation**
+```
+greeting :: IO ()  
+
+greeting = do
+  putStrLn "What is your name?"
+  name <- getLine
+  putStrLn ("Hello " ++ name ++ "!")
+```
+
+The do notation is used to sequence I/O actions. Not very typical for a functional language, but useful. 
+
+
 
 # Föreläsning 4
 
