@@ -342,10 +342,27 @@ greeting = do
   putStrLn ("Hello " ++ name ++ "!")
 ```
 
-The do notation is used to sequence I/O actions. Not very typical for a functional language, but useful. 
+syntatic sugar for bind and then
 
-
+The do notation is used to sequence I/O actions. Not very typical for a functional language, but useful. SO to allow sequencing of I/O actions, we need to use the do notation?
 
 # Föreläsning 4
+### Tip for writing multiple lines in ghci
+```
+{main = do {foo 1
+            ;foo 2}
+            hann inte... vet inte om detta är rätt
+}
+```
 
+### Random numbers
+How do you randomise r?
+* RandomIO is a library function that returns a random number of type a. So in the example, it returns a random number of type Float.
+```
+somethingsRandom rs = do
+  r <- RandomIO :: IO Float 
+  return (pick r rs)
+```
+
+* The (pick r rs) is used to extract a random element from the list rs. Something of just type IO Float isnt very useful, so we use the return function to turn it into an I/O action that returns a random element from the list rs.
 
