@@ -222,5 +222,49 @@ end
 ## Greedy algorithms
 * It is not trivial to define that makes an algoirithm greedy  
   * The main idea is to se a simple rule to ake decisions (without taking all information into account)
+* Proving a greedy algorithm is optimal:
+  * Method 1: The greedy algoritm "stays ahead" - by proving it is always at least as good as an optimal solution
+  * Exchange argment - transform the output of an optimal algoritm (without changing its quality) to the output of the greedy algoritm
 
+## Interval scheduling
+* A set R of requests, ri with a start time s(i)  and a finish time f(i)
+* A set of requests is **compatible** if they do not overlap in time
+* The **interval scheduling problem** is to find the largest subset S of R that is compatible
+* All requests have equal value and it is the size of S we want to maximize
+* A compatible set of maximum size is called an **optimal schedule**
 
+### Greedy algorithm for interval scheduling
+```
+procedure schedule (R)
+S ← ∅ /* S is a sequence */
+while R ̸= null
+  r ← select a request from R
+  remove r from R
+  add r to the end of S
+  remove all request in R which overlap with r
+return S
+
+```
+**A good select function**
+Take the request with the earliest finish time
+
+In psuedocode:
+1. Select the request with the earliest finish time
+2. remove all requests that overlap with this request
+3. repeat until R is empty
+
+**Example of proving that this is optimal**
+* Using "our algorithm stays ahead of the optimal solution" method
+* That is size(S) >= size(T)
+  * Where S is the output of our algorithm and T is the output of the optimal algorithm
+  * Meaning that our algorithm is at least as good as the optimal solution
+  * Or in this case: They output the samer thing
+
+### Greedy algorithm for interval scheduling while to minimize delays
+* Consider now requests with a soft deadline d(r) and a time length t(r)
+* It is not a disaster to faila  soft deadline compared to a hard deadline
+* s(r) and f(r) are the start and finish times and in this problem they are the output, not the input
+* The delay of one request is max(0, f(r) - d(r))
+* goal: minimize the total delay of all requests
+
+**How?**

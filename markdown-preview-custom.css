@@ -1,0 +1,13 @@
+/* Set a custom background color */
+.markdown-preview.markdown-preview {
+    background-color: #f7f7f7;
+}
+
+/* Adjust the code block styles */
+.markdown-preview.markdown-preview pre {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    overflow-x: auto;
+}
