@@ -158,3 +158,69 @@ tror att:
 Cycle: Go to a lower index som inte är besökt
 Forward: Go to a higher index som inte är besökt
 Cross: 
+
+# Föreläsning 3
+## Strong connectivity in directed graphs
+* Nodes u and v are mutually reacjaböe of tjere os a path from u to v and a path from v to u
+* A directed graph is strongly connected if every pair of nodes are mutually reachable
+
+### Lemma
+* Let s be any node in a directed graph G. 
+  * G is strongly connected <=> every node is reachable from s and s is reachable from every node
+
+### Determening strong connectivity
+1. Select any node s tllhör V
+2. Use BFS on G from v and check if all of V is reachable
+3. Consttruct G^r from G by revering all edges
+4. Use BFS from G^r from s and check if all of V is reached
+5. if s can reach a node u in G^r, thenu can reach s in G
+6. if all of V is reached in both searches, G is strongly connected
+  * O(n+m)
+
+### Alternativly: Tarjan's algorithm
+```
+int dfnum
+procedure strong_connect (v)
+  dfn (v) ← dfnum
+  lowlink (v) ← dfnum
+  visited(v) ← true
+  push (v)
+  dfnum ← dfnum +1
+
+  for each w ∈ succ(v) do
+    if (not visited(w)) {
+      strong_connect (w)
+      lowlink(v) ← min (lowlink (v), lowlink(w))
+    } else if (dfn (w) < dfn (v) and w is on stack)
+        lowlink(v) ← min (lowlink (v), dfn (w))
+
+  if (lowlink (v) = dfn (v))
+    scc ← ∅
+    do
+      w ← pop ()
+      add w to scc
+    while (w ̸= v)
+    process_scc(scc )
+end
+
+```
+
+**The steps:**
+* Se slidsen för stegen
+* Säkert lättare att bara se en video på det
+
+**Remarks**  
+* Consider the edge (v,w)  
+* When w is not yet visited, we must visist it by calling strong_connect(w)  
+* When w is already visited, we must check if w is on the stack
+* If w has been visisted: we have two main cases:  
+  1. w is not on the stack, because it has already found its SCC
+  2. w is on the stack, baucse it is waiting to be popped from the stack  
+     1. If dfn(w) < dfn(v), then v must set its lowlink so it does not think it is its own SCC
+     2. If dfn(w) > dfn(v) then no more information for v is availbable. There is another path from v to w due to which they belong to the same SCC
+
+## Greedy algorithms
+* It is not trivial to define that makes an algoirithm greedy  
+  * The main idea is to se a simple rule to ake decisions (without taking all information into account)
+
+
