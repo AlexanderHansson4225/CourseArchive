@@ -170,3 +170,43 @@ Dvs om ström in är i1 och i2 och ström ut är i3 så:
 ### Kondensator
 Tog detta väldigt snabbt. Se slides
 
+# Föreläsning 3
+
+# Föreläsning 4
+### (->) = Strömkälla
+Det tecknet (->)2mA betyder att den skapar en ström 2mA åt det specifika hålet. Ingen annan ström finns över den vägen
+
+### Spännignskälla  (- +)
+Skapar en skillnad i spänning mellan de två punkterna
+
+Spänningskälla skapar problem vid en spänningskälla
+- Svårt att räkna för man behöver veta resistansen på spänningskällan
+- Alternativ lösning: Anta ett område som är spänningkällan och dess två närmaste områden
+  - Räkna strömmen in och ut ur detta område
+
+**Exempelvist**
+Har spänning v2 vid höger nod. Sedan en spänningskälla (- +) med spänningsskillnad två. Sedan en spänning v3 till höger nod.
+- Vad är v2 och v3? 
+  - Gör ström analys men även tänk å att v2+2=v3
+
+
+![image](exempel.png)
+
+### Styrda källor
+Spänningskällor och strömkällor med riktning
+
+**Exempelvist**
+om vi har ->(+ -) -2 [V/mA]
+I exemplet ovan har vi nu inte v2+2=v3
+- Istället har vi v3=v2+(-2)(1-v2)*1/1
+
+Dvs räknar ut spänningsskillnaden genom att ta -2*i
+där i = (1-v2)*1/1 
+
+**Exempelvist**
+Nodera om vi har ->(+ -) 2 [V/mA]
+så får vi lösningen 
+* v3+v2=1
+* v3+v2=2
+
+Detta är rätt räknat, men vi har kopplat konstigt, så vi får positiv återgång (dvs g ökar i, som ökar g osv)
