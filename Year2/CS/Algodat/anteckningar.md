@@ -268,3 +268,5 @@ In psuedocode:
 * goal: minimize the total delay of all requests
 
 **How?**
+* Select next with earliest deadline
+* Schedule requests so that s(ri+1) = f(ri)
