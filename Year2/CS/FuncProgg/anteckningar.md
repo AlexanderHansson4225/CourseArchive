@@ -516,7 +516,7 @@ filter :: (a -> Bool) -> [a] -> [a]
 
 :type filter odd
 filter odd :: Integral a => [a] -> [a]
--- Integral is a type class which elements are Int and Integer
+-- Integral is a type class which elements are Int & Integer
 
 ```
 
@@ -543,6 +543,70 @@ String
 ```
 
 Note: Basic types start with a capital letter.
+
+
+### Basic types during exam (example)
+```
+:t ((.):)
+
+-- ex tentafråga: Vad är typen av detta
+-- svar: [(b -> c) -> (a -> b) -> a -> c]
+--     -> [(b -> c) -> (a -> b) -> a -> c]
+-- (.) är kompositionen av funktioner
+-- (.): är ... oklart
+```
+
+```
+:t (+0).(0+)
+
+-- ex tentafråga: Vad är typen av detta
+-- svar: Num a => a -> a
+```
+
+```
+:t (.)(.)
+--  ex tentafråga: Vad är typen av detta
+-- (a1 -> b -> c) -> a1 -> (a2 -> b) -> a2 -> c
+```
+
+### More type derivation during exam (example)
+```
+-- What is the type' of the following function?
+:t g x = map ($x)
+-- "map :: (a -> b) -> [a] -> [b]
+-- ($) :: (c->d) -> c -> d
+-- map ($x) :: c -> d -> d
+-- Note that $ gives a function that takes a value and returns a value
+```
+The diffrence between `map ($x)` and `map (x)` is that the first one takes a function and applies it to x, while the second one takes a value and applies it to x.
+
+
+
+- Ex: `map ($x) [(*2), (+1)]` = [6, 4] 
+  - if x = 3 because `(*2) 3 = 6` and `(+1) 3 = 4`
+- Ex: `map (x) [(*2), (+1)]` = ???
+---
+
+### Making a type class
+```
+class Example a where
+  f1 :: a -> a -> String
+  f2 :: a -> a
+  f3 :: a
+```
+
+**The child of this type class:**
+```
+instance Example Int where
+  f1 x y = show $ (+) x y 
+  -- "adds x and y and converts the result to a string"
+  f2 = (+1)
+  f3 = 0
+```
+
+
+
+
 
 
 
