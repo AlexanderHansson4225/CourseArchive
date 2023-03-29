@@ -586,7 +586,6 @@ The diffrence between `map ($x)` and `map (x)` is that the first one takes a fun
   - if x = 3 because `(*2) 3 = 6` and `(+1) 3 = 4`
 - Ex: `map (x) [(*2), (+1)]` = ???
 ---
-
 ### Making a type class
 ```
 class Example a where
@@ -603,15 +602,8 @@ instance Example Int where
   f2 = (+1)
   f3 = 0
 ```
-
-
-
-
-
-
-
-
-
+### Class inherticance
+Standard bara
 
 
 
