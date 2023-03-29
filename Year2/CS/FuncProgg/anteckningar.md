@@ -290,6 +290,9 @@ Solution?
 This is how we define that Eq is a type class.
 A type class is a set of types that have some common properties.
 
+Motsvarigheten till interface i java
+- A type class is a set of types that have some common properties.
+
 ```
 class Eq a where
   (==), (/=) :: a -> a -> Bool
@@ -351,7 +354,7 @@ The do notation is used to sequence I/O actions. Not very typical for a function
 ```
 {main = do {foo 1
             ;foo 2}
-            hann inte... vet inte om detta är rätt
+-- hann inte... vet inte om detta är rätt
 }
 ```
 
@@ -420,5 +423,137 @@ maybe 0 (+1) (Just 1) = 2
 ```
 Either we have success or we have failure.
 Depending on the case, we get Nothing or Just a.
+
+# Föreläsning 5
+### Recources for Haskell
+* [Hoogle](http://www.haskell.org/hoogle/)
+* [Lunds tekniska högskola CS Website for Haskell](www.google.com)
+
+### Lists funtions
+
+
+```
+(:) :: a -> [a] -> [a]
+'a' : "bc" = "abc"
+-- Insertion
+
+(++) :: [a] -> [a] -> [a]
+"ab" ++ "cd" = "abcd"
+-- Concatenation
+
+head :: [a] -> a
+head "abc" = 'a'
+-- First element
+
+tail :: [a] -> [a]
+tail "abc" = "bc"
+-- All but first element
+
+last :: [a] -> a
+last "abc" = 'c'
+-- Last element
+
+filter :: (a -> Bool) -> [a] -> [a]
+filter even [1,2,3,4] = [2,4]
+-- Filter out elements that do not satisfy the predicate
+
+map :: (a -> b) -> [a] -> [b]
+map (+1) [1,2,3,4] = [2,3,4,5]
+-- Apply a function to all elements
+
+repeat :: a -> [a]
+repeat 'a' = "aaaaa..."
+-- Infinite list of the same element
+
+replicate :: Int -> a -> [a]
+replicate 3 'a' = "aaa"
+-- List of n copies of the same element
+
+cycle :: [a] -> [a]
+cycle "abc" = "abcabcabcabc..."
+-- Infinite list of the same list
+
+until :: (a -> Bool) -> (a -> a) -> a -> a
+until (>10) (*2) 1 = 16
+-- Apply a function until a predicate is satisfied
+-- So 1*2*n until n>10 = 16
+
+span :: (a -> Bool) -> [a] -> ([a],[a])
+span (<5) [1,2,3,4,5,6,7] = ([1,2,3,4],[5,6,7])
+-- Split a list into two parts, the first part satisfies the predicate, the second does not
+
+show :: (Show a) => a -> String
+show 1 = "1"
+-- Convert to string
+-- Show can be used to convert any type to a string if it the type is an instance of the Show type class
+
+read :: (Read a) => String -> a
+read "1" = 1
+-- Convert from string if the type is an instance of the Read type class
+-- Note that if you make your own type, and you want to be able to read it from a string, you need to make it an instance of the Read type class
+-- Functions are not instances of the Read type class
+
+-- in ghci read "5" gives an error, but read "5" :: Int works
+-- we need to tell ghci what type we want to read
+
+
+
+```
+---
+
+### Refering types
+```
+:t (+) :: Num a => a -> a -> a  
+-- Num is a type class
+
+:type (+) :: Num a => a -> a -> a  
+-- Num is a type class
+```
+
+```
+:type filter
+filter :: (a -> Bool) -> [a] -> [a]
+
+:type filter odd
+filter odd :: Integral a => [a] -> [a]
+-- Integral is a type class which elements are Int and Integer
+
+```
+
+### => means "is an instance of"
+so `Integral => n -> Bool`
+* means that n is an instance of Integral
+* which means that n is either an Int or an Integer
+
+Futhermore we can see that filter takes a function that takes an element of type a and returns a Bool, and a list of type a, and returns a list of type a.
+
+### Writing the type
+The type in haskell is used to tell the compiler what type of value we want to return.
+* It is often not necessary to write the type, but it is helpful because it makes the code more readable and helps the compiler to find errors.
+
+### Basic types
+```
+Int -- fixed precision
+Integer --abbretrary precision
+Float 
+Double
+Char
+Bool
+String
+```
+
+Note: Basic types start with a capital letter.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
