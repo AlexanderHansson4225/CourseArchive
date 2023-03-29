@@ -161,7 +161,6 @@ Induktans
 * Magnetiska fält
 * Strömtrög
 
-
 ---
 ### Krichoffs strömlag  (KCL)
 * Ström in = ström ut (in i en nod)  
@@ -210,3 +209,61 @@ så får vi lösningen
 * v3+v2=2
 
 Detta är rätt räknat, men vi har kopplat konstigt, så vi får positiv återgång (dvs g ökar i, som ökar g osv)
+
+### Ekvivalent krets med källa (lite oklart)
+![image](ekvivalent.png)
+
+Dvs tänk att vi har iA och iB.
+- Det är linjär: så vi behöver bara två punkter för att räkna ut alla
+
+vi har punkterna (i0, 0) och (0, v0) på i mot v graf
+- Där v0 är när i = 0
+- vi är då v = 0 dvs vi har kortslutit kretsen
+
+Kort sagt: Alla kretser som bestär av kombination av resistanser kan vi argumentera med hjälp av en **Thevenin ekvivalent krets**:
+
+![image](thevenin.png)
+![image](thevenin2.png)
+
+notera att lutningen på den linjära grafen bli R=v0/i0
+- Så räkna enbart v0 & i0 tror jag
+- Kan då lösa resten av punkterna med den resulterande grafen
+
+### Recept för nodanalys
+```
+1. Slå samman resistanser
+2. Välj noder och referensnod
+3. Sätt ut nodspänningar
+4. Skapa supernoder
+5. Skriv nätekvationer
+  1. KCL i vanliga noder och supernoder
+  2. KVL för noder i supernoder
+6. För styrda källor
+  1. Uttryck i nodspänningar
+  2. Substituera i nätekvationerna
+7. Normalisera ekvationerna (matrisform)
+8. Beräkna nodspänningar (invertera matrisen)
+9. Beräkna strömmar och andra spänningar
+```
+
+* Generellt, fungerar alltid
+* Finns ofta enklare sätt - hitta dom
+* Ekvivalenter och superpositioner
+
+---
+
+### Generellt tips då jag hanterar kretsar 
+* from what I have observed of what he has done
+  
+Om jag ska mäta resistansen eller spänningen mellan två punkter
+- Förenkla systemet utifrån de punkter jag ska ska jämföra
+- Så skillnaden mellan punkt a och b:
+  - Rita a längst upp i en graf, sedan grenar, och sedan slutar i en punkt b. Så kort sagt förenklar bilden, så det är lättare att analysera
+
+---
+
+
+
+
+
+
