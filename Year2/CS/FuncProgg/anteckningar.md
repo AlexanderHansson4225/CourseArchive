@@ -603,7 +603,7 @@ instance Example Int where
   f3 = 0
 ```
 ### Class inherticance
-Standard bara
+- Inget konstigt. Bara standard
 
 
 

@@ -217,7 +217,7 @@ Dvs tänk att vi har iA och iB.
 - Det är linjär: så vi behöver bara två punkter för att räkna ut alla
 
 vi har punkterna (i0, 0) och (0, v0) på i mot v graf
-- Där v0 är när i = 0
+- Där `v0` är när `i = 0`
 - vi är då v = 0 dvs vi har kortslutit kretsen
 
 Kort sagt: Alla kretser som bestär av kombination av resistanser kan vi argumentera med hjälp av en **Thevenin ekvivalent krets**:
@@ -226,7 +226,7 @@ Kort sagt: Alla kretser som bestär av kombination av resistanser kan vi argumen
 ![image](thevenin2.png)
 
 notera att lutningen på den linjära grafen bli R=v0/i0
-- Så räkna enbart v0 & i0 tror jag
+- Så räkna enbart `v0` & `i0` tror jag
 - Kan då lösa resten av punkterna med den resulterande grafen
 
 ### Recept för nodanalys
@@ -261,6 +261,113 @@ Om jag ska mäta resistansen eller spänningen mellan två punkter
   - Rita a längst upp i en graf, sedan grenar, och sedan slutar i en punkt b. Så kort sagt förenklar bilden, så det är lättare att analysera
 
 ---
+# Föreläsning 5
+### Kondensator
+```
+C = kapacitans (konstant om man inte rör på kondensatorn)
+q = laddning
+v = spänning
+```
+
+
+```
+i = δq/δt
+q = C*v
+    => i = C*δv/δt
+```
+
+**Hur mycket effekt levereras till kondensatorn**  
+
+```
+p(t) = i(t)*v(t)
+    => p(t) = C*δv/δt * v(t)
+```
+
+**Notera**: 
+om `i = 0` 
+=> `δv/δt = 0` 
+=> spänningen är konstant 
+(den bevaras även om strömmen stängs av)
+
+**Hur mycket energi levereras från kondensatorn**  
+- Note, denna typ av (enklare) integraler förväntas vi ha koll på
+```
+w(t) = w(0) + ∫p(t)dt  = ∫p(t)dt = 1/2*C*v(t)^2
+```
+
+(w(0) = start effekten)
+
+
+### Missade regeln för kondensatorer över distans
+
+---
+### Serie och parallellkopplade kondensatorer
+**Serie**
+Att seriekoppla kondensatorer -> högre kapacitans
+Formel: `C = C1 + C2 + ... + Cn`
+
+
+**Parallell**
+Att parallellkoppla kondensatorer -> lägre kapacitans
+Formel: `1/C = 1/C1 + 1/C2 + ... + 1/Cn`
+
+### Att vrida tillbaka spänningen
+- Ger tillbaka negativ spänning
+  - Resulterar i ström åt andra hållet
+    - enligt `i = C*δv/δt`
+
+### Övning kondesatorer
+![image](2023-03-30-09-22-17.png)
+
+Tydliggörelse: Den X liknande grejen i mitten är en strömbrytare med en pil över (ignonera pilen)
+
+**Kortsluten krets**
+Vid `t=t0` är strömbrytaren stängd
+- Blir kortslutning (kan d ignonera högersidan)
+- Vi kommer tillslut får `v(t) = 0`  oberoende av vad v(0) är
+  - Enligt KSV så blir spääningen över R2 samma som spänningen över C (v(t))
+  - Detta leder till en ström moturs. 
+    - DVS man leder ström ut ur kondensatorn
+  - i(t) i `i(t) = C*δv/δt` blir negativ
+    - Dvs `δv/δt` är negativ. 
+    - DVS spänningen blir tillslut noll
+(Överkomplicera ej. Analysera folmerna bara)
+
+**SIDENOTE**
+Den sträckade lådan kallas fyrpol
+```
+v_in(t) = v_AB(t)
+v_ut(t) = v_CD(t)
+=>
+
+h(t) = v_ut(t)/v_in(t)
+H(s) = V_ut(s)/V_in(s) -- överföringsfunktion
+
+```
+
+
+**`i(t) = C*δv/δt`** i s-domänen
+I(s) = CsV(s) - V
+- Poängen är: Kan räkna i s-domän och det blir enklare
+
+**Strömbrytaren öppen**
+Kan slå ihop R1 och R2
+Vi får då en spänning över R: `V_s-v(t)`
+- Detta resulterar i en ström medurs
+- Efter lång tid kommer då v(t) gå mot Vs
+
+Då får vi 
+```
+v(t) = R*i(t)  -- Se till att du förstår varför
+i(t) = C*δv(t)/δt
+=> v(t) = -R*C*δv(t)/δt
+
+-- löses med att räkna -R*C som konstant & V_s
+v(t) = V_s*e^(-t/RC) 
+
+```
+**Note**: Ofta görs benämningen τ = RC för att RC har enheten sekunder
+
 
 
 
