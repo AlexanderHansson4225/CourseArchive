@@ -98,7 +98,7 @@ P = U*I
     * Identifierbara anslutningspunkter
 
 ### Spänning 
-![Image](Screenshot%20from%202023-03-22%2020-35-52.png) 
+![Image](images/Screenshot%20from%202023-03-22%2020-35-52.png) 
 
 ### Ledare och noder
 * Ledare: Anses beräknas vara ideala
@@ -140,7 +140,7 @@ Givet v3 är bakvänd satt
 * Node: En punkt där två grenar möts
 * Väsentlig nod: En nod som har minst tre grenar som går in i den
 
-![Image](Screenshot%20from%202023-03-22%2020-36-01.png)
+![Image](images/Screenshot%20from%202023-03-22%2020-36-01.png)
 
 ---
 ### Nollställning  
@@ -189,7 +189,7 @@ Har spänning v2 vid höger nod. Sedan en spänningskälla (- +) med spänningss
   - Gör ström analys men även tänk å att v2+2=v3
 
 
-![image](exempel.png)
+![image](images/exempel.png)
 
 ### Styrda källor
 Spänningskällor och strömkällor med riktning
@@ -211,7 +211,7 @@ så får vi lösningen
 Detta är rätt räknat, men vi har kopplat konstigt, så vi får positiv återgång (dvs g ökar i, som ökar g osv)
 
 ### Ekvivalent krets med källa (lite oklart)
-![image](ekvivalent.png)
+![image](images/ekvivalent.png)
 
 Dvs tänk att vi har iA och iB.
 - Det är linjär: så vi behöver bara två punkter för att räkna ut alla
@@ -222,8 +222,8 @@ vi har punkterna (i0, 0) och (0, v0) på i mot v graf
 
 Kort sagt: Alla kretser som bestär av kombination av resistanser kan vi argumentera med hjälp av en **Thevenin ekvivalent krets**:
 
-![image](thevenin.png)
-![image](thevenin2.png)
+![image](images/thevenin.png)
+![image](images/thevenin2.png)
 
 notera att lutningen på den linjära grafen bli R=v0/i0
 - Så räkna enbart `v0` & `i0` tror jag
@@ -317,7 +317,7 @@ Formel: `1/C = 1/C1 + 1/C2 + ... + 1/Cn`
     - enligt `i = C*δv/δt`
 
 ### Övning kondesatorer
-![image](2023-03-30-09-22-17.png)
+![image](images/2023-03-30-09-22-17.png)
 
 Tydliggörelse: Den X liknande grejen i mitten är en strömbrytare med en pil över (ignonera pilen)
 
