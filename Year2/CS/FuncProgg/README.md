@@ -6,6 +6,13 @@
  - Han följer Graham Hutton, Programming in Haskell nära.
  - Koden som han skriver finns på kurshemsidan.
 
+# Godtyckliga functioner
+```
+const :: a -> b -> a
+const x y = x
+-- meaning that const takes a parameter x and a parameter y and returns x
+```
+
 # Föreläsning 1
 ### Information
 - Glasgow Haskell Compiler (GHC)
@@ -605,10 +612,94 @@ instance Example Int where
 ### Class inherticance
 - Inget konstigt. Bara standard
 
+### Derived instances
+```
+data Season = Spring | Summer | Autumn | deriving (Eq, Ord, Show, Read, Enum)
 
+notWinter = [Spring .. Autumn]
+```
+meaning...
+From Prelude only Eq, Ord, Show, Read, Enum, Bounded can be derived
 
+**More deriving**
+```
+-- Maybe type
+data Maybe a = Nothing | Just a deriving (Eq, Ord, Read, Show)
 
+maybe :: b -> (a -> b) -> Maybe a -> b
+maybe n f Nothing = n
+maybe n f (Just x) = f x
+```
 
+**How does deriving work?**
+Haskell tries to derive form what he already knowd
+- Complains if there is no logical way to derive
+
+### Functor
+A prelude
+Represents a type that can be mapped over
+
+**Examples of functor**
+
+```
+-- Maybe type
+instance Functor Maybe where
+  fmap f (Just x) = Just (f x)
+  fmap f Nothing = Nothing
+
+-- Tree
+data Tree a = EmptyTree | Node a (Tree a) (Tree a)
+instance Functor Tree where
+  fmap f EmptyTree = EmptyTree
+  fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)
+```
+
+Meaning...
+
+### Field labelling
+Type definitions 
+```
+data C = F Int Int Bool
+and 
+data C = F {f1, f2 :: Int, f3 :: Bool}
+```
+are the same
+Note that in pattern matching F {} denotes that we want to match on the fields of the type, and not the type itself.
+
+### Type renaming
+`newtype Age = Age Int`
+or 
+`newtype Age = Age {unAge :: Int}`
+
+Note: Just one field possible!
+Note: The second variant brings into the scope two functions, constructor and deconstructor
+
+```
+Age :: Int -> Age
+unAge :: Age -> Int
+```
+
+--- 
+### Church numbers
+Numbers that are defined by numbers
+type ChurchNatural a = (a -> a) -> (a -> a)
+
+```
+zeroC, oneC, twoC :: ChurchNatural a
+zero f = id 
+oneC f = f 
+twoC f = f . f
+```
+
+Meaning we define an alternative to zero using id while we define oneC as the function itself 
+
+# Föreläsning 6
+- Inlämning den `2/5`
+
+- Egen tanke 
+```
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+```
 
 
 
