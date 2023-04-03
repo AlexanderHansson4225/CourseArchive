@@ -302,6 +302,10 @@ S behöver ingen datastruktur
 Q använder en prioritetskö
 prioritet i Q är d(v)
 
+d(s) = 0
+Q = V - {s}
+S = {s}
+
 while Q isNotEmpty
 u = remove_min(Q)
 for each neighbour v of u
@@ -339,4 +343,26 @@ Ungefär samma som dijkstra (står i boken)
 2. Tag billigaste kanten som inte ger en cykel 
 * Notera att kanten inte måste vara precis brevid trädet vi redan har
 3. Upprepa tills vi har n-1 kanter
+
+**Hur undviker vi att skapa en cykel**
+* Då vi väljer en kant, lägg till båda noderna i en mängd
+* om man vill lägga till (a,b)
+  * givet find(x) ger mängden som x är i:
+    * gör find(a) och find(b)
+    * om de är samma, så är det en cykel
+* Notera att vi skapar nya mängden för disjunkta mängder
+* Återkommer till implementeringsdetaljer
+
+### Bevis till de båda
+**Safeedges**
+1. Låt A vara en delnäng av kanterna i något MST
+2. Låt SϵV s.t (S,V-S) är en parition av noderna
+3. Kanten e = (u,v), eϵE, där uϵS och vϵV-S korsar paritionen
+4. En kant är safe om A∪{(u,v)} är en delmängd av kanterna i något MST
+5. Lemma om A och S är som ovan och ignen kant i A redan korsar (S,V-S) så är vajre kant med minsta vikt safe
+
+**Själva beviset - Se video**
+
+# Länk till 5 min video om pseudokod för algoritmerna
+![Link](https://www.youtube.com/watch?v=UwOrtDumoNo&list=PLemSi3hraQqDLlKLctZw9pBNPBsWTMwls&index=8)
 
