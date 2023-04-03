@@ -693,13 +693,16 @@ twoC f = f . f
 
 Meaning we define an alternative to zero using id while we define oneC as the function itself 
 
-# Föreläsning 6
+# Föreläsning 6: Assignment 1
 - Inlämning den `2/5`
 
 - Egen tanke 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
+
+### Chatterbots (N1)
+- Chatterbot is a program that simulates a conversation with a human user, typically via a chat interface.
 
 
 
