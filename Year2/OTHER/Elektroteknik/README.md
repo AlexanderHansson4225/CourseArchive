@@ -23,7 +23,7 @@ Note to self: Kolla upp förra boken?
 # Föreläsning 2
 ### Begrepp
 * Noder: Punkter där komponenter kopplas ihop via anslutningar
-* Ström: `i = dq / dt` dvs tidsförändring av laddning q (C) per tidsenhet (s). Alt. i=U/R. Mäts i ampere (A)
+* Ström: `i = δq / δt` dvs tidsförändring av laddning q (C) per tidsenhet (s). Alt. i=U/R. Mäts i ampere (A)
 * Spänning / potential: Den potentiella energi som finns för laddning. Mäts i volt. Då en laddning q rör sig genom kretsen ändras dess potentiella energi
 * Effekt: Energi per tidsenhet i en komponent. Mäts i watt. `P = U * I`
 
@@ -292,7 +292,7 @@ om `i = 0`
 **Hur mycket energi levereras från kondensatorn**  
 - Note, denna typ av (enklare) integraler förväntas vi ha koll på
 ```
-w(t) = w(0) + ∫p(t)dt  = ∫p(t)dt = 1/2*C*v(t)^2
+w(t) = w(0) + ∫p(t)dt  = ∫p(t)dt = **1/2*C*v(t)^2**
 ```
 
 (w(0) = start effekten)
@@ -301,13 +301,13 @@ w(t) = w(0) + ∫p(t)dt  = ∫p(t)dt = 1/2*C*v(t)^2
 ### Missade regeln för kondensatorer över distans
 
 ---
-### Serie och parallellkopplade kondensatorer
-**Serie**
+### Serie och parallellkopplade kondensatorer (tvärt emot resistanser - formler är tvärtom)
+**parallelkopplade**
 Att seriekoppla kondensatorer -> högre kapacitans
 Formel: `C = C1 + C2 + ... + Cn`
 
 
-**Parallell**
+**Seriekopplade**
 Att parallellkoppla kondensatorer -> lägre kapacitans
 Formel: `1/C = 1/C1 + 1/C2 + ... + 1/Cn`
 
@@ -352,9 +352,9 @@ I(s) = CsV(s) - V
 
 **Strömbrytaren öppen**
 Kan slå ihop R1 och R2
-Vi får då en spänning över R: `V_s-v(t)`
+Vi får då en spänning över R: V<sub>s</sub>v(t)
 - Detta resulterar i en ström medurs
-- Efter lång tid kommer då v(t) gå mot Vs
+- Efter lång tid kommer då v(t) gå mot V<sub>s</sub> 
 
 Då får vi 
 ```
@@ -367,6 +367,8 @@ v(t) = V_s*e^(-t/RC)
 
 ```
 **Note**: Ofta görs benämningen τ = RC för att RC har enheten sekunder
+
+
 
 
 

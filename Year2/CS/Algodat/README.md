@@ -9,6 +9,10 @@
 - I varje video så står det 3, 4, 5.
   - Representerar vilken nivå videon är på
 
+- Måste vi ha koll på bevisen?
+  - Oklart
+  - Gör dom i efterhand isf?
+  - Fråga på lektionen
 ### Todo tidigt i kursen
 - Start preparing lab 2
 - Download documentation
@@ -270,3 +274,69 @@ In psuedocode:
 **How?**
 * Select next with earliest deadline
 * Schedule requests so that s(ri+1) = f(ri)
+
+**Sidenote: var denna föreläsning klar?**
+
+# Föreläsning 4
+## Närmaste vägen för en riktad graf - Dijkstra's algoritm
+**Antar att våran graf har godtyckliga positiva vikter**
+
+### Variabler
+d(v) = minsta avståndet från start (s) till v (slut)
+ - Behöver två mängder
+  - S: Sökta noder
+  - Q: Noder vi inte känner till
+
+### Algoritmen
+* Från start: väljer ut den nod som ligger i Q, som har den kortaste vägen från startnoden. 
+  * Hur? Titta på en nod på S.
+  * minsta möjliga d(u) + w(u, w), där uϵS, vQ
+
+  **Måste vi ha koll på varför det leder till optimal lösning?**
+
+### Implementering av Dijkstra (pseudocode)
+
+```
+Mängder Q och S
+S behöver ingen datastruktur
+Q använder en prioritetskö
+prioritet i Q är d(v)
+
+while Q isNotEmpty
+u = remove_min(Q)
+for each neighbour v of u
+  if d(u)+w(u,v) < d(v)
+    d(v) = d(u)+w(u,w)
+    pred(v)=u
+
+```
+
+### Tidskomplexitet?
+m kanter
+n noder
+
+log n att sortera prioritetskö
+För varje kant, tar vi bort en nod och sorterar:
+
+O(m*log n)
+
+---
+
+## Hitta ett minimalt uppspännande träd (MST)
+Vill minimera den totala vikten av alla kanter i trädet
+
+### Alternativ 1: Prims algoritm
+* Liknar Dijkstra
+* Starta i en godtycklig nod s och lägg till närmaste noden till de vi redan besökt
+
+**Utförande**
+Ungefär samma som dijkstra (står i boken)
+
+### Alternativ 2: Kruskal's algoritm
+**Pseudokod**
+
+1. Sotera alla kanter
+2. Tag billigaste kanten som inte ger en cykel 
+* Notera att kanten inte måste vara precis brevid trädet vi redan har
+3. Upprepa tills vi har n-1 kanter
+
