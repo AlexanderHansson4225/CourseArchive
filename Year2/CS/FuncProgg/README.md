@@ -841,17 +841,17 @@ result2 = snd (runST [] dictM) where
 
 ```
 
-### Monad axioms ("just nice properies")
+### Monad axioms 
+Regler som gäller och måste gälla för monads
+
 1. return acts as a neutral element of >>=.
-  (return x) >>= f ⇔ f x
-  m >>= return ⇔ m
+* (return x) >>= f ⇔ f x
+* m >>= return ⇔ m
+    *  (På sammas sätt som 0 är neutral element av + (0+x)= x )
 2. Binding two functions in succession is the same as binding
 one function that can be determined from them.
-  (m >>= f ) >>= g ⇔ m >>= λx.(f x >>= g)
-
-DVS om jag har fattar rätt (han sa det ej rakt ut)
-1. Assocative
-2. Composable
+* (m >>= f ) >>= g ⇔ m >>= λx.(f x >>= g)
+  * Dvs den är associativ
 
 **Importance**
 - ghc wont check if this is true
