@@ -86,6 +86,7 @@ Effekt=Tryck*flöde*...
 
 
 ### Effekt
+(exempelvist effektutveckling för en resistans)
 Alternativt:
 ```
 P = U*I
@@ -276,11 +277,18 @@ q = C*v
     => i = C*δv/δt
 ```
 
-**Hur mycket effekt levereras till kondensatorn**  
+**Hur mycket effekt levereras till kondensatorn eller en resistans**  
 
+Alternativ 1:
 ```
 p(t) = i(t)*v(t)
     => p(t) = C*δv/δt * v(t)
+```
+
+Alternativ 2: 
+
+```
+p(t) = abs(vC (t))^2/R
 ```
 
 **Notera**: 
@@ -291,11 +299,15 @@ om `i = 0`
 
 **Hur mycket energi levereras från kondensatorn**  
 - Note, denna typ av (enklare) integraler förväntas vi ha koll på
+
 ```
 w(t) = w(0) + ∫p(t)dt  = ∫p(t)dt = **1/2*C*v(t)^2**
 ```
 
-(w(0) = start effekten)
+(w(0) = start effekten = oftast 0)
+ 
+
+
 
 
 ### Missade regeln för kondensatorer över distans
@@ -362,11 +374,19 @@ v(t) = R*i(t)  -- Se till att du förstår varför
 i(t) = C*δv(t)/δt
 => v(t) = -R*C*δv(t)/δt
 
--- löses med att räkna -R*C som konstant & V_s
-v(t) = V_s*e^(-t/RC) 
+-- löses med att räkna -R*C som konstant & V_s (tror det är startvärdet)
+v(t) = V_s*e^(-t/RC)*u(t)
 
 ```
 **Note**: Ofta görs benämningen τ = RC för att RC har enheten sekunder
+**Note** u(t) är en stegfunktion (behövs den alltid?) 
+**Note** V_s är start
+**Note** C är en konstant. Behöver inte lösa för den
+
+Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*u(t)
+- se 9.7
+
+
 
 
 
