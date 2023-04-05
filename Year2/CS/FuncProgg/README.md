@@ -720,7 +720,7 @@ Checka canvas ish en timme innan föreläsningen den 26/4
 Fråga han om hur länge assignments tar:
 - De undersöker hur länge folk tar på sig
   * I medel tar det 30h **per person**
-  * Me den lägre gränsen de har fått in är 10h (per person)
+  * Men den lägre gränsen de har fått in är 10h (per person)
 --- 
 ### IO fördjupning
 **Pure functions**
