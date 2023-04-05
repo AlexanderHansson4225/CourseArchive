@@ -1,3 +1,12 @@
+# Innehållsförteckning
+- [Föreläsning 1](#föreläsning-1)
+- [Föreläsning 3](#föreläsning-3)
+- [Föreläsning 4](#föreläsning-4)
+- [Föreläsning 5](#föreläsning-5)
+- [Föreläsning 6](#föreläsning-6)
+- [Föreläsning 7](#föreläsning-7)
+
+
 # Information
  - Labs in pairs (fyra)
     - Assignments are submitted online
@@ -708,6 +717,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 Checka canvas innan föreläsningen den 26/4
 - Han kan potentiellt inte komma (eller kommer sent)
 
+Fråga han om hur länge assignments tar:
+- De undersöker hur länge folk tar på sig
+  * I medel tar det 30h **per person**
+  * Men den lägre gränsen de har fått in är 10h (per person)
+--- 
 ### IO fördjupning
 **Pure functions**
 - Always return the same value for the same input
@@ -721,15 +735,19 @@ Checka canvas innan föreläsningen den 26/4
 let x = (outputChar 'h'; outputChar 'a') in 
 x; x
 
--- kommer ge ha (dvs inte två gånger)
-
+// kommer ge ha (dvs inte två gånger)
+```
 För att let x kommer beräknas en gång.
 Sån när vi  kallar x så beräknas den och outputtar
 När vi gör x
 
 jämför det med
 ```
-var x 
+var x = print("hej")
+x;
+x;
+// will only print "hej" once
+```
 
 ### Return
 return does "nothing" in the context of IO
@@ -738,14 +756,14 @@ getInt :: IO Int
 getInt = do
   aLine <- getLine
   return (read aLine :: Int) 
-  -- transform aLine to Int
+  transform aLine to Int
   -- IO takes an argument, annotates it as `IO, andr return unannotates it
 
 ```
 Clarification: Return doesnt return anything in classic way
 - It simply unpackages whats in it
 
-### lambda laughter fixed with monads
+### lambda laughter fixed with monads (more about monads later)
 The IO monad gives type safe laughters
 ```
 laugh :: IO ()
@@ -753,8 +771,9 @@ laugh =
   let x = do putChar ’h’; putChar ’a’
   in do x; x
 
-...
 ```
+
+---
 
 ### IO-stripping (**FORGET IMMEDIETLY and AVOID**)
 Finns metoders om tar bort om io notationen
@@ -765,11 +784,13 @@ stripIO :: IO a -> a
 
 **Forget it (not typesafe.)**
 
+---
 
 ### Monad class: Motivation
 * Separation of pure and sequential code
   * Pure code is easier to reason about
 * Simply see it as yet another type class
+* Introduction of state and its transformations
 
 ### The monad class
 ```
@@ -779,9 +800,66 @@ class Monad m where
   return :: a -> m a
   fail :: String -> m a
 ```
+### Monadic introduction of state and its state
 
-### The identity monad
-Return and packs
+```
+type Dictionary = [(String,String)]
+  dictAdd key value dict = (key, value):dict
+  dictFind key dict = lookup key dict
+
+```
+**Passing state without side effects is clumsy:**
+- Becausew e have to keep track what has already been done
+  - d1 = ..., d2 = f(d1), d3 = f(d2)
+```
+
+result1 = r where
+d1 = dictAdd "no" "norway" []
+d2 = dictAdd "se" "sweden" d1
+r1 = dictFind "fr" d2
+d3 = dictAdd "fr" "france" d2
+r = dictFind "fr" d3
+```
+**Better to pack into an monadic type**
+```
+type DictMonad = StateTransform Dictionary
+
+result2 = snd (runST [] dictM) where
+  dictM :: DictMonad (Maybe String)
+  dictM = do
+    stateUpdate (dictAdd "no" "norway")
+    stateUpdate (dictAdd "se" "sweden")
+    r1 <- stateQuery (dictFind "fr")
+    stateUpdate (dictAdd "fr" "france")
+    r <- stateQuery (dictFind "fr")
+
+// more robust and not as clumsy
+// Note: StateTransform is a monad that stores a state
+// Can then pack the updates in a do notation
+// Update state with stateUpdate
+
+
+```
+
+### Monad axioms ("just nice properies")
+1. return acts as a neutral element of >>=.
+  (return x) >>= f ⇔ f x
+  m >>= return ⇔ m
+2. Binding two functions in succession is the same as binding
+one function that can be determined from them.
+  (m >>= f ) >>= g ⇔ m >>= λx.(f x >>= g)
+
+DVS om jag har fattar rätt (han sa det ej rakt ut)
+1. Assocative
+2. Composable
+
+**Importance**
+- ghc wont check if this is true
+  - its the programmers responsibility to make sure that the monad laws are true
+- if it is not true, then your "monad" wont work in a monadic way
+  - cant just define abbritary functions and call them monads
+
+---
 
 ### Reminder of functors: IO is a functor
 Please note that IO is a functor
@@ -825,21 +903,39 @@ pure (+) <*> Just 3 <*> Nothing
 **Notes: Can have more than one single function**
 ```
 [(+),(*)] <*> [1,2] <*> [3,4]
--- gives '[4,5,5,6,3,4,6,8]'
+// gives '[4,5,5,6,3,4,6,8]'
 ```
 so:
+
 ```
-[(+),(*)] <*> [1,2] gives [1+2, 1*2, 2+2, 2*2]
-[1+2, 1*2, 2+2, 2*2] <*> [3,4] gives [1+3,1+4, 2+3, 2+4, 1*3, 1*4, 2*3, 2*4] = [4,5,5,6,3,4,6,8]
+[(+),(*)] <*> [1,2] 
+// gives [1+2, 1*2, 2+2, 2*2]
+[1+2, 1*2, 2+2, 2*2] <*> [3,4] 
+// gives [1+3,1+4, 2+3, 2+4, 1*3, 1*4, 2*3, 2*4] 
+// lika med [4,5,5,6,3,4,6,8]
 
 ```
 
-Dvs: List are applicatives
+Clarification: List are applicatives
 ```
 instance Applicative [] where
   pure x = [x]
   fs <*> xs = [f x | f <- fs, x <- xs]
 ```
+
+### List comprehension
+"Reverse do notation"
+```
+list1 = [ (x,y) | x<-[1..], y<-[1..x]]
+
+list2 = do
+  x <- [1..]
+  y <- [1..x]
+  return (x,y)
+```
+
+list1 = list2
+
 
 
 
