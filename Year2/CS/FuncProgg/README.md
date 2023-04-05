@@ -924,7 +924,8 @@ instance Applicative [] where
 ```
 
 ### List comprehension
-"Reverse do notation"
+Allows you to define lists in a concise and expressive way
+* "Reverse do-notation"
 ```
 list1 = [ (x,y) | x<-[1..], y<-[1..x]]
 
@@ -933,7 +934,7 @@ list2 = do
   y <- [1..x]
   return (x,y)
 ```
-
+**Notera:**
 list1 = list2
 
 
