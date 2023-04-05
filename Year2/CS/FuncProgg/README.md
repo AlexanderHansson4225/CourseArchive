@@ -704,6 +704,153 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ### Chatterbots (N1)
 - Chatterbot is a program that simulates a conversation with a human user, typically via a chat interface.
 
+# Föreläsning 7
+Checka canvas innan föreläsningen den 26/4
+- Han kan potentiellt inte komma (eller kommer sent)
+
+### IO fördjupning
+**Pure functions**
+- Always return the same value for the same input
+- No side effects
+- Are able to mathimatically be prove thatt hey always behave the same output
+
+**Impure functions**
+- Can have side effects
+- The do notation is used to sequence impure functions
+```
+let x = (outputChar 'h'; outputChar 'a') in 
+x; x
+
+-- kommer ge ha (dvs inte två gånger)
+
+För att let x kommer beräknas en gång.
+Sån när vi  kallar x så beräknas den och outputtar
+När vi gör x
+
+jämför det med
+```
+var x 
+
+### Return
+return does "nothing" in the context of IO
+```
+getInt :: IO Int
+getInt = do
+  aLine <- getLine
+  return (read aLine :: Int) 
+  -- transform aLine to Int
+  -- IO takes an argument, annotates it as `IO, andr return unannotates it
+
+```
+Clarification: Return doesnt return anything in classic way
+- It simply unpackages whats in it
+
+### lambda laughter fixed with monads
+The IO monad gives type safe laughters
+```
+laugh :: IO ()
+laugh =
+  let x = do putChar ’h’; putChar ’a’
+  in do x; x
+
+...
+```
+
+### IO-stripping (**FORGET IMMEDIETLY and AVOID**)
+Finns metoders om tar bort om io notationen
+ex:
+```
+stripIO :: IO a -> a
+```
+
+**Forget it (not typesafe.)**
+
+
+### Monad class: Motivation
+* Separation of pure and sequential code
+  * Pure code is easier to reason about
+* Simply see it as yet another type class
+
+### The monad class
+```
+class Monad m where
+  (>>=) :: m a -> (a -> m b) -> m b
+  (>>) :: m a -> m b -> m b
+  return :: a -> m a
+  fail :: String -> m a
+```
+
+### The identity monad
+Return and packs
+
+### Reminder of functors: IO is a functor
+Please note that IO is a functor
+```
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b
+```
+=>
+
+```
+instance Functor IO where
+  fmap f action = do
+    result <- action
+    return (f result)
+```
+
+So it is a functor because it has a fmap function that takes a function (a -> b) and an action (IO a) and returns an action (IO b)
+
+### Applicative functors
+- `(<*>)` is a apply
+  - Introducing the possiblityt to also add a function to the action `f (a -> b)`
+```
+class (Functor f) => Applicative f where
+  pure :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+
+instance Applicative Maybe where
+  pure = Just 
+  Nothing <*> _ = Nothing
+  (Just f) <*> something = fmap f something -- Are extracting x 'from under Just and applying f to the result
+```
+**Examples**
+```
+Just (+3) <*> Just 9
+-- gives Just 12
+
+pure (+) <*> Just 3 <*> Nothing
+-- gives Nothing
+```
+
+**Notes: Can have more than one single function**
+```
+[(+),(*)] <*> [1,2] <*> [3,4]
+-- gives '[4,5,5,6,3,4,6,8]'
+```
+so:
+```
+[(+),(*)] <*> [1,2] gives [1+2, 1*2, 2+2, 2*2]
+[1+2, 1*2, 2+2, 2*2] <*> [3,4] gives [1+3,1+4, 2+3, 2+4, 1*3, 1*4, 2*3, 2*4] = [4,5,5,6,3,4,6,8]
+
+```
+
+Dvs: List are applicatives
+```
+instance Applicative [] where
+  pure x = [x]
+  fs <*> xs = [f x | f <- fs, x <- xs]
+```
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
