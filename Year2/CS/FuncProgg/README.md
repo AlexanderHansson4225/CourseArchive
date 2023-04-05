@@ -714,13 +714,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 - Chatterbot is a program that simulates a conversation with a human user, typically via a chat interface.
 
 # Föreläsning 7
-Checka canvas innan föreläsningen den 26/4
+Checka canvas ish en timme innan föreläsningen den 26/4
 - Han kan potentiellt inte komma (eller kommer sent)
 
 Fråga han om hur länge assignments tar:
 - De undersöker hur länge folk tar på sig
   * I medel tar det 30h **per person**
-  * Men den lägre gränsen de har fått in är 10h (per person)
+  * Me den lägre gränsen de har fått in är 10h (per person)
 --- 
 ### IO fördjupning
 **Pure functions**
@@ -786,11 +786,12 @@ stripIO :: IO a -> a
 
 ---
 
-### Monad class: Motivation
+### Monad class: Usecases and notes
 * Separation of pure and sequential code
   * Pure code is easier to reason about
-* Simply see it as yet another type class
 * Introduction of state and its transformations
+* Simply see it as yet another type class
+  - *hade läst på om detta lite till*
 
 ### The monad class
 ```
@@ -810,7 +811,7 @@ type Dictionary = [(String,String)]
 ```
 **Passing state without side effects is clumsy:**
 - Becausew e have to keep track what has already been done
-  - d1 = ..., d2 = f(d1), d3 = f(d2)
+  - `d1 = ..., d2 = f(d1), d3 = f(d2)`
 ```
 
 result1 = r where
@@ -845,12 +846,12 @@ result2 = snd (runST [] dictM) where
 Regler som gäller och måste gälla för monads
 
 1. return acts as a neutral element of >>=.
-* (return x) >>= f ⇔ f x
-* m >>= return ⇔ m
-    *  (På sammas sätt som 0 är neutral element av + (0+x)= x )
+* `(return x) >>= f` ⇔ `f x`
+* `m >>= return` ⇔ `m`
+    *  (På sammas sätt som 0 är neutral element av + (0+x) = x )
 2. Binding two functions in succession is the same as binding
 one function that can be determined from them.
-* (m >>= f ) >>= g ⇔ m >>= λx.(f x >>= g)
+* `(m >>= f ) >>= g` ⇔ `m >>= λx.(f x >>= g)`
   * Dvs den är associativ
 
 **Importance**
@@ -876,16 +877,18 @@ instance Functor IO where
     return (f result)
 ```
 
-So it is a functor because it has a fmap function that takes a function (a -> b) and an action (IO a) and returns an action (IO b)
+So it is a functor because:
+* it has a fmap function that takes a function (a -> b) and an action (IO a) and returns an action (IO b)
 
 ### Applicative functors
-- `(<*>)` is a apply
+- `(<*>)` is an apply
   - Introducing the possiblityt to also add a function to the action `f (a -> b)`
 ```
 class (Functor f) => Applicative f where
   pure :: a -> f a
   (<*>) :: f (a -> b) -> f a -> f b
-
+```
+```
 instance Applicative Maybe where
   pure = Just 
   Nothing <*> _ = Nothing
@@ -935,7 +938,7 @@ list2 = do
   return (x,y)
 ```
 **Notera:**
-list1 = list2
+`list1` = `list2`
 
 
 
