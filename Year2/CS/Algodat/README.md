@@ -13,6 +13,11 @@
   - Oklart
   - Gör dom i efterhand isf?
   - Fråga på lektionen
+
+- Varje video har en relevans titel
+  - Ex nivå 3 -> behövs för att få en trea
+  - nivå 4 -> behövs för att få en fyra
+  - nivå 5 -> behövs för att få en femma
 ### Todo tidigt i kursen
 - Start preparing lab 2
 - Download documentation
@@ -363,6 +368,254 @@ Ungefär samma som dijkstra (står i boken)
 
 **Själva beviset - Se video**
 
-# Länk till 5 min video om pseudokod för algoritmerna
+### Länk till 5 min video om pseudokod för algoritmerna
 ![Link](https://www.youtube.com/watch?v=UwOrtDumoNo&list=PLemSi3hraQqDLlKLctZw9pBNPBsWTMwls&index=8)
+
+# Föreläsning 5
+
+### Söndra och härska, devide and conquer
+Delar upp problemet i halvor och löser dem rekursivt
+* Kombinerar sedan lösningarna till en lösning på hela problemet
+
+* Ex merge sort:
+  * Dela upp konstant tid
+  * Sorterahalvorna
+  * Kombinera på linjär tid
+* Antalet jäförelser T(n) = 2T(n/2) + n (n är antalet element); n > 1
+* Sedan kollade han på källkoden:
+
+* Uppskatta tiden med antalet jämförelser
+* T(n) = 2T(n/2) + n
+  * Tillräckligt bra att anta n=2^k
+**Bevis genom expandera:**
+    * T(n) = 2T(n/2) + n
+      * 2^k + 2*2^(k-1) + 4*2^(k-2) + ... + n*2^0
+      * Leder till O(n*log2 n) 
+**Lemma 2.6**
+T(n) = n*log2 n om n = 2^k
+Bevis bättre genom induktion
+T(1) = 0 sant typ log 1 = 0
+Antag att T(n) = n*log2 n
+Visa att T(2n) = 2n*log2 2n
+T(2n) = 2T(n) + 2n
+      = 2(n*log2 n) + 2n
+      = 2n*log2 2n
+
+**Lemma 2.7**
+T(n) = n*log2 n
+(Jobbigare att bevisa om n!=2^k)
+men görs genom T(n) = T(tak(n/2))0 + T(golv(n/2)) + n
+
+**Alternativ bevis**
+Få ié från små tal
+- T(n)/n = 0, 1, 2, 3 -> anta att = log2 n
+
+Nu kan vi anta T(n) = n*log2 n
+* Bevisa antagandet
+
+### Master theorem - huvudsatsen
+(Även ett alternativt bevis)
+T(n) = aT(n/b) + n^s
+* Antag att n=b^k
+* Kommer få visa fall:
+
+**a < b^s -> T(n) = O(n^s)**
+**a = b^s -> T(n) = O(n*log n)**
+**a > b^s -> T(n) = O(n^log_b a)**
+
+**Exempel T(n)=2T(n/2)+n**
+* a = 2, b = 2, s = 1
+  * Från master theorem definitionen
+
+Har alltså a = b^s
+- DVS T(n) = O(n*log n)
+
+**Note: Glöm ej förenkla log_b a om möjligt**
+
+### Logaritmer repition
+Def: x^a = z -> logx z = a
+
+**Kolla upp log regler**
+
+Samt
+log_x z = log_y z * log_x y
+
+Ger:
+
+**a^log_b n = n^(log_b a)**
+
+### Kostnad för löv
+Antag n=b^k, T(n) = aT(n/b) + n^s
+
+nivå 0: T(n), 1 nod
+nivå 1: T(n/b), a noder
+...
+nivå k: a^k*T(n/b^k), a^k noder
+
+a^k löv med konstnad O(1)
+n =b^k, k = log_b n, dvs a^k = a^log_b n = n^(log_b a)
+
+### Kostnad för interna noderna:
+på nivå finns a^i interna noder med (n/b^i)^s
+* Totala kostnad: arbetet av alla interna noder
+* i=0,1,2,...,log_b n-1 av a^i*(n/b^i)^s=n^s*summa (a/b^s)^i
+
+### Kostnad för löv och interna noder
+T(n) = n^log_b a + n^s*summa (a/b^s)^i från 0 till log_b n-1
+
+**Tre fall:**
+a/b^s < 1 -> T(n) = O(n^s)
+* Vet a < b^s -> så n^s är större än n^log_b a=n^s
+* Dominerande term O(n^s)
+a/b^s = 1 -> T(n) = O(n^s*log n)
+* summan blir då lob_b n
+* Term nummer två dominerar
+* Få O(n^s*log n)
+a/b^s > 1 -> T(n) = O(n^log_b a)
+* Samma som förssta men n^lob_b a är större än n^s
+  * Summan är växande. Kollar på sista termen och sämför med n^log_b a
+* DVS får O(n^log_b a)
+
+### Exempel med hur man ser hur lika åsikter ryska statchefer har
+I video 5 på föreläsning 5
+
+### Pseudokod för söndra härska
+(han vill invertera en lista)
+- Det är det som kostar då han pratar om kostnad där uppe tror jag
+1. Dela upp i två halvor
+2. Räkna invertieringar i vänster halva
+3. Gör för höger halva
+4. Kombinera på linjär tid
+* Gör genom att plocka "rätt" element från vänster och höger halva
+* DVS om man inverterar, plocka det element som är minst (längst till vänster)
+  * Lägg till den i den kombinerade listan
+
+### LAB VIDEOS (KKolla slidsen. Fattar bättre genom att labba)
+* https://youtu.be/nn9qqVKetDM
+
+* https://youtu.be/E3eMtzHojqs 
+
+* https://youtu.be/tSVYU0H8Wxo
+
+# Föreläsning 7
+## Nätverksflöde
+* har riktad graf G=(V,E) medm speciella noder s och t
+* Kanter har kapacitet c(e) >= 0
+* Kanter har flöde f(e) >= 0
+* Tänk på att flöde som vatten
+  
+Vatnnet ska rinna över kantera
+* Flödet får inte överstiga kapaciteten
+  * 0 <= f(e) <= c(e)
+
+* s är källa (källa)
+* t är sänka (mål)
+
+Mål: Hitta maximalt flöde från s till t
+
+### s, t snitt
+- Flödet kan aldrig bli mer än s-t snitt har för capacitet
+- - V = A U B, A snitt B = {}
+- s tillhöer A, t tillhör B
+  - cap(A,B) = SUM(c(e)) för alla kanter e som går från A till B, där
+  - A är s
+  - B är alla noder förutom S
+
+### Flödeskoncerveringsregelen (/kravet)
+* För att det ska kallas flöde måste flödet in i en nod v tillhör V - {s,t} vara densamma som flödet ut ur noden
+* Så detta gäller alltid för flöden och man kan anta det
+  
+## Ford-Fulkerson
+### Pseudokod (NÄSTAN)
+1. f(e) = 0 för alla kanter e
+2. hitta en väg p från s till t med F(e) < c(e) för alla kanter e på vägen
+   1. Exempelvist med BFS
+3. om ingen p finns så är vi klara
+   1. Vi har hittat maximalt flöde
+4. delta(e)=c(e)-f(e)
+5. DELTA = min delta(e) för alla kanter e på vägen p
+6. öka f(e) längst p med DELTA
+7. goto 2
+
+![image](1.png)
+
+-> 
+
+
+
+
+### Goldberg-Tarjan
+
+# Föreläsning 8
+
+## Hollow heap
+
+### Tidskomplexiteter:
+Konstant tid:
+- Insert
+- Decrease key
+
+Logaritmisk tid O(log n):
+- Find min (delete min)
+- Delete 
+  
+### Vad är det?
+* En heap är en mängd av träd
+
+* Varje träd har en heap egenskap
+  * Om v är föräldrar till w så key(v) <= key(w)
+
+* On nod har en lista med barn
+  * Barn är alla noder som den kan nå med en kant
+  * Nod har pekare på första barn, skykon och förälder
+    * Syskon är noder med samma förälder
+  
+* Nytt i jämför en hollowheap jämför tmed en fibonaccihheap
+  * En nod och dess värde är inte samma sak
+  * Vi lagrar key/value pairs och vi kallar value för en item
+
+* En nod har en pekare på en item
+  * En item har en pekare på en nod
+    * Både item och node har samma key
+    * DVS om en nod hvir av med sin item så
+      * Kommer den ändå vara kvar på samma plats
+      * Eftersom den behåller sin key
+
+### Varför heter det hollow node
+* En nod är antingen full eller tom
+  * Om den är tom så är den hollow
+  * Om vi gör decrease key så ändras nyckeln på item
+    * Men noden behåller sin key
+    * Noden blir tom
+      * DVS null som value
+      * Istället skapar vi en ny nod för item
+
+  * Specialfall. Om den var den minsta och vi gör decrease key
+    * Så behöver vi bara minska nyckeln
+
+* Om det intevar den minsta noden, men en annan rotnod  
+  * Då jan vi också minska den
+  * Måste då också kolla om nya nyckeln blev den nya minsta noden
+
+### Link
+* Ex då vi lägger till en nya item eller tar vobt den minsta
+* V och w är två fullla rotnoder
+  * Länkar ihop dem så att en blir föäldrar till den andra
+  * Gör detta genom att kolla om key(v) <= key(w)
+    * Om det är så så blir w barn till v
+    * Annars blir v barn till w
+    * Vid link minskar vi antalet rotnoder med 1
+      * Dvs vi har en mindre rotnod
+
+Jag var mitt i denna video:
+https://www.youtube.com/watch?v=aLrzDUVUk3M&list=PLemSi3hraQqBAOGakw97Lacvzio6zhiLf&index=3
+ 
+
+
+
+
+
+
+
+
 
