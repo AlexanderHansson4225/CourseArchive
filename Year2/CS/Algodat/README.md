@@ -592,14 +592,56 @@ a = b
 a < b_
 * Omöjligt
 
-Note Edmonds-Karp algoritmen är en variant av Ford-Fulkerson algoritmen där specifikt en BFS används för att hitta vägar
-
-
-
+**Note** Edmonds-Karp algoritmen är en variant av Ford-Fulkerson algoritmen där specifikt en BFS används för att hitta vägar
 
 ### Time complexity
+Note C = SUM(c(e)) for all edges e going out from S
+
+* Flow is max C
+* Assume heltalskapaciteter
+  * Alternativt kalla om det är rationellt
+* iF all DELTA = then maximum of C BFS searches
+* BFS har time complexity O(V+E)
+*  (since E > V) we say O(E)
+* => **Timecomplecity** P(C*E)
+  * The constant is keept because its still very relevant for big grafs
+
+**What do we do if C is huge**
+* Want to avoid small DELTA
+
+* Assume x = 2^k >= C; for minimum k
+
+1. Only consider c_f(e) >= x for the BFS
+2. If no new s-t path is found:
+   1. halvera x och börja om (goto 1)
+
+### Ett bevis för att Ford-Fulkerson algoritmen finds the maximum flow
+* Note level 3
+* Check F07, video 5
+
+* Skippade även video 6
+
+### Sats 4.2
+max flow = min cut
+dvs 
+maximala flödet = kapaciteten över minsta snittet
+* Där snitten är alla s-t snitt som partionerar V
+
+"om vi använder ett snitt som vi upptäcker när det inte lägre finns en s-t väg så ahr vi hittat det maximala flödet" 
 
 
++ ett bevis i video 7
+
+
+**Exempel**
+
+
+
+
+### Lemma 4.8
+Omdet finns ett flöde i G så att det inte finns någon s-t väg i G_f är flödet maximalt
+
+(bevis, video 7)
 
 ### Goldberg-Tarjan
 
