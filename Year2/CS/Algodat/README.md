@@ -1,4 +1,5 @@
 # Info
+- **Hur bra ska vi kunna bevisen?**
  - 6 labs  
 - jonasskeppstedt.net har videor (notera att har inget om lab 4)  
 - calendly.com/forsete
@@ -621,6 +622,9 @@ Note C = SUM(c(e)) for all edges e going out from S
 
 * Skippade även video 6
 
+### Lemma 4.8
+Omdet finns ett flöde i G så att det inte finns någon s-t väg i G_f är flödet maximalt
+
 ### Sats 4.2
 max flow = min cut
 dvs 
@@ -634,16 +638,117 @@ maximala flödet = kapaciteten över minsta snittet
 
 
 **Exempel**
+* Gör algirtimen på g_f tills vi får p = nej
+  *  Om vi kommer till ett läge där vi inte kan nå t så har vi hittat ett snitt, där vi inte kan gå från A till B. 
+* Väljer A och B så att A innehåller s och B innehåller t
+  * Samt max kapacitet på alla kanter som går från A till B
+  * samt alla kanter som går från B till A har f(e) = 0
 
+* Om man kollar på bilden tror jag man kan dra slutsatsen att maxflödet är 2+2? (dvs 4)
 
+![image](4.png)
+  
 
-
-### Lemma 4.8
-Omdet finns ett flöde i G så att det inte finns någon s-t väg i G_f är flödet maximalt
 
 (bevis, video 7)
 
-### Goldberg-Tarjan
+## Goldberg-Tarjan (pre flow push)
+* Använder också residualgrafen
+* Men ryter mot att i en nod (som icke är s och t) så ska inflödet vara större än utflödet
+  * Dvs inflödet - utflödet >= 0
+  * Goldber-Tarjan algoritmen tillåter detta
+  * Kallas då ett förflöde (excess flow) och inte ett flöde för att det bryter mot regeln för flöde
+
+## intuition
+* I ford-fulkersson har vi vattenkanaler och ökar lite utan att det läcker
+* I Goldberg-tarjar häller vi en hink vatten från s frpn början och ser vad som händer (tillåt pga excess flow)
+  * Men vissa kommer puttta tillbaka vatten
+
+## Höjder h(u)
+* varje nod har en höjd h(u)
+  * h(s) = n
+  * h(t) = 0
+  * h(u) startar på 0 och kan enbart öka (inte minska)
+    * Kan dock enbart öka med ett
+
+* Preflow = förflöde kan öka längst e = (u,v om h(u) = h(v) + 1)
+  * Dvs om vi har en kant som går från en nod med höjd 1 mer än den andra noden så kan vi öka flödet längst den kanten
+* h och f avser alla höjder h(u) och preflow f(e)
+* De är kompatibla om varje kant e = (u,v) i E_f:
+  * h(s) = n, h(t) = 0
+  * h(u) <= h(v) + 1
+* Algoritmen kommer se till att h och f alltid är kompatibla
+
+### Lemma 4.9
+Om f och h är komatibla finns ingen s-t väg i G_f
+
+bevis (video 10)
+
+### Lemma 4.10
+Om f är kompatibel med h och förflödet är destum är ett flöde (dvs inte excess flow så är det ett maximalt flöde)
+
+Bevis i video 11
+
+### Stategi
+Om vi startar med komatibla h och f där 
+* h = höjderna för alla u
+* f = förflöden för alla e tillhör E_f
+
+och göra om f till att vli ett flöde och f och h fortfarrande är kompatibla så har vi hitta ett maximalt flöde
+
+### Hur görs strategi?
+![image](5.png)
+- Video 11 om jag inte förstår
+
+### Exempel
+![image](6.png)
+* Notes:
+  * Börjar med excess preflow (hur mycket in i a)
+    * 4 för a
+    * 2 för c
+  * Ta något med excess preflow, exempelvist c
+    * Kolla om den har högre höjd än en granne.
+      * Ja d
+    * Det har den inte. Så höjer upp den till ett högre
+  * Ta c igen. Nu tillåtet att push från c till d
+    * Push min(excess preflow, 3) = 2
+    * e_f(d) = excess preflow = 2
+  * gör samma för a
+    * Pushar 4 till d för a har 4 i excess preflow från början
+    * Så d får då 2+4 i excess preflow
+* Kollar då å d
+  * Den kan push till t. Så den pushar 4. Men har då 2 kvar
+* d är den ändra med för mycket preflow
+  * d vill pusha till a men får ej för att de har samma höjd
+    * Relabel d,dvs ändrar dess höjd
+* Kan sedan pusha 2 tillbaka till a
+* a har då 2 i excess preflow
+* a är den ända med excess, så kollar på den
+* a har högre höjd än b, då pushar 2 till b
+* b pushar 2 till t
+
+* t är den ända med excess preflow. Den har excess preflow med 2 + 4
+  * vårt preflow är nu ett flöde för det inte finns en väg till s till t (ses om man ritar residualgrafen)
+  * Det är då vårt maximalflöde = 6
+
+### Lemma 4.11
+En nod v med f_(v) > 9 har en väg till s i G_f
+
+Bevis i video 13
+
+### Lemma 4.12
+En nod kan bli max 2n-1 hög (utan att bilda en cykel)
+
+* Se bevis i video 13
+
+### Två typer av push
+- Finns två typer av push från v till w längst (v,w)
+
+De två typerna:
+1. Om excess preflow
+
+Fortsätt kolla på:
+https://youtu.be/w3vrP17Y-SI 
 
 # Föreläsning 8
 
