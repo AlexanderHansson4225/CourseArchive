@@ -512,6 +512,7 @@ Vatnnet ska rinna över kantera
 * t är sänka (mål)
 
 Mål: Hitta maximalt flöde från s till t
+- DVS hur mycket flöde går ut från s
 
 ### s, t snitt
 - Flödet kan aldrig bli mer än s-t snitt har för capacitet
@@ -538,9 +539,65 @@ Mål: Hitta maximalt flöde från s till t
 7. goto 2
 
 ![image](1.png)
+- Fyra är lägst, tar den på övre routen
 
--> 
+![image](2.png)
+- tar undre routen. två är lägst
+  
+![image](3.png)
+- Cross över vägen så är 4 lägst (mellanskillnaden mellan 6 och 2) alt. 4
 
+- BFS är klar för att alla kanter ut från s är fulla.
+  - Kommer ej s till t, med kravet så vi är nöjda
+
+
+### Varför fungerar det inte alltid?
+- Hittar inte alltid maximala flödet för in i en nod, om kapaciteten är mer in eller ut så kan vi blockera en rätt väg om vi råkar välja fel
+  - Vill kunna dirigera om felaktigt vald väg
+
+Lösning:
+- istället jobba med residualgrafen G_f:
+- Alla kanter som fanns förut kallas för framåtkanter
+- alla kanter som inte finns förut kallas för bakåtkanter (alla nya)
+- När vi vill dirigera om flöde så lägger vi till en bakåtkant åt andra håller (istället för att behöva minska flödet)
+
+**Mer praktiskt hur det fungearar**
+Om vi ökar flödet i en riktning så skapar vi en bakåtkant med den kapciteeten som vi ökade med. DVS: om vi på en framåtkant gör 0/4 till 4/4 så gör vi en bakåtkan med 0/4
+
+C_f(u,v) =
+* c(u,v) - f(u,v) om (u,v) är en framåtkant
+  * Så mycket vi kan öka flödet längst den kanten
+* f(v,u) om (u,v) är en bakåtkant
+* 0 annars
+
+**Notera om vi ändrar flödet på en framåtkant och det redan finns en bakåt kant, så ta bort den bakåtkanten och sätt din nya bakåtkant**
+
+**Notera:**
+För att göra ett unit test om du gjorde rätt eller ej: koplla om flödet in i t är detsamma så flödet ut från s
+**Notera**:
+- "Finns abra en kant i residualgrafen o man kan öka flödet längst den kanten: om vi skickar ett flöde där f(e) = c(e) så kommer den kanten att försvinna"
+
+### Olika fall
+* för framåtkanter:
+  * a = c(u,v)
+  * b = f(u,v)
+
+a > b: 
+* c_f(u,v) = a - b
+* cf(v,u) = b
+
+a = b
+* c_f(u,v) = c_f(v,u) => bara lägga till en bakåtkant
+
+a < b_
+* Omöjligt
+
+Note Edmonds-Karp algoritmen är en variant av Ford-Fulkerson algoritmen där specifikt en BFS används för att hitta vägar
+
+
+
+
+### Time complexity
 
 
 
