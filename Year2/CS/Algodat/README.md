@@ -1,5 +1,10 @@
 # Info
 - **Hur bra ska vi kunna bevisen?**
+- **Farligt att jag bara sett på videos?**
+  - Fråga på lektionen
+  - Fråga även om typ extentor finns
+    - Eller tänk ut vad jag vill fråga om tentan
+- Kolla hur han töänker när han räknar tidskompelxitet
  - 6 labs  
 - jonasskeppstedt.net har videor (notera att har inget om lab 4)  
 - calendly.com/forsete
@@ -837,6 +842,69 @@ Logaritmisk tid O(log n):
     * Annars blir v barn till w
     * Vid link minskar vi antalet rotnoder med 1
       * Dvs vi har en mindre rotnod
+
+## Hollow heap algoritmer
+### algoritmen & insert
+Kolla upp dom i boken
+- Han sa inget notable i videon
+
+### Delete
+- Ta bort alla tomma rotnoder och gör då deras barn tll nya rotnoder
+- minska antalet rotnoder till 1 genom links
+  - Varje nood har en rank som ökar med ett när den blir föräldrar i en link
+    - - Rank anger alltså antalet barn (dvs antalet barn i listan av barn - noden själv ingår givetvist inte i antalet barn)
+  - Denna version gör link mellan alla rotnoder mellan 0 och nextrank
+    - vill göra link mellan rotnoder med samma rank
+      - Villa alltså hitta de med samma rank
+      - dåligt att gå igenom hela listan för att söka efter detta krav
+        - Bättre att göra en array där position i innehåller en rotnod med rank i (i barn)
+        - Mer konkret:
+          - Behåll array från förra delete (allokera lite större)
+          - Skapar en ny genom att gå igenom alla rotnoder och lägga in dem i arrayen
+          - om två har samma rank så gör vi link(a,b) där a och b har samma rank
+            - Båda deras rank ändras då, så gör den platsen till null
+            - (sedan pseudokoden)
+
+### Rank
+- För en nod u med rank r gäller
+  - Angtingen_
+    1. u har r barn med ranar 0,1,2,...,r-1
+    2. r > 2 och  blev tom vid en decrease key då har u två barn med ranker r-1 och r-2
+
+- Vid decrease key:
+  - En item fluttar från u till ny nod v
+  - rank(v) = max(rank(u)-2, 0)
+  - Flytta alla barn w från u med rank(w) <= rank(u)
+    - Om rank(u) >= 2 behåller u sina barn med r-1 och r-2s
+**Ex:**
+![image](8.png)
+
+![image](9.png)
+
+### Lemma 3.4
+En nod med rank r har min F_r+3-1 ättlingar = decendents
+- Notera att noden själv räknas som sin egna ättling
+
+F_i är i:te fibonacci talet
+
+(bevis)
+
+### Delete-min time complexity
+* H hollow rotnoder försötrs (konstant)
+* T rotnoder kvar före links
+ * Efter links finns max en rotnod kvar per rank, dvs max log_φ(n) rotnoder kvar
+
+* med link mellan noder med samma rank blir det minst T-log_φ(n) link operatorioner
+* Till sist slås denna max log_φ(n) ihop till en rotnod
+
+* Hur många links görs?
+  * "då ska vi inte räkna i värsta fall, utan ammorterad tid"
+    * Använder potentialmetoder
+      * **LÄR DIG POTENTIALMOETODEN**
+      * F08, video 7 finns ett exempel på potentialmetoden
+
+  * Slutsats med maximala antalet links
+    * Han sa inte hur många links som görs
 
 
 
