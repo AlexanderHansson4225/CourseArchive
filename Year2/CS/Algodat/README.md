@@ -741,14 +741,41 @@ En nod kan bli max 2n-1 hög (utan att bilda en cykel)
 
 * Se bevis i video 13
 
-### Två typer av push
+### Två typer av push 
 - Finns två typer av push från v till w längst (v,w)
 
 De två typerna:
-1. Om excess preflow
+1. Om excess preflow begränsar: omättad push
+2. Om den kvarvarande kapaciteten begränsar: mättad push
 
-Fortsätt kolla på:
-https://youtu.be/w3vrP17Y-SI 
+### lemma 4.13
+Färre än 2mn saturing push
+
+(bevis i video 14)
+
+### Lemma 4.14
+Max 4mn^2 unsaturation push
+
+(bevis i video 15 med potentialmetoden)
+
+### Tidkomplexitet
+* PÅbyggnad av beviset i lemma 4.14
+  * alla operationer tar O(1) tid
+  * preflow-push har alltså tidskompexiteten O(4mn^2)
+
+### Exempel
+* Företag har m ansätllda och n arbetsuppgifter
+* Alla anställda kan inte utföra alla arbetsuppgifter
+* Mex en uppgift per anställ
+* Varje uppgift behöver en anställd
+* Vi vill få så många uppgifter som möjligt utförs
+* Anställda u_i tillhör u och kan utföra arbetsuppgifter v_j
+* Kant (u_i, v_j) om u_i kan utföra v_j
+  * Hitta en så stor matching som möjligt
+
+- Löses enkelt med flöde:
+  - Hitta det maximala flödet
+  - Ger även tilldelningen av arbetsuppgifter
 
 # Föreläsning 8
 
@@ -811,9 +838,7 @@ Logaritmisk tid O(log n):
     * Vid link minskar vi antalet rotnoder med 1
       * Dvs vi har en mindre rotnod
 
-Jag var mitt i denna video:
-https://www.youtube.com/watch?v=aLrzDUVUk3M&list=PLemSi3hraQqBAOGakw97Lacvzio6zhiLf&index=3
- 
+
 
 
 
