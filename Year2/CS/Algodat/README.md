@@ -906,6 +906,47 @@ F_i är i:te fibonacci talet
   * Slutsats med maximala antalet links
     * Han sa inte hur många links som görs
 
+# Föreläsning 9
+
+**Fortsättning, föreläsning 9**
+
+## Proving NP-completness
+* Consider a new problem Y such that:
+  * We cannot come up with an efficient algorithm for Y
+  * We suspect it is NP-complete
+
+How can we prove it is?
+* Firstly, does it have a polynomial time verifier so Y ∈ NP?
+* Can we make a reduction from a problem X which is known to be NP-complete?
+
+That is: can we solve X using a reduction to Y ? X ≤P Y
+* If that is the case, we have proved Y is NP-complete
+
+Given a circuit composed of logical gates (such as AND, OR, and NOT gates) that operates on binary inputs and produces a binary output, the problem of circuit satisfiability asks whether there is an input combination that produces a true output.
+
+## Circuit satisfiability (Boolean satisfiability) (SAT)
+First problem to be concluded as NP-complete
+- The cook theorem: The Circuot satisfiability problem is NP-complete (han har ett bevis också)
+Given a circuit composed of logical gates (such as AND, OR, and NOT gates) that operates on binary inputs and produces a binary output, the problem of circuit satisfiability asks whether there is an input combination that produces a true output.
+
+(given a circuit with n inputs, can we select the values of each input bit i1, i2
+2, . . . , in so that the output becomes 1)
+  * If we can, we have satisfied the circuit
+
+### Algorithm vs Circuit
+* In theory we can implement any algorithm using only circuits — the disadvantage is that it will become too big to be practical for non-trivial algorithms
+  * And it is nice to be able to run different apps on a computer/phone and not only one so we prefer using memories so we can put a different app there and run it instead
+
+* What can be computed is the same, however Another practical difference is that a circuit has a fixed number of input bits while an algorithm can process any number of input bits
+
+### Proving NP-completeness. Example med circuit satisfiability
+Sida 36 i slidsen
+
+### Conjunctive normal form
+ (x1 ∨ x2) ∧ (x3 ∨ x4)
+
+
+
 
 
 
