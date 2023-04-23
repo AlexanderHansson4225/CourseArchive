@@ -924,13 +924,12 @@ That is: can we solve X using a reduction to Y ? X ≤P Y
 
 Given a circuit composed of logical gates (such as AND, OR, and NOT gates) that operates on binary inputs and produces a binary output, the problem of circuit satisfiability asks whether there is an input combination that produces a true output.
 
-## Circuit satisfiability (Boolean satisfiability) (SAT)
+## Circuit satisfiability (Boolean satisfiability) 
 First problem to be concluded as NP-complete
 - The cook theorem: The Circuot satisfiability problem is NP-complete (han har ett bevis också)
 Given a circuit composed of logical gates (such as AND, OR, and NOT gates) that operates on binary inputs and produces a binary output, the problem of circuit satisfiability asks whether there is an input combination that produces a true output.
 
-(given a circuit with n inputs, can we select the values of each input bit i1, i2
-2, . . . , in so that the output becomes 1)
+(given a circuit with n inputs, can we select the values of each input bit i1, i2, . . . , in so that the output becomes 1)
   * If we can, we have satisfied the circuit
 
 ### Algorithm vs Circuit
@@ -942,14 +941,163 @@ Given a circuit composed of logical gates (such as AND, OR, and NOT gates) that 
 ### Proving NP-completeness. Example med circuit satisfiability
 Sida 36 i slidsen
 
-### Conjunctive normal form
+## Formula satisfiability (SAT)
+- Instead of digital gates we use operators: ∨, ∧ and ¬ 
+
+### Can we reduce Circuit satifiability to SAT?
+- translate the gates to their corresponding operators in
+an obvious way starting with the output
+  
+Two problems:
+- We prefer a formula on the form of a conjunction of clauses, e.g.:
+  - (x1 ∨ x2) ∧ (x3 ∨ x4)
+  - Doing this in an obvious way is not efficient
+
+**Conjunctive normal form**
  (x1 ∨ x2) ∧ (x3 ∨ x4)
+ 
+ **Exponential size of the formula**
+* Recall the output of one gate T can be input of multiple other gates, g1, g2, ..., gn
+
+Then when each of gi translates their input from T they will create multiple copies of the same formula
+* We will next see a way to avoid that.
+
+**Translating each gate**
+Recall p → q means ¬p ∨ q
+* So p ↔ q means (¬p ∨ q) ∧ (¬q ∨ p)
+* We can give a name for each wire that is an output from a gate
+
+For an and-gate with inputs x1
+and x2 we can call the output x3
+The idea is that x3 represents the value of the gate so only one ”copy of the gate/formula” is needed
+
+1. x1 ∧ x2 ↔ x3 for an and-gate
+2. x1 ∨ x2 ↔ x3 for an or-gate
+3. ¬x1 ↔ x2 for a not-gate
+- These new variables that can be used in multiple expressions
+
+### The formula and an example
+For each gate in the circuit we make an equivalence operator
+
+Then all equivalence expressions must be true so there is one and with
+each as input
+
+In addition, the output should also be true so it is also an input to this
+
+**Example**
+Say we have three inputs x1, x2, x3, an and-gate with x1
+and x2, the output of it and x3 input to an or-gate and the output of that input to a not-gate.
+* If the output is x4 we have: x4 = ¬((x1 ∧ x2) ∨ x3)
+* 
+Three equivalences:
+x1 ∧ x2 ↔ x5
+x5 ∨ x3 ↔ x6
+¬x6 ↔ x4
+The formula: x4 ∧ (x1 ∧ x2 ↔ x5) ∧ (x5 ∨ x3 ↔ x6) ∧ (¬x6 ↔ x4)
+**Note we can create this formula in polynomial time**
 
 
+**Why are the circuit and the formula equivalent?**
+Given values of the inputs x1, x2, x3 in the circuit that lead to a one as output, i.e. to x4, will the formula also be true?
+- Yes, because the new variables have the same values as the wires of the circuit that resulted in the output one
 
+### From and-gate to formula
+- Look up demorgans law, distruvtion laws, osv
+- Inte från från föreläsningen dock för han beskriev aldrog hur man gör det
 
+## The hamiltonian cycle problem
+The Hamiltonian Cycle Problem asks whether there exists a simple
+cycle with all nodes of a directed graph.
+In other words, each node must be on this path exactly once, and we
+must return to the node where we started
 
+### Proving NP-completedness
+The usual start is:
+1. Prove the problem is in NP, i.e. has a polynomial-time verification.
+2. Find a suitable problem Q known to be NP-complete
+3. Solve Q using the new problem, i.e. reduce from 
 
+1. A polynomial time verification of a proposed solution C simply checks
+that C is a cycle and that each node is in C exactly once. So the
+problem is in NP.
+
+2. It turns out it often is practical to reduce from 3-SAT
+
+3. Skipped this. Slide 55. Behöver vi kunna det?
+
+## The Traveling Salesperson Problem (TSP)
+Another problem in which a sequence of all nodes of a graph is requested is the Traveling Salesperson Problem (TSP)
+
+Consider a set of cities with distances between every pair of cities
+- We denote the distance between two cities u and v by d(u, v)
+- A tour visits all cities and returns to the originating city
+
+The Traveling Salesperson problem asks if there is a tour using a total distance of at most x
+
+### Proving NP-completedness
+
+1. Linear to go through and check if it is an correct solution, I think
+2. Convient to chose hamiltonian sequence
+3. Given a directed graph G(V, E) for the Hamilton Cycle problem, we construct an instance of TSP as follows
+    - For each each (u, v) ∈ E we assign a distance d(u, v) = 1 and for all pairs such that (u, v) ∈/ E we assign a distance d(u, v) = 2
+    - If and only if there is a solution to TSP for this graph with a total distance of n, there exists a Hamiltonian cycle for G
+    - The proof of this claim is trivial. If there is such a TSP tour, this tour constitutes a Hamiltonian cycle, and if G has a Hamiltonian cycle, the TSP tour must have length n
+
+## Reduction from 3-SAT to 3-coloring
+...
+
+## SAT solving
+No efficient algorithm for SAT solving is know in the general case
+- In practice, there are numerous SAT instances that can be solved even with millions of variables
+
+We have a set F of clauses in CNF form, using a set V of variables and |V| = n.
+
+A variable is free when it has not been assigned a value yet
+- In an assignment no variable is free
+- In a partial assignment some variables are free
+
+It can be possible to satisfy F with a partial assignment: 
+- in C = x1 ∨ x2 ∨ x4 is satisfied if either x1 = 1, x2 = 1 or x4 = 0
+    - It is too slow to enumerate and check all 2n possible assignments
+
+### SAT solving with backtracking
+```
+function basic_sat(F)
+begin
+  if any clause C in F cannot be satisfied then
+    /* all variables in C are assigned a value and all literals in C are 0 */
+    return 0
+  else if all clauses in F are satisfied then
+    /* every clause contains a literal with value 1 */
+  return 1
+  /*select a variable xj marked as free*/
+  if basic_sat(F with xj = 0) then
+    return 1
+  else
+    s ← basic_sat(F with xj = 1)
+    mark xj as free
+    return s
+end
+```
+
+### Unit propagation
+* Try to discover early that a partial assignment cannot satisfy F
+
+* The algorithm then can try a different partial assignment
+
+* A unit clause is a clause with only one literal that has a free variable
+
+* Assume we have C = x1 ∨ x2 ∨ x4
+
+* And partial assignments: x1 = 0 and x2 = 0 have been made.
+
+* Next try x4 = 0
+
+* This approach is called unit propagation.
+
+* It is trivial to add it in the select step in the basic SAT solver
+
+* When we check if the partial assignment either satisfies F or cannot satisfy F, we can also collect candidate variables may be used in unit propagation
 
 
 
