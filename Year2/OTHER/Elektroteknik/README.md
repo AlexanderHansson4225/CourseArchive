@@ -386,7 +386,118 @@ v(t) = V_s*e^(-t/RC)*u(t)
 Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*u(t)
 - se 9.7
 
-# Förekäsning 8
+# Föreläsningar missade
+## MOS-transitstorn
+* Förstärkning
+  * Krävs överallt
+
+* Olinjärt
+  * Ofta linjärt i ett område
+
+### Vad karakteriserar en MOS-transistor?
+Antag B(ulk) och S(ource) sammankopplade
+
+Mellan D(rain) och S(ource)
+– Kanalen, transistorns utgående egenskap
+– 𝑖𝐷 𝑡 = 𝑓 𝑣𝐷𝑆 𝑡 inga tidsberoenden
+– 𝑓 beror av dopning, geometri, samt av...
+Spänningen 𝑣𝐺𝑆 𝑡
+– Styrspänningen, transistorns ingång
+– 𝑖𝐺 (𝑡) ≅ 0, med liten parasitkapacitans
+– Egenskap: Tröskelspänningen, 𝑉𝑡
+
+![image](4.png)
+
+### Varför behövs förstärkning?
+
+Inne i digitala system
+* En funktion driver flera
+* Återställa nivåer
+
+Mot omvärlden
+* Belasta lite
+* Driva mycket
+
+AD-omvandling
+* Kunna jämföra nivåer
+
+## Digitala kretsar
+### Representera booleska värden med spänning
+- Vanliga val:
+
+0 = v <= V_låg; 1 = v >= V_hög
+
+* Otillåter område 
+  * 𝑉_låg < 𝑣 < 𝑉_hög
+    * Det passeras vid omslag
+    * Den digitala funktionen är odefinierad
+    * Marginal mot störningar
+
+![image](images/1.png)
+
+### Datablad för 74HC04
+- Ingångar
+- Utgångar
+
+### H(S)
+För digitala kretsar finns:
+- Krav på insignalen (röda linjer)
+  - Får inte vara mellan dom?
+- Garantier för utsignalen(gröna linjer)
+  - Kommer vara en av dom två antar jag
+
+Överföringsfunktionen H(S) = V_ut(s)/V_in(s)
+- Lutar brant (negativt för inverterare i det otillåtna området)
+- Förstärkning abs(H(S)) > 1 mellan linjerna
+
+Kan modelleras med soäningstyrd spänningskälla med g << -1
+* Linjärrisering
+
+![inage](images/2.png)
+
+## Grunka om förstäker
+![image](images/3.png)
+Rita in V_s = R * I_a + V_a
+- Grafisk lösning "load line"
+  - Blå linjen
+
+- Läs av för 
+  - Röd korsar vid (-0.5, 140)
+  - Grön korsar vid (-1,5,210)
+    - Ger Förstäkning g = -70
+
+- Liknar en ivnerterare
+
+
+## Inuti en CPU
+### Råmaterialet kisel
+- Halvledare
+  - Dopas genom ersättning av atom
+    - N-typ, elektronöverskott, ofta Fosfor
+    - P-typ, elektronunderskott, ofta Bor
+    - Koncentration 1013 − 1018 cm−3
+
+### n-kanal MOSFET
+Normalt 𝑉𝐵 = 0 övriga 𝑉 ≥ 0
+– Alla ”dioder” blockerar
+
+Gatespänningen 𝑣𝐺𝐵(𝑡)
+– Styr Drainströmmen, 𝑖𝐷𝑆(𝑡)
+– Ledande kanal D till S
+
+Storlek = längden L
+– 1971: ~10 μm
+– Nu: ~10 nm
+
+106 fler transistorer/yta
+
+### Massor om CPU:er oklart om det är viktigt. Sida 20 och framåt
+https://canvas.education.lu.se/courses/22921/files/3640268?module_item_id=863541
+
+
+
+
+# Föreläsning 8
 ### CMOS NAND-grind
 
 
