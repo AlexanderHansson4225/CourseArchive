@@ -398,15 +398,42 @@ Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*
 Antag B(ulk) och S(ource) sammankopplade
 
 Mellan D(rain) och S(ource)
-– Kanalen, transistorns utgående egenskap
-– 𝑖𝐷 𝑡 = 𝑓 𝑣𝐷𝑆 𝑡 inga tidsberoenden
+– finns Kanalen, transistorns utgående egenskap
+– 𝑖_𝐷(t) = 𝑓(V_𝐷𝑆(𝑡)) inga tidsberoenden
 – 𝑓 beror av dopning, geometri, samt av...
-Spänningen 𝑣𝐺𝑆 𝑡
+Spänningen V_𝐺𝑆(𝑡)
 – Styrspänningen, transistorns ingång
 – 𝑖𝐺 (𝑡) ≅ 0, med liten parasitkapacitans
-– Egenskap: Tröskelspänningen, 𝑉𝑡
+– Egenskap: Tröskelspänningen, 𝑉_t
 
-![image](4.png)
+**Note**: Ex är V_DS spänningen mellan D och S 
+
+
+![image](images/4.png)
+
+### Vad består kanlen av
+- `kvantfysik`
+
+- Tankemodell:
+  - Elektiskt fält mellan G (+) och B (-)
+  - Negativa (fåtaliga) laddningar i B dras mot G
+  - När fältet blivit tillräckligt starkt
+    - P-området närmast G får överskott av n-laddning
+    - Som att D+kanal+S blivit ett ändra n-område
+    - Det händer då V_GS > V_t
+
+![image](images/5.png)
+
+**Subtröskel (cutoff), V_GS < V_t**
+* Ingen kanal
+* I_D = 0
+* Idealisering och förenkling
+  * Bortset från ex tunnelström
+  * Oftas en bra model
+  * **Gäller alla modeller i kapitlet**
+
+
+
 
 ### Varför behövs förstärkning?
 
