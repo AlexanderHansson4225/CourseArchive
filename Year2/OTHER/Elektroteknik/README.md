@@ -414,10 +414,20 @@ Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*
 ### Sampling
 Tittar på signalen vi vissa ögonblick
 
+Tiden:
+- Kontinuelig till diskret
+  - Fortfarrande analoga värden
+
+Om vi föjer Nyquist theorem så kan vi göra sampling utan informationsförlust
+- om frekvens av sampling > 2 * frekvensen av signalen
+
 ### Kvantisering
 Välj ett antal bitar och avrunda talen till det
 - Påverkar precision
 
+Vi får (2^n) - 1 nivåer
+- står konstigt med 2^n i kompendiet
+- 
 ### Kodare
 - En möjlighet att överfära tal (tittar inte på det i kursen)
   - Ex vi vill ta varje 3 tal och göra ett decimaltal i guess
@@ -451,3 +461,40 @@ Logaritmisk magnitudskala, definition
  När dB används i effektskalor (pratar om effekt) gäller:
  - `10log_10(p1/p2)`
    - Detta är 1/100 av spänningen för det förhåller sig kvadratiskt 
+
+## Periodiska signaler och effekt
+Ögonblciseffekt vet vi är
+```
+p(t) = v^2(t)/R
+```
+
+Energi per period T
+E_T = 1/R integral(from 0 to T, V^2(t) dt)
+
+Ger medeleffekt
+P = E_T/T = 1/T*1/R integral(from 0 to T, V^2(t) dt)
+
+### Effektivvärde
+Innebär att en periodisk spänning eller ström levererar samma effekt i en resisistans som en konstant sådan med samma värde
+- Så 240V är effektivvärdet
+
+* Se bild från 25/4
+
+**För sinusvåg**
+Beräkna effektivvärde:
+V_rms = V/√(2)
+
+där V_rms är effektivvärde
+
+**Trekantvåg**
+V_rms = V/√(3)
+
+**Kvantiseringbrus**
+- Uppstår pågrund att vi inte har oändligt många nivåer
+
+Om vi lägger en signal som varierar med tid
+- Kan beräkna snitteffekten för bruset: 
+  - `C*N+a`
+    - Där C och a är konstanter
+    - N är antalet bitar (som ger uppstånd till bitar)
+
