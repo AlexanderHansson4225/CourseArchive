@@ -411,6 +411,19 @@ Spänningen V_𝐺𝑆(𝑡)
 
 ![image](images/4.png)
 
+### Varför behövs förstärkning?
+
+Inne i digitala system
+* En funktion driver flera
+* Återställa nivåer
+
+Mot omvärlden
+* Belasta lite
+* Driva mycket
+
+AD-omvandling
+* Kunna jämföra nivåer
+
 ### Vad består kanlen av
 - `kvantfysik`
 
@@ -432,21 +445,101 @@ Spänningen V_𝐺𝑆(𝑡)
   * Oftas en bra model
   * **Gäller alla modeller i kapitlet**
 
+### Linjära området V_GS > V_t och **LITET** V_DS
+* FInns en kanal V_GB ≅ V_GS i hela kanalen
+  * Samma förhållanden vid D och S
+
+* Materialegenskapen κ ≝ 𝜇_e*𝐶_ox (~50 𝜇𝐴/𝑉2)
+  * 𝜇_𝑒 rörligheten (mobilitet) för elektronen
+  * 𝐶𝑜𝑥 = 𝜀_0*𝜀_𝑟/t_ox
+kapacitans per yta hos G
+• Geometrin, L(ength) och W(idth) hos G
+– 𝐾 ≝ (W/L) 1/2K = 𝑊 (W/L) 1/2 * 𝜇_e*𝐶_ox
+• 𝑖𝐷 = 2𝐾 𝑣𝐺𝑆 − 𝑉𝑡 𝑣𝐷𝑆 (igen; för litet 𝑣𝐷𝑆)
+
+### Linjära området, 𝑣𝐺𝑆 > 𝑉𝑡, 𝑣𝐷𝑆 < (𝑣𝐺𝑆 − 𝑉𝑡)
+* Även kallad triodområdet
+* Transistiorn är symettrisk
+  * Ingen fysikalisk skillnad så S och D
+  * Kanalen vid D krymper i tank med
+    * Ökande V_DS -> ökande i_D
+    * Ökande i:D -> ökande potential i B nära D
+    * Därmed avtagande fält vid D
+    * Begränsar tillväxten host i_D
+
+* 𝑖_𝐷 = 𝐾(2(𝑣_𝐺𝑆 − 𝑉_𝑡)𝑣_𝐷𝑆 − 𝑣_𝐷𝑆^2)
 
 
+![image](images/6.png)
 
-### Varför behövs förstärkning?
+### Mättnad, 𝑣_𝐺𝑆 > 𝑉_𝑡 och 𝑣_𝐷𝑆 > (𝑣_𝐺𝑆 − 𝑉_𝑡)
+* Kanalstryping (pinch off)
+  * Villkoret för kanal V_GB > V_t gäller även vid D
+  * 𝑣_𝐺𝐷 = 𝑣_𝐺𝑆 − 𝑣_𝐷𝑆 > 𝑉_𝑡 ↔ 𝑣_𝐷𝑆 < (𝑣_𝐺𝑆 − 𝑉_𝑡)
+  * Överstigande 𝑣𝐷𝑆 över dioden D->B
+* 
+Ordet strypning är missvisande
+* Ingen ytterligare ökning av 𝑖𝐷 (idealisering!)
 
-Inne i digitala system
-* En funktion driver flera
-* Återställa nivåer
+𝑖𝐷 = 𝐾(𝑣_𝐺𝑆 − 𝑉_𝑡)^2
 
-Mot omvärlden
-* Belasta lite
-* Driva mycket
+Normalt område för transistorn i
+* Tillslagen digital krets
+* Analog förstärkare
 
-AD-omvandling
-* Kunna jämföra nivåer
+**Ska stå mättat område över den blåa kvadraten**
+![image](images/6.png)
+
+### MOS-transistion
+Sida 35
+https://canvas.education.lu.se/courses/22921/files/3640268?module_item_id=863541 
+
+## Att hantera olinjära komponenter
+- Forsättning på MOS
+  
+* Våra metoder litar på linjäritet
+* Dela upp omgivningen
+  * Block av linjära komponenter
+  * Förenkla dessa - Thévenin
+  * Kombinera med den olinjära komponenten
+
+* Grafisk metod
+
+* Beräkningsmässigt
+  * Approximera olinjäriteten med derivatan
+  * Fungerar för små variationer
+
+### Grafisk lösning
+- Förenkla omgivningen med Thevenin
+- Grafisk framställning av i_D = f(v_D)
+- KVG: V_t - R_t*i_D = v_D = f^-1(i_D)
+  - Första likhetstecknet vår räta Load-line
+  - Andra likhetstecknet på kurvan 𝑖𝐷 = 𝑓 𝑣𝐷
+Rita och sök skärningspunkten
+
+För Load-line
+- Punkt A, ingen ström 𝑖𝐷 = 0, 𝑣_𝐷 = 𝑉_𝑡
+- Punkt B, all spänning över R_𝑡, 𝑣_𝐷 = 0, 𝑖_𝐷 = 𝑉_t/R_t
+
+**Exempel: Enkel NMOS förstärkare**
+Behöver kurvorna för transistorn
+- Datablad, 2N7000
+
+Simulera med parametrar
+
+Välj 𝑅 = 100 Ω
+  - 𝐼_0 = 50 mA
+  - varför...?
+    - Kolla datablad kanske
+
+Motsvarar den räta blå linjen
+
+![image](images/7.png)
+
+**38-43**: Oklart vad han försöker få sagt
+https://canvas.education.lu.se/courses/22921/files/3640268?module_item_id=863541 
+
+
 
 ## Digitala kretsar
 ### Representera booleska värden med spänning
@@ -460,6 +553,7 @@ AD-omvandling
     * Den digitala funktionen är odefinierad
     * Marginal mot störningar
 
+**Simulerat resultat**
 ![image](images/1.png)
 
 ### Datablad för 74HC04
@@ -519,12 +613,52 @@ Storlek = längden L
 106 fler transistorer/yta
 
 ### Massor om CPU:er oklart om det är viktigt. Sida 20 och framåt
-https://canvas.education.lu.se/courses/22921/files/3640268?module_item_id=863541
+https://canvas.education.lu.se/courses/22921/files/3640268?module_item_id=863541 
 
+### CMOS-inverteraren
+Allt på ett substrat (p-dopat)
 
+PMOS in n-ficka/brunn/grop
 
+Nodspänningar
+- Nära V_DD (matning): Logisk etta
+- Nära V_SS / Gnd (jord): Logisk nolla
+
+Hög förstärkning
+- Inverterande
+- Omslagspunkt nära V_DD/2
+- Återstället signalnivåer till digitalt
+
+![image](images/8.png)
+
+### Simulering med CMOS
+Ersatt 𝑅 med PMOS
+
+Diagram, 𝑣𝑑𝑠 mot 𝑣𝑔𝑠
+
+Överföringsfunktionen
+- Perfekt omslag
+  - 𝐾𝑝 = 𝐾𝑛
+- Drar ”ingen” statisk ström
+
+![image](images/9.png)
+
+### MOS-transistorn som strömbrytare
+Alltid ena transistor i subtröskel
+– Aldrig ström direkt 𝑉𝐷𝐷 → Gnd
+– Styret kapacitivt
+– Ingen statisk strömförbrukning!
+
+Andra transistorn i mättnad
+– Hög strömförmåga (litet 𝑅 ut)
+– I förhållande till 𝐶 hos styret
+– Processberoende, kΩ och fF
+– Grindfördröjning ~100 ps
+
+![image](images/10.png)
 
 # Föreläsning 8
+
 ### CMOS NAND-grind
 
 
