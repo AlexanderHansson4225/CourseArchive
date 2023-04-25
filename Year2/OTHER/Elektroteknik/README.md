@@ -386,13 +386,68 @@ v(t) = V_s*e^(-t/RC)*u(t)
 Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*u(t)
 - se 9.7
 
+# Förekäsning 8
+### CMOS NAND-grind
 
 
+## Signaler 
+- täcks inte av kursboken. Enbart kompendiumet
+## Digititala domänen
+- Kostar mindre
+- Mindre hot att den störs
 
+### Analogt till digitalt
+- Heltal till realvärd
+- Diskret till konturnuelig
 
+**Antiviknignsfilter - sampling - kvantisering - kodare**
 
+### Digitialt till analogt
+- Realvärd till heltal
+- Konturnuelig till diskret
 
+**Omkodare - sample and hold - rekonstruktionsfilter**
+(han förklarade ej dessa)
 
+### Antivikningsfilter
+  
+### Sampling
+Tittar på signalen vi vissa ögonblick
 
+### Kvantisering
+Välj ett antal bitar och avrunda talen till det
+- Påverkar precision
 
+### Kodare
+- En möjlighet att överfära tal (tittar inte på det i kursen)
+  - Ex vi vill ta varje 3 tal och göra ett decimaltal i guess
 
+### Brus
+- Lättare att tolka en digital signal som har blivit påvekar mot brus
+  - Jämfört med analoga
+    - För man vet hur de borde se ut: Dvs bara 0:or och 1:or
+
+## Spektumanalys
+- Alla reella periodiska signalen kan beskrivas med en funktioner a(t) 
+- - a(t) består av ett antal cos() funktioner och konstanter
+
+Uppdelning med fourieranalys
+- kan beräknas efektivt numeriskt med DFT
+- Analysera varje frekvens för sig
+  - Sätt samman enligt superposition
+
+Ett spektum är en samling av signaler
+
+Finns ett trick där vi kan ... 
+
+### Gradering av spektumdiagramet
+- Mer behagligt att gradera spektumskalan i decibel
+
+Logaritmisk magnitudskala, definition  
+`abs(H(jɷ))dB = 20log_10(abs(H(jɷ)))`
+
+- Enhetslös, kvnot mellan spänningar
+
+ När dB används i effektskalor (pratar om effekt) gäller:
+ - `10log_10(p1/p2)`
+   - Detta är 1/100 av spänningen för det förhåller sig kvadratiskt 
