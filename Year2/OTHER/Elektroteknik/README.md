@@ -660,7 +660,18 @@ Andra transistorn i mättnad
 # Föreläsning 8
 
 ### CMOS NAND-grind
+Varje ingång påverkar
+– Två transistorer
+– Parallell / Serie
+– Ena sidan leder alltid
+– Lätt öka antal ingångar
 
+Från digitaltekniken
+– NAND-grinden universell
+
+Hur kan man göra AND?
+
+![image](images/11.png)
 
 ## Signaler 
 - täcks inte av kursboken. Enbart kompendiumet
