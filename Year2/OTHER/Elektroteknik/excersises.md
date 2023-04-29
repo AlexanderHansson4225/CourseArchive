@@ -1,6 +1,7 @@
 # Oklara frågor
 1.14. Förstår ej
-13.6
+13.6 - varfäör blir min uträkning fel?
+13.8, svaret. Varför är laplace av R = R != sR?. 
 
 # Varför fel? 
 2.3
@@ -19,6 +20,11 @@
     - I = V / R, där V är spänningen över den, R är strömmen över den
     - Strömdelning tror jag inte finns
     - Borde väll visst finnas....?
+
+- Spänningsdelning, seriekoppling:
+    - samma som parallellkoplling
+        - Så om vi har R1, R2 och R3 som ovan, och man vill beräkna soääningen över parallellkopplingen R1||R2:
+            - v_12(t) = v_tot * (r1||r2)/(r1+r2+r3) 
 
 - Spänning över en kapacitator
     - Görs med laplace
@@ -39,6 +45,9 @@
 
 - Tomma kondensatorer är som kortslutningar
 - Fulla är som en oändlig resistans
+
+Om man har parallellkopplad i serie med en till resistans, och vill göra spänningsdelning:
+    - Kolla på svaret för 13.8
 
 
 - **Läs mer om impedance**
