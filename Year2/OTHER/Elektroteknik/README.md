@@ -781,3 +781,92 @@ Om vi lägger en signal som varierar med tid
     - Där C och a är konstanter
     - N är antalet bitar (som ger uppstånd till bitar)
 
+# Föreläsning 9 
+## Fortsättning sampling
+### Att återställa en samplad signal
+- Vi har en samplad signal
+  - Vi vill återställa den till en kontinuelig signal
+    - Vi vill ha en kontinuelig signal som är så lik den ursprungliga som möjligt
+- Interpolera
+  - Fyll tidsintervall från sampel
+  - LP-filtrera
+    - Varför?
+    - För att få bort högfrekventa komponenter?
+    - För att få bort samplingseffekter?
+
+### Undersampling
+- Om vi har undersamplat dvs f_s < 2 * f_sig
+  - Kan inte säkerställa att vi kan återställa 
+  - Kan få aliasing
+
+### Aliasing
+- Aliasing är när resultatet av samplingen inte är unikt
+  - Dvs vi kan få samma resultat av två olika signaler
+    - Dvs vi kan inte återställa signalen
+- Undviks om vi inte undersamplar
+- Vår återställda signal kommer inte vara den orginella
+
+- Exempel: f_s = 10, f_Blue = 2, f_Red = 12
+
+- En extra period mellan punkterna
+  - Signaler med f_n = n × f_s + f_blue
+  - Oskiljbara från f_blue
+
+### Aliasing och fasläge
+- Samplingen har ingen inforamtion om fasläget
+  - Dvs vi kan inte återställa fasläget
+
+- DVS om vi samplar för långsamt kan det se ut som den återställda funktionen är fasförskjuten jämfört med den orignella
+
+- Samtliga spegelfrekvenser till 𝑓_Blue är oskiljbara från 𝑓_Blue
+  - 𝑓_𝑛 = 𝑛 × 𝑓_𝑠 ± 𝑓_Blue
+
+### I spektrumform
+
+1. Signalens spektrum, max 𝑓_𝐵
+    - Hur hög den högsta frekvensen är antar jag?
+    - Negativt spektrum, komplexkonjugat
+    - Ingen information  
+
+2. Sampla med 𝑓_𝑠 > 2 ∗ 𝑓_𝐵
+    - Återställs med LP-filter; 𝑓_0 ≅ 𝑓_𝑠/2  
+
+3. Med 𝑓_𝑠 < 2 ∗ 𝑓_𝐵
+    - Vikning, 1 och 2 glider ihop
+    - Kan ej återställas
+
+![12.png](images/12.png)
+
+### Antivikningsfilter
+Måste eliminera störningar med 𝑓 ≥ 𝑓_𝑠 − 𝑓_𝐵
+-  Viks ner i den nyttiga signalens spektra
+- Kan inte skiljas ut på digitala sidan
+  - Nödvändigt, analogt filter
+  - Störningar med 𝑓𝐵 < 𝑓 < 𝑓𝑠 − 𝑓𝐵 kan filtreras digitalt
+  - Skäl att välja 𝑓𝑠 ≫ 2 ∗ 𝑓𝐵
+- Minskar kraven på antivikningsfiltret
+
+### Krav på antivikningsfilter
+- Nyttiga signalen
+  - Liten och jämn dämpning
+  - Då 𝑓 < 𝑓𝐵
+- Störningar som viks ner
+  - Till frekvenser 𝑓mirror < 𝑓𝐵
+  - Dvs med 𝑓 ≥ 𝑓𝑠 − 𝑓𝐵
+  - Dämpas minst 𝐴𝑆𝐵
+- Lutning ASB = 𝑓_𝐵 / 𝑓𝑠−2𝑓𝐵
+  - Snålt 𝑓𝑠 → brant filter
+  - Högre ordning
+
+### Intervaller och intervallgränser
+ -Är 𝑉𝐿𝑆𝐵 = 𝑉fs/2𝑁 eller Τ𝑉fs 2𝑁 − 1 ?
+- Vi väljer det senare!
+  - Varning, blandat i materialet(!)
+  - 𝑉fs = (2𝑁 − 1)𝑉LSB går att representera
+  - Naturligt med Flash-omvandlare
+    - 𝑉𝐿𝑆𝐵 = 𝑉fs / 2𝑁 − 1
+
+
+
+
+
