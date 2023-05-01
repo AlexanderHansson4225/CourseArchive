@@ -859,14 +859,108 @@ Måste eliminera störningar med 𝑓 ≥ 𝑓_𝑠 − 𝑓_𝐵
   - Högre ordning
 
 ### Intervaller och intervallgränser
- -Är 𝑉𝐿𝑆𝐵 = 𝑉fs/2𝑁 eller Τ𝑉fs 2𝑁 − 1 ?
-- Vi väljer det senare!
-  - Varning, blandat i materialet(!)
-  - 𝑉fs = (2𝑁 − 1)𝑉LSB går att representera
-  - Naturligt med Flash-omvandlare
-    - 𝑉𝐿𝑆𝐵 = 𝑉fs / 2𝑁 − 1
+- **Så som jag har uppfattat det:**
+  - Intervallet är trappstegen se bild 13 under titeln "exempel ideal A/D omvandlare"
+  - Intervallgränserna är trappstegens kanter
+  - LSB är trappstegens höjd 
+  - V_LSb står för vad LSB är i volt
+  - V_fs står för vad fullskala är i volt
+  - N är antalet bitar
+
+
+* Är 𝑉𝐿𝑆𝐵 = 𝑉fs/2𝑁 eller Τ𝑉fs 2𝑁 − 1 ?
+  - Vi väljer det senare!
+    - Varning, blandat i materialet(!)
+    - 𝑉fs = (2𝑁 − 1)𝑉LSB går att representera
+    - Naturligt med Flash-omvandlare
+      - **𝑉_𝐿𝑆𝐵 = 𝑉fs / 2𝑁 − 1**
+
+### Ideal A/D-omvandlare
+- Omvandlar en kontinuelig signal till en diskret signal
+- Ideala A/D är helt linjära tror jag
+- Tror även m=0
+
+- LSB står tydligen för analog output value enligt en slide.
+  - Står det inte för least significant bit?
 
 
 
+### Exempel Ideal A/D-omvandlare
+![13.png](images/13.png)
+
+Exempel med 
+- 𝑁 = 3 (3 bitar)
+- 𝑉fs = 4
+-  Insignal 𝑣 ∈ ℝ, 𝑣 ∈ 0, 4  
+
+  ---
+
+-  Δ = 𝑉_LSB = 𝑉fs
+- 2𝑁−1 ≈ 0,57 V  
+• Digitalt 𝑦max = 2𝑁 − 1 𝑉LSB  
+• Kurvanpassning 𝑦 = 𝑘 ∗ 𝑥 + 𝑚 → 
+  - 𝑘 = 2𝑁−1  / 𝑉fs = 7/4 = 1,75
+  - 𝑚 = 0
+
+### Icke-ideal A/D omvandlare
+
+**Offsetfel**  
+Försjutninging av kurvan/Parallellförskjutning
+- Offset
+  - Förskjutning i x-led
+- I 𝑉LSB eller mV
 
 
+![14.png](images/14.png)
+
+**Lutningsfel**
+Lutningsfel
+- Felet i 𝑘
+- I 𝑉_LSB vid max 𝑦
+- Avvikelse i %
+
+### Mäta upp felen, tabell med godtyckliga värden
+- Mät upp punkter på den verkliga gröna kurvan
+  - Osäkerhet: intervall avbildas på heltal 
+  - Finns ett antal utspridda punkter
+    - Undvik svansen
+
+- Anpassa kx+x (minsta krvadrat metoden), gul linje
+  - k1 = 2.09
+  - m = -0.56
+
+- Förstärknignsfel i % 
+  - 2.09-1.75/1.75 = 19.4%
+
+- Nollpunktsfel i V (m1 är på X axeln)
+  - -0.56/2.09 = 0.27V
+
+![15.png](images/15.png)
+
+### Mäta upp felen, söka upp övergångar
+- Sök upp övergångar hos verkliga gröna kurvan
+  - Tror han syftar på att man vill hitta då gul går rakt genom en punkt på den gröna
+  - Typ som "sök upp"
+- Hitta minst två språng
+  - Mitt i stegen, på gula linjen
+  - Antag att värdet slår om q -> q+1
+  - Avrundande omvandlare, 𝑘𝑥 + 𝑚 = 𝑞 + 0.5
+- Exemplet: (0.51, 0.5) och (3.41, 6.5)
+
+- Två punkter, lös ut 𝑘 och 𝑚
+  -  Med endast förstärknings- och nollpunktsfel
+  - Mycket noggrant
+
+![16.png](images/16.png)
+
+### Övriga fel i överföringsfunktionen
+- Linjäritetsfel
+  - Den heldragna linjen
+
+- Kvarstående avvikelse
+  - Efter korrigering för offset- och förstärkningsfel
+  - Komponentfel, olinjär förstärkning...
+
+![17.png](images/17.png)
+
+### Yttre felkällor, Jitter
