@@ -964,3 +964,6 @@ Lutningsfel
 ![17.png](images/17.png)
 
 ### Yttre felkällor, Jitter
+
+
+**Lite kort kvar på denna föreläsning. Några slides bara**
