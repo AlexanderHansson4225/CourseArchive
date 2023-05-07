@@ -2,6 +2,7 @@
 1.14. Förstår ej
 13.6 - varfäör blir min uträkning fel?
 13.8, svaret. Varför är laplace av R = R != sR?. 
+16.2
 
 # Varför fel? 
 2.3
@@ -52,7 +53,8 @@ Om man har parallellkopplad i serie med en till resistans, och vill göra spänn
 
 - **Läs mer om impedance**
 
-
+- tips är att spänningsvandra. Säg att i=i1+i2 om de ej finns
+- Tror att spänningsdelning över spänningsgeneratorer är typ: v1/(v1+v2)... oklart
 
 
 
