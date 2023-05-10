@@ -964,9 +964,6 @@ Lutningsfel
 ![17.png](images/17.png)
 
 ### Yttligare felkällor, Jitter
-
-
-**Lite kort kvar på denna föreläsning. Några slides bara**
 ![image](images/18.png)
 - Vi har avvilker i tiden (pga av jitter) vilket gör att vi sa,plar delta(nT) bort. 
 - Om vi har insignal x(t) så kommer skillnaden i x(nT) (y-axeln) bli delta(nT)x'(nT) (x-axeln)
@@ -1036,5 +1033,123 @@ b) Överst och nederast, R_U / 2
 
 ### D/A med R/2R-stege
 ![image](images/23.png)
+* För varje nod i övre kedjan
+  - Direkt efter varje R
+  - R_eq åt höger = R = 2R / 2R
+
+* OP-förstärkaren
+  - Hög förstärkning
+   V_out ställer in sig så att 
+    - Strömmen i R_2 balanserar I_out 
+    - V_out approx = -I_out * R_2
+
+### D/A med kapacitiv spänning
+![image](images/24.png)
+* Med brytaren sluten
+  - Ladda ur C_U till vänster
+  - Ladda C_eq till V_ref
+  - C_eq = SUM( b_i * C_U * 2^i )
+    - Viktad bitsumma
+
+* Då brytaren öppnad
+  - Dela V_ref kapacitivt mellan
+  - C_U till vänster och C_eq
+
+### D/A med strömkällor
+![image](images/25.png)
+* I integrerade kretsar
+  - Strömkällor är enklare att bygga än R eller C
+    - "Billigare" än R eller C
+  - Strömkälla = 1 transistor
+
+
+## A/D-omvandlare blockschema
+- Ett blockschema är en grafisk representation av ett system som består av olika block som är sammankopplade med varandra.
+
+![image](images/26.png)
+
+### Sample and hold 
+![image](images/27.png)
+
+* Under omvandling måste den analoga signalen vara stabil
+* "Fångas" ofta i en kondensator
+* Bufferförstärkare:
+  * Förstärkning = 1
+  * Stort Z_in, litet Z_out
+  * Enkelt i CMOS
+* Oftast inbyggt i A/D-omvandlaren
+
+### A/Domvandlare överssikt
+![image](images/28.png)
+
+Tror detta är en jämförelse mellan olika A/D-omvandlare
+- f_sig är frekvensen på signalen
+- bits är bits
+
+### Flash A/D omvandlare
+![image](images/29.png)
+
+* Snabb
+* Resurskrävande
+  - #Komparatorer = 2^N - 1
+  - Små N, eller flera steg (se bild)
+
+* Omvändningen av första D/A lösningen
+
+### A/D i flera steg
+![image](images/30.png)
+
+* Flera steg, mer fördröjning
+  * FLer klockcykler
+
+* Princip: Använd D/A i A/D
+* Exempel 8 bitar, 2 flashsteg
+  * Antal komparatorer
+    - 2 * (2^4 - 1) = 30
+    - Jfr direkt 2^8 - 1 = 255
+    - Tror han försöker säga att det är färre kompratorer??
+
+
+### Tidsmultiplexad A/D omvandlare
+![image](images/31.png)
+
+* N st A/D-omvandlare
+  - Turs om i tidsordning
+  - Total samplingfrekvens = f_s
+  - I varje A/D räcker f_s/N
+
+* Sample and ohold i full hastighet, f_s
+* Vanligt i HF-sammanhang
+
+### 10G Ethernet, A/D för mottagare
+* Moderna nätverk är inte så digitala på tråden
+* Lös av signalen med A/D och avkoda digitalt
+
+### A/D med successiv approximation
+![image](images/32.png)
+
+* Vanlig omvandlare
+  - Effekt-snål
+  - Bra upplösning
+  - God hastighet
+
+* Ofta med kapacitiv D/A-omvandlare
+
+### Integrerande A/D-omvandlare
+![image](images/33.png)
+
+* OP:n som integrator: v_out(t) = 1/RC * integral(0->t, v_in(t)dt)
+* Vi mäter tid istället för spänning
+1. Med brytaren mot V_sig i T_sig = 2^N * t_clk
+  - Då V_out = v_sig * (2^N * t__clk) / RC
+
+2. Med brytaren mot V_ref tills V_out = 0
+  - Räkna till k klockcykler dvs T_ref = kt_c
+  - Då V_sig / V_ref = k / 2^N, dvs k är digitala värdet
+
+* Noggrant och långsamt
+
+
+
   
 
