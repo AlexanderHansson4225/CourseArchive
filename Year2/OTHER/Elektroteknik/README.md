@@ -963,4 +963,75 @@ Lutningsfel
 
 ![17.png](images/17.png)
 
-### Yttre felkällor, Jitter
+### Yttligare felkällor, Jitter
+![image](images/18.png)
+- Vi har avvilker i tiden (pga av jitter) vilket gör att vi sa,plar delta(nT) bort. 
+- Om vi har insignal x(t) så kommer skillnaden i x(nT) (y-axeln) bli delta(nT)x'(nT) (x-axeln)
+
+Tolkat från: 
+Små tidsavvilkeser delta(nT) i samplingen
+Med insignal x(t) 
+- Samplingsfel DELTAx(nt) approx = delta(nT)x'(nT)
+- Feleter ökar med delta och w
+  - Utmaning för HF-tillämpningar
+
+
+## Hur bygger man en omvandlare  
+![image](images/19.png)
+
+- A/D i detta fall?? eller båda hållen?
+
+1. Brytare 
+  - Mot 0V, ensam NMOS
+  - (annars) Par av NMOS och PMOS
+
+2. Komparator och förstärkare
+  - Operationsförstärkare (komparatorn)
+  - 10 - 100 transistorer
+
+### Operationsförstärkaren (komparatorn)
+![image](images/20.png)
+
+* Ideal operationsförstärkare:
+  - Z_in -> oändligheten
+    - MOS-styre, > MΩ
+      - Vilket betyder att vi har en MOSFET som är i cut-off enligt copilot
+
+  - Z_out -> 0
+    - MOS-kanaler mΩ - Ω
+      - Vilket betyder att vi har en MOSFET som är i triode enligt copilot
+
+    - V_out = A(V_2 - V_1)
+      - Konstant A -> oändligheten
+      - I praktiken 10^3 - 10^4
+      V_out är begränsad av matningen
+
+### Operationsförstärkaren inuti
+![image](images/21.png)
+- Enklaste grundform i CMOS
+- 8 transistorer + minst en för I_ref
+- Strömspegel 1 (Q_8 och Q_5)
+  - Håller I konstant (ungefär I_ref)
+- Strömspegel 2 (Q_3 och Q_4)
+  - Håller I_Q1 = I_W2
+  - Förstäker V_+ - V_-  till V_gs på Q_6
+- Utgångsförstärkaren Q_6
+  - R_D motsvaras av Q_7
+
+### Enklaste D/A-omvandlaren
+![image](images/22.png)
+* Enkel och vanlig lösning (få bitar)
+  - N bitar kräver 2^N resistanser
+
+a) Alla resistanser är lika med R_U
+  - V_DAC = V_ref * i / 2^n
+  - DAC är förkortning för D/A-omvandlare DA converter
+
+b) Överst och nederast, R_U / 2
+  - V_DAC = V_ref * (i+1/2) / 2^n
+  - Ideal överföringsfunktion!
+
+### D/A med R/2R-stege
+![image](images/23.png)
+  
+
