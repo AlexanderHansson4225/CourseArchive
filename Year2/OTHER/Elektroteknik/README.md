@@ -964,6 +964,9 @@ Lutningsfel
 ![17.png](images/17.png)
 
 ### Yttligare felkällor, Jitter
+
+
+**Lite kort kvar på denna föreläsning. Några slides bara**
 ![image](images/18.png)
 - Vi har avvilker i tiden (pga av jitter) vilket gör att vi sa,plar delta(nT) bort. 
 - Om vi har insignal x(t) så kommer skillnaden i x(nT) (y-axeln) bli delta(nT)x'(nT) (x-axeln)

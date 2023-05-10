@@ -2,6 +2,7 @@
 1.14. Förstår ej
 13.6 - varfäör blir min uträkning fel?
 13.8, svaret. Varför är laplace av R = R != sR?. 
+16.2
 
 # Varför fel? 
 2.3
@@ -48,11 +49,25 @@
 
 Om man har parallellkopplad i serie med en till resistans, och vill göra spänningsdelning:
     - Kolla på svaret för 13.8
+    
+Att hitta arbetslinjen:
+- KVL: v_g(t) - IR - v_x(t) = 0
+  - där v_g är voltgeneratorn, R är resistansen, i är ström genom kretsen och v_x är okända komponenten
+  - Detta ger v_g(t) = IR + v_x(t)
+  - Anta att I = 0 -> v_x(t) = v_g(x)
+  - Anta att v_x(t) = 0 -> I = v_g(t)/R
+  - Kan sedan rita ut två punkter som nu ger en rät linje
+  - givet att v_g(t) = 0.3, R = 200
+     - Kalla i = y, v_x(t) = x
+     - Har 0.3 = 200*y + x
+     - 0.3-x = 200*y
+     - y = -x/200 + 0.3/200 -> dvs m = 0.0015 (samma som fås då v_x antas som noll) och k = -1/200 
 
 
 - **Läs mer om impedance**
 
-
+- tips är att spänningsvandra. Säg att i=i1+i2 om de ej finns
+- Tror att spänningsdelning över spänningsgeneratorer är typ: v1/(v1+v2)... oklart
 
 
 
