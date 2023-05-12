@@ -1150,6 +1150,85 @@ Tror detta är en jämförelse mellan olika A/D-omvandlare
 * Noggrant och långsamt
 
 
+# Analogt
+## Digitala kretsar
+### Representera Booleska värden med spänning
+
+![image](images/34.png)
+
+
+* Vanliga val är att:
+  * `<=` v_låg represesenterar 0
+  * `>=` v_hög representerar 1
+
+* Otillåtet område mellan v_låg och v_hög
+  * Paseras vid omslag (tänk kapacitans)
+  * Den digitala funktionen är odefinierad
+  * Marginal för störningar
+
+### Ur datablad för 74HC04, tålighet
+![image](images/35.png)
+
+* Tabellen definierar de
+gränser som gäller för att
+inte förstöra komponenten
+
+* Användaren av kretsen
+måste garantera dessa
+villkor
+
+* Normalt krav
+0 ≤ 𝑣𝑖𝑛 ≤ 𝑉𝑐𝑐
+
+### Digitala kretsar, CMOS-inverteraren
+![image](images/36.png)
+
+Tunn gateoxid ger
+* Snabba, effektiva transistorer
+* Förstörande genombrott 𝑉𝑖𝑛 ≳ 10 V
+
+Dopning påverkas (förstörs) av värme
+* Höga strömmar
+* Felpolarisering av PN-övergångar
+* Bristande kylning
+
+## Induktans
+* Fungear som kapacitans - fast tvärt om
+  * B-fält i stället för E-fält som energilager 
+
+* Mäts i Henry (H)
+
+* Spänningen:
+  * v(t) = L * di(t)/dt
+
+* Lagrad energi:
+  * W = 1/2 * L * i(t)^2
+
+* Dvs konstant spänning kräver ständigt ökande ström
+
+
+### Effekt och energi - exempel
+![image](images/37.png)
+
+### Plötsliga förändringar
+Kapacitans:
+* Samband 𝑖 𝑡 = 𝐶 𝑑𝑣(𝑡) / 𝑑𝑡
+  * Kan ha språng i ström, trög i spänning
+  * Till-/frånslag vid t = t0 -> v(t_0-) = v(t_0+)
+
+* Induktans
+  * Samband 𝑣 𝑡 = 𝐿 𝑑𝑖(𝑡) / 𝑑𝑡
+  * Kan ha språng i spänning, trög i ström
+  * Till-/frånslag vid t = t0 -> i(t_0-) = i(t_0+)
+
+### Kapacitans och induktans
+
+
+
+
+
+
+
 
   
 
