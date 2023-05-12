@@ -1309,11 +1309,98 @@ resistansen
 
 ### Impedans
 ![image](images/42.png)
+Laplacetransform av v(t)/i(t)
+* Sätt v_0 = 0
+* Kompensera med källan 
+
+Överför differemtialekvation i(t) till algebra i(s)
+
+Linjära samband med parameter t ger li jära samband med paramter s
+
+Använd nodanalys
+
+### Tidsförlopp, beräkna 𝑣(𝑡) för 𝑡 ≥ 0
+![image](images/43.png)
+* Spänningsdelning ger
+  * H(s) = Z_L / (Z_R + Z_L) = s / (5000 + s)
+
+* Utsignal i s-planet 
+  * 𝑉 𝑠 = 𝑉_s(s) * 𝐻(s) = 5 / (5000 + s)
+
+* I tidsplanet
+  * v(t) = V_0 * e^(-5000t)
+
+* Med tidskonstant 𝜏 = L/R = 0.2 ms
+  * v(t) = v_0 * e^(-t/𝜏)
+
+### Signaler från/till omvandling
+![image](images/44.png)
 
 
+A/D-omvandling
+* Antivikningsfilter / församplingsfilter
 
+D/A-omvandling
+* Rekonstruktionsfilter
 
+Båda är LP-filter
+* Bygga och beräkna?
+* Vet redan, arbeta i s-planet!
+* Förenklade metoder
 
+### Generell lösning
+![image](images/45.png)
+
+* Allmänna källor
+* Komplexa nät med nodanalys
+* Inga differentialekvationer
+  * Kretsekvationer blir kvot av polynom i 𝑠
+* Partialbråksuppdelning
+  * Använd program för symbolisk matematik
+  * Behövs bara för algebraisk lösning
+* ”Trick” för sinussignaler, kommer strax!
+
+**Överföringsfunktion**
+Räkna med impedanser i s-domänen precis som
+resistanser i tidsdomänen
+  * Tillbaks till nodanalys & linjär algebra
+  * Spänningsdelning ger överföringsfunktionen
+```
+V(s) = Z_C / (Z_R + Z_C) * V_A(s)
+
+H(S) = 1 / (1 + sRC)
+```
+
+### Exempel med sinussignal in
+![image](images/47.png)
+![image](images/48.png)
+
+## Sinusformade signaler
+Uppstår naturligt i många sammanhang
+
+E_0 syftar på amplituden
+
+och som vanligt:
+T = pi/omega
+
+### Spektrumanalys och 𝑗𝜔
+Alla reella periodiska signaler kan beskrivas som
+a(t) = a_0 + SUM(1->inf) a_n cos(n*omega*t + phi_n)
+* omega = 2pi/T
+
+* Uppdelning med fourier analys
+  * Kan beräknas effektivt numeriskt mha DFT
+
+* Analysera varje frekvens för sig 
+  * Sätt sammman enligt superposition
+  * Använd jw metoden: H(s), s = jw
+
+### Fourieranalys
+![image](images/49.png)
+![image](images/50.png)
+
+### Fyrkantvåg efter sampling
+![image](images/51.png)
 
 
 
