@@ -1222,6 +1222,95 @@ Kapacitans:
   * Till-/frånslag vid t = t0 -> i(t_0-) = i(t_0+)
 
 ### Kapacitans och induktans
+Modeller, dvs idealiseringar/förenklingar
+
+* Enkla samband mellan spänning och ström
+  * Generellt
+𝐷(𝛼𝑓(x) + 𝑔(x)) = 𝛼𝐷𝑓(x) + 𝐷(𝑔(x))
+
+Kondensatorer och spolar kan ofta betraktas som
+rena kapacitanser eller induktanser, men...
+* Har förluster
+* Tål inte alla spänningar och strömmar
+
+### Verkliga kondensatorer och spolar
+![image](images/38.png)
+
+Alla verkliga komponenter har:
+* Lite resistans, 𝑅𝑠, i serie
+  * Resistans i anslutningarna
+
+* En (stor) resistans, 𝑅𝑝, parallellt
+  * Läckage genom isolatorer
+
+* Lite extra
+  * Induktans, 𝐿𝑠, i serie
+  * Kapacitans, 𝐶𝑝, parallellt
+  * Finns fysikaliskt överallt
+
+### Relä
+* Princip
+  * En spole ger magnetfält
+  * Magneten drar ankaret
+  * Ankaret slår om kontakt
+
+* Liten ström i spolen
+  * Påverka stor ström
+
+* Alla storlekar
+  * Isolerar spole – kontakt
+  * Induktiv och långsam
+
+
+
+
+### Att driva ett relä
+![image](images/40.png)
+Mycket enkel modell av en
+digital krets som driver ett relä
+
+* Ström genom spolen genererar
+magnetfält som påverkar en
+kontakt
+
+* Matningsspänning 5 V och
+brytaren = en MOS-transistor
+som bara tål den spänningen
+
+* Vad händer vid till- respektive
+frånslag?
+
+**Tillslag**
+* Slut brytaren vid t = 0
+* Strömmen före i(0-) = 0
+* Strömmen kan inte ändras momentant i(o+)=0
+* Efter en lång tid v(oändlighet) = 0
+* Ger i(oändlighet) = 5 mA
+* Inga problem här!
+
+**Frånslag**
+Öppna brytaren vid 𝑡 = 0
+* Strömmen före 𝑖 0− = 5 mA
+* Strömmen kan inte ändras
+momentant 𝑖 0+ = 5 mA
+* Ger 𝑣 0+ = −5 mA ∙ 1 MΩ = -5000 V
+* Yikes! Transistorn brann upp!
+  * Aldrig induktiv last utan skyddskrets!
+
+### Enkel lösning som skyddar
+Dioden (idealiserad)
+* Oledande för 𝑣 𝑡 > 0
+* Kortslutning, hindrar 𝑣 𝑡 < 0
+
+Verklig diod
+* Begränsar 𝑣(𝑡) nedåt till c:a −0.7 V
+* Tar över strömmen från 1 MΩ-
+resistansen
+
+### Impedans
+![image](images/42.png)
+
+
 
 
 
