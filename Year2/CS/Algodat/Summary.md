@@ -1,4 +1,6 @@
 
+# Sorry, it is not formatted for md.
+\\
 O(n): Upper bound time complexity. Efficient: O(n²)
 Ω(n): Lower bound time complexity
 θ(n): Average time
