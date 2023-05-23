@@ -1,6 +1,7 @@
 module DelEtt where
 import GHC (GeneralFlag(Opt_PrintExplicitRuntimeReps))
 import GHC.Driver.Session (initDynFlags)
+import Data.List
 
 sieve :: Int -> [Int]
 sieve n = sieveHelper [2..n]
@@ -217,7 +218,52 @@ demoSequence_ = do
 --     let myList = [1, 2, 3, 4, 5]
 --     let incremented = incrementList myList
 --     return incremented
-    
+
+--gives all except the last element  
+demoInit :: [Int]
+demoInit = init [1, 2, 3, 4, 5]
+
+
+-- Summerar alla element i listan
+-- 0 är startvärdet. Gör (((((0+5)+4)+3)+2)+1)
+-- NOTE: foldr är lazy, men det är inte foldl. 
+-- DVS bara den fungerar på oändliga listor
+-- Använd den som default
+demoFoldr :: Int
+demoFoldr = foldr (+) 0 [1, 2, 3, 4, 5]
+
+-- Summerar alla element i listan
+-- 0 är startvärdet. Gör ((((0+1)+2)+3)+4)+5
+demoFoldl :: Int
+demoFoldl = foldl (+) 0 [1, 2, 3, 4, 5]
+
+-- tar de första 10 elementen i en oändlig lista 123123123123...
+demoCycle :: [Int]
+demoCycle = take 10 (cycle [1, 2, 3])
+
+-- constains
+demoElem :: Bool
+demoElem = elem 1 [1, 2, 3]
+
+demoNotElem :: Bool
+demoNotElem = notElem 1 [1, 2, 3]
+
+-- Gör en lista av par med element med samma index
+demoZip :: [(Int, Int)]
+demoZip = zip [1, 2, 3] [4, 5, 6]
+
+-- Adderar element med samma index
+demoZipWith :: [Int]
+demoZipWith = zipWith (+) [1, 2, 3] [4, 5, 6]
+
+-- tar lista av par och gör en tupel av två listor
+demoUnzip :: ([Int], [Int])
+demoUnzip = unzip [(1, 4), (2, 5), (3, 6)]
+
+-- ger en lista av 1 till 5
+-- tar bort dupicates
+demoNub :: [Int]
+demoNub = nub [1, 1, 2, 3, 3, 4, 1, 5, 5]
 
 
 
