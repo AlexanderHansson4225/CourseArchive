@@ -94,6 +94,7 @@ class Example a where
     --f4 = 3 kommer inte fungerar
 
 -- Har typ en abstrakt class samt att vi ärver från den
+-- Den behandlar alla a i example som intes
 instance Example Int where
     f1 x y = show $ x + y
     f2 x = x + 1
@@ -144,11 +145,85 @@ point = Point {yCoord = 1, xCoord = 2}
 
 
 -- Allows sequencing and naming the returned values:
--- Note the use of <- instead of = (let)
-echoReverse :: IO ()
-echoReverse = do
+-- Note the use of <- for IO actions
+-- let x = is used for pure values
+echoReverseArrow :: IO ()
+echoReverseArrow = do
     aLine <- getLine
     putStrLn (reverse aLine)
+
+echoReverseLet :: IO ()
+echoReverseLet = do
+    aLine <- getLine
+    let reversedLine = reverse aLine
+    putStrLn reversedLine
+
+-- Return 
+-- Does the empty IO-activity
+-- This is the same as return ()
+-- return :: a -> IO a
+-- So :: IO Int and we do IO we cover the IO with return and then can give an int?
+-- Tänk på det som actually return i IO iaf
+
+echoReverse :: IO Int
+echoReverse = do
+    aLine <- getLine
+    let reversedLine = reverse aLine
+    putStrLn reversedLine
+    return 1
+
+-- lambdaLaugh :: IO ()
+-- lambdaLaugh = 
+--     let x = (outputChar 'h' outputChar 'a') in
+--         x; x;
+
+-- monadicLaugh :: IO ()
+-- monadicLaugh = do
+--     let x = do {putChar 'h'; putChar 'a'}
+--     in do x; x
+
+
+-- fromRational is in the Fractional typeclass
+demoFromRational :: (Fractional a) => a
+demoFromRational = fromRational (1/2)
+
+-- Takes a list of IO actions and returns an IO action that
+-- performs all of them in sequence
+-- Om jag hade gjort returrn () hade det blivit en nice IO action
+demoSequence :: IO [()]
+demoSequence = do
+    sequence [putChar 'h', putChar 'a', putChar 'h', putChar 'a']
+    
+
+-- return () is crucial here, otherwise the IO action will
+-- return the last IO action in the sequence
+-- instead of an IO action that does nothing
+-- otherwise we get a list of IO actions and
+-- kort sagt, behöver return () för att det ska se nice ut
+executeDemoSequence :: IO ()
+executeDemoSequence = do
+    demoSequence
+    return ()
+    
+
+-- Also executes the IO actions in sequence, but returns 
+-- an IO action that does nothing
+demoSequence_ :: IO ()
+demoSequence_ = do
+    sequence_ [putChar 'h', putChar 'a', putChar 'h', putChar 'a']
+
+-- demoMonadListFunc :: IO [Int]
+-- demoMonadListFunc = do
+--     let myList = [1, 2, 3, 4, 5]
+--     let incremented = incrementList myList
+--     return incremented
+    
+
+
+
+
+
+
 
 
 
