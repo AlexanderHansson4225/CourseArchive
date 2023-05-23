@@ -265,6 +265,21 @@ demoUnzip = unzip [(1, 4), (2, 5), (3, 6)]
 demoNub :: [Int]
 demoNub = nub [1, 1, 2, 3, 3, 4, 1, 5, 5]
 
+-- Inserat 4 på rätt plats i listan
+demoInsert :: [Int]
+demoInsert = insert 4 [1, 2, 3, 5, 6, 7]
+
+-- tar bort alla element i den första listan som finns i den andra
+demoBackslashBackslash :: [Int]
+demoBackslashBackslash = [1, 2, 3, 4, 5] \\ [1, 2]
+
+-- Ger en lista [2]
+-- So \\ är delete all potential issues of
+demoBackslashBackslash2 :: [Int]
+demoBackslashBackslash2 = [1, 2, 2, 3] \\ [1, 2, 3, 4, 5]
+
+
+
 
 
 
