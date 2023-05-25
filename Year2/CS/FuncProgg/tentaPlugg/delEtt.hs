@@ -278,6 +278,57 @@ demoBackslashBackslash = [1, 2, 3, 4, 5] \\ [1, 2]
 demoBackslashBackslash2 :: [Int]
 demoBackslashBackslash2 = [1, 2, 2, 3] \\ [1, 2, 3, 4, 5]
 
+demoMonadBind :: IO ()
+demoMonadBind = do
+    let a = Just 1 >>= (\x -> Just (x + 1)) >>= (\x -> Just (x*2))
+    print a
+
+demoReturn :: IO Int
+demoReturn = do
+    return 1
+
+demoFail :: Maybe Int
+demoFail = do
+    x <- Just 5
+    y <- Just 10
+    if x > y then
+        fail "x should be smaller than y"
+        -- wrapper out string to look like a Maybe Int
+    else return (x + y)
+
+calculateSum :: Int -> Int -> Int
+calculateSum x y = x + y
+
+-- Andra elementet till seq är evaluated, därför returnerar vi efter ha gjort result upp tills WHNF
+demoSeq :: IO ()
+demoSeq = do
+    let result = calculateSum 3 4
+    let seqResult = result `seq` "Result calculated."
+    putStrLn seqResult
+
+checkEven :: Int -> String
+checkEven x = if even x then "Even number" else "Odd number"
+
+-- () kommer inte att röras för result är inte evaluated
+demoSeq2 :: IO ()
+demoSeq2 = do
+    let result = checkEven 7
+    let seqResult = () `seq` result
+    putStrLn seqResult
+
+-- Demo av par och force
+parSort :: (Ord a) => [a] -> [a]
+parSort (x:xs) = force grtr ‘par‘ 
+        (force lesser ‘pseq‘ 
+        (lesser ++ x:grtr))
+    where 
+        lesser = parSort [y | y <- xs, y < x]
+        grtr = parSort [y | y <- xs, y >= x]
+parSort _ = []
+
+    
+    
+
 
 
 
