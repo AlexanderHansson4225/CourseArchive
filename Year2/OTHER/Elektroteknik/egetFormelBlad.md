@@ -112,11 +112,10 @@ Ger medeleffekt
 
 ## Omvandlare
 ### Analog till digital
-V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
-    * V_ref är referensspänningen
-    * V_FS är omfånget av spänningen
-        * Full-scale voltage 
-        * Vill 
+V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)  
+    * V_ref är referensspänningen  
+    * V_FS är omfånget av spänningen  
+        * Full-scale voltage   
 
 * sampelvärde (icke binärt) hänvisar till utdata från omvandlaren (maximalt 2^n-1)
     * Så vid trunkering z++ vid V_lsb
