@@ -921,7 +921,7 @@ Lutningsfel
 
 ### Mäta upp felen, tabell med godtyckliga värden
 - Mät upp punkter på den verkliga gröna kurvan
-  - Osäkerhet: intervall avbildas på heltal 
+  - Osäkerhet: intervall avbildas på heltal dä
   - Finns ett antal utspridda punkter
     - Undvik svansen
 
