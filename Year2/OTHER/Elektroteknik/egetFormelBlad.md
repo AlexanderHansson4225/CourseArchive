@@ -177,12 +177,15 @@ tror man beräknar det genom:
 
 ## MOS
 ![image](images/mos.png)
+![image](images/matta.png)
+strypt, linärt och mättat syftar på I_D
 
 ### Förenklat
 * K = kW/2L
     * k är konstant (det funky k)
     * W är bredden
     * L är längden
+    * Finns även en alternativ uträckning till detta beroende på epsilon
 * Subtröskel: I_D = 0
 * Linjärt: I_D = linjär
 * Mättat: I_D = konstant
@@ -190,16 +193,46 @@ tror man beräknar det genom:
 
 ### Begrepp
 * V_DD: Matningsspänning
-* Statisk strömförbrukning: Strömförbrukning när komponenten är inaktiv
+* Statisk strömförbrukning:                  Strömförbrukning när komponenten är inaktiv
+    * Sker då nmos och pmos leder samtidigt
 * Krav på inspänning
     1. 0 <= V_in <= V_DD
     2. !(v_in > v_h && v_in < v_l)
         * v_l är högsta spänningen som ger 0
         * v_h är lägsta spänningen som ger 1
+* Parasitkapacitans
 
-### Beräkning av 
+### Beräkning av v_h och v_l
+* Med kravet att vi inte vill ha statisk strömförbrukning:
+    1. v_l = abs(v_tn)
+    2. v_h = v_DD - abs(v_tp)
+    * v_tn är tröskelspänningen för nmos
+    * v_tp är tröskelspänningen för pmos
+    * Inte helt säker om absolutbeloppet ska vara där, men verkar som det
 
+### Approximation av seriekopplade MOS
+* Två likadana, seriekopllade transistorer
+    * Dvs samma W och L
+    * Kan approximeras som en MOS med newL = 2L
 
+T3 och T4 är seriekopplade  
+Blanda inte ihop hur seriekopplade komponenter och seriekopplade transistorer ser ut
+![image](images/serie.png)
+
+### Tidsberäkningar
+* "Vilken tog längst tid"
+    1. Flaskhalsen är transistorerna (räkna tiden för sladdar som 0)
+    2. Tiden för en transistor att förändra sig till input är proportionell mot i_D 
+        * DVS högre i_D -> snabbare
+    3. i_D är proportionell mot K = kW/2L
+    4. Så om något är dubbellt så långt, men 3 gånger större k -> 3/2 så lång tid
+
+### Värmeutveckling
+* Bara transistorer som det går ström igenom utvecklar värme
+* DVS inaktiv (ex om PMOS får 0) -> ingen värme
+* Om en transistor med total paracitkapacitans C byter håll så blir energiförbrukningen
+    * E = 1/2 * C * V_DD^2
+    
 
 ### Inverterare
 ![image](images/inverter.png)
