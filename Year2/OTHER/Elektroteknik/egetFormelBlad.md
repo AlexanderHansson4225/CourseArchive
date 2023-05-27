@@ -73,7 +73,11 @@ Energi per period T
 Ger medeleffekt
 * P = E_T/T = 1/T*1/R integral(from 0 to T, V^2(t) dt)
 
+### Superposition
+* Kortslut alla strömkällor
+* Avbryt kablar in i alla strömkällor
 
+* Gör grundläggande superposition
 
 ## Frekvenser och amplituder
 * V_pp = 2 * amplitude (point to point voltage)
@@ -86,7 +90,20 @@ Ger medeleffekt
 * `abs(H(jɷ))dB = 20log_10(abs(H(jɷ)))`
     * Medför: 10log_10(p1/p2)
 
-## Effekt
+## Thevenin och Norton
+### R_t
+* Kortslut alla spänningskällor
+* Avbryt kablar in i alla strömkällor
+
+### V_t
+* Ersätt resistorer där det ej går ström med kortslutningar (per URI)
+* Beräkna V_A mha nodanalys och eventuellt superposition
+
+
+### I_n
+I_n = V_t / R_t
+
+## Signaler, frekvenser
 ### Effektivvärde
 * Genomsnittlig effekt i en signal
 
@@ -175,6 +192,10 @@ tror man beräknar det genom:
     * C är kapacitans
     * Förläng med L och C med j vid förenkling
 
+### Resonans vid frekvensen
+Kräver att L och C har samma impedans med olika tecken, och vi får resonans vid:
+* 1/2𝜋√𝐿𝐶
+
 ## MOS
 ![image](images/mos.png)
 ![image](images/matta.png)
@@ -187,6 +208,7 @@ strypt, linärt och mättat syftar på I_D
     * L är längden
     * Finns även en alternativ uträckning till detta beroende på epsilon
 * Subtröskel: I_D = 0
+    * "V_out är 0" kan man typ säga...
 * Linjärt: I_D = linjär
 * Mättat: I_D = konstant
 * Gate strömmen är 0 (idealt)
@@ -202,13 +224,23 @@ strypt, linärt och mättat syftar på I_D
         * v_h är lägsta spänningen som ger 1
 * Parasitkapacitans
 
-### Beräkning av v_h och v_l
+### Beräkning av v_h och v_l & statisk strömförbrukning
 * Med kravet att vi inte vill ha statisk strömförbrukning:
     1. v_l = abs(v_tn)
     2. v_h = v_DD - abs(v_tp)
     * v_tn är tröskelspänningen för nmos
     * v_tp är tröskelspänningen för pmos
     * Inte helt säker om absolutbeloppet ska vara där, men verkar som det
+
+* Energi förbrukas då båda MOS leder
+    * Dvs då v_in > v_l eller v_in < v_h
+
+### Output spänning
+* En MOS kommer antingen vara av eller på
+    * Den gränsen går vid V_GS = V_tn
+    * Dess output spänning kommer då öka tills den når V_DD
+* Inputen ökar över tid
+    * DVS kommer finnas ett läge där båda MOS leder (ger ut spänning)
 
 ### Approximation av seriekopplade MOS
 * Två likadana, seriekopllade transistorer
@@ -235,7 +267,7 @@ Blanda inte ihop hur seriekopplade komponenter och seriekopplade transistorer se
     
 
 ### Inverterare
-![image](images/inverter.png)
+![image](images/inverter.png)  
 Förklaring:
 * Angående NMOS
     * När V_in är hög (dvs = V_DD) så -> V_GS > 0 -> Kan leda ström -> Kortslutning till jord -> V_ut = 0
