@@ -1,7 +1,9 @@
 # Formelblad
+- https://canvas.education.lu.se/courses/22921/files/3393193?module_item_id=816009 
+
 - https://www.eit.lth.se/fileadmin/eit/courses/ess010/appadda_mod13.pdf
 
-- https://canvas.education.lu.se/courses/22921/files/3393193?module_item_id=816009 
+
 
 ## Grundläggande
 ### Grundlagar
@@ -49,6 +51,9 @@ p(t) = abs(vC (t))^2/R
 **Hur mycket energi lagras i en kondensator**  
 * `w(t) =  1/2*C*v(t)^2`
 
+**Hur mycket energi lagras i en krets**
+* kondenstor + spole...?
+
 ### Induktans
 * Spänningen:
   * `v(t) = L * di(t)/dt`
@@ -79,8 +84,50 @@ Ger medeleffekt
 
 * Gör grundläggande superposition
 
+
+### Sidenote
+![image](images/sidenote.png)
+    - Notera att detta är spänningen över både
+        - Borde ju vara samma som över C
+## Delning
+### Spänningsdelning
+* Vill veta hur mycket spänning som går över R_1
+* `v_1 = v * R_1 / (R_1 + R_2)`
+* ...more applicable to series circuits
+
+
+### Strömdelning
+* Vill veta hur mycket ström som går genom R_1
+* `i_1 = i * R_2 / (R_1 + R_2)`
+
+### Mer komplex spänningsdelning
+* R1 och R2 är i serie
+* R3 och R4 är i serie
+* V1 ligger över allt
+
+* Vill ha spänningen över R1:
+    * `v_R2 = v_1 * R_1 / (R_1 + R_2)`
+    * Tror det går för de är parallellt
+    * DVS över båda är samma som för hela kretsen, dvs v_1
+
 ## Frekvenser och amplituder
 * V_pp = 2 * amplitude (point to point voltage)
+
+Gul: Insignal till A/D
+Orangea: Utsignal från D/A
+
+![image](images/adda.png)
+
+### Vad är samplingfrekvens 
+* Räkna antalet hold. Glöm inte den sista i intervallet. Den räknas med. 
+
+### Maxialt fel
+Vad är maximal spänningsskillnad mellan insignalen till A/D-omvandlaren och utsignalen
+från D/A-omvandlaren direkt efter sampling?
+- De sitter i serie
+- Se bild i slides av vad de gör för steg.
+
+I allafall V_lsb / 2 för avrundning och V_lsb för trunkering
 
 ### Decibel (tror detta stämmer)
 - `20 * log_10 (v_2 / v_1)` -> dB
@@ -89,6 +136,9 @@ Ger medeleffekt
 **Tror detta stämmer bättre**
 * `abs(H(jɷ))dB = 20log_10(abs(H(jɷ)))`
     * Medför: 10log_10(p1/p2)
+
+### Fasvektorer
+𝑉0∠𝜃 <-> 𝑉0(cos 𝜔𝑡 + 𝜃)
 
 ## Thevenin och Norton
 ### R_t
@@ -116,6 +166,8 @@ I_n = V_t / R_t
     * Occilerande: P = V_eff^2 / R
 
 ### Frekvensdiagram
+* Frekvens på x-axeln, effekt på y axeln
+
 1. f_s = sampelfrekvens
 2. omega = `2 * pi * f` -> vinkelfrekvens
 3. f_b = brytfrekvens = 1/(2*pi*R*C)
@@ -133,7 +185,10 @@ I_n = V_t / R_t
     * Oskiljbara från f_blue
 
 ## Omvandlare
+* Tar in -> AD -> D/A -> Ut
 ### Analog till digital
+* Tar analoga värden och gör dem digitala (binära)
+
 V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)  
     * V_ref är referensspänningen  
     * V_FS är omfånget av spänningen  
@@ -146,6 +201,25 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
 * Beräkna m och k för AD omvandlare
     * hämta två punkter dvs x är en volt, och y är ett sampelvärde
 
+### Antivikningsfilter
+- 80dB filterkrav betyder att en minskning på 80dB ska ske vid f_s-f_b
+    - Det är ju signalerna mellan f_s-f_b och f_s som kommer att vikas in
+    - Så man lovar att det är en minskning på åtminstoende 80dB där
+
+- Nödvändig ordning på filtret på sida 5 i adda kompendiumet
+### Digital till analog
+* Representerar en binär signal med en spänning
+### Kvantisering
+* V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)  
+    * V_ref är referensspänningen  
+    * V_FS är omfånget av spänningen  
+        * Full-scale voltage
+
+* Bilden nedan visar hur 1/N till N/N bitar kommer att kvantiseras
+
+
+
+![image](images/kvantisering.png)
 ## Filter
 ### Grundläggande
 * Dämpningen vid brytfrekvensen är -3dB
