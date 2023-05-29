@@ -61,13 +61,33 @@ p(t) = abs(vC (t))^2/R
 ### Induktans
 * Spänningen:
   * `v(t) = L * di(t)/dt`
+  * För att hitta strömmen genom induktansen
+    * Lös v(t) = ?, hitta startvärde i(0)
+    * `i(t) = C + integral(from 0 to t, v(t) dt) / L`
+    * Detta är lösningen så länge det går ström genom induktansen
+        * Kan sätta dom gränsena utifrån lösningen av frågan
+        * Om det går ström genom induktansen i början, lös ekvationen, och kolla hur länge det går ström igenom induktansen
+
+* Kort sagt lösa ström genom spole:
+    * Om ström är större än noll i början, hitta v(t), lös för i(t). Så länge den är större än noll, använd den lösningen
+        
+
 
 * Lagrad energi:
   * `W = 1/2 * L * i(t)^2`
 
 * Notera:
     * i(t) = integral(from 0 to t, v(t) dt) / L
-        * DVS strömmen kan inte ändra sig omedelbart
+        * DVS strömmen kan inte ändra sig omedelbart  
+
+
+* Notera att om vi har en spänning över en induktans så kommer strömmen att öka linjärt, dvs över lång tid är den oändlig, dvs v(t) noll
+
+* Om jag kommer till att skillnad i i(t) = oändlig
+    * v(t) = oändlig
+    * DVS i(t) bevaras som den var precis innan, ändringen
+    * Allt annat är "normalt"
+
 
 
 ### Effekt
@@ -364,6 +384,14 @@ Förklaring:
         * `p(t) = i_D(t) * v_DS`
 
 ## Diod
+* Tänk också på att den kan bli en kortslutning
+    * Dra inte för snabb slutsats om kapacitanser och spolar
+* DVS om ström går mot en diod så vet vi att den har satisfactory spänning för att leda ström
+
+### Centralt
+* Om det går ström igenom dioden så är spänningen inställd på framspänningsfall
+    * Spänningen underskrider aldrig framspänningsfallet
+    * Se lösningen 2021.6.2 för mer info
 ### Begrepp
 * Hur den fungerar:
     * Dioden leder ström i en riktning
@@ -373,6 +401,7 @@ Förklaring:
     * DVS enbart om v(t) > 0 leder den ström
 
 * Ideal: 
+    * Framspänningsfall: 0V
 
 * Framspänningsfall: 0.7V
     * DVS om v(t) > 0.7V leder den ström

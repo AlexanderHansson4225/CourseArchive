@@ -1200,6 +1200,7 @@ Dopning påverkas (förstörs) av värme
 
 * Spänningen:
   * v(t) = L * di(t)/dt
+    * Notera att om vi har en spänning över en induktans så kommer strömmen att öka linjärt, dvs över lång tid är den oändlig, dvs v(t) noll
 
 * Lagrad energi:
   * W = 1/2 * L * i(t)^2
