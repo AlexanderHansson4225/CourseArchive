@@ -25,6 +25,10 @@
 
 * Parallellkoppking: `v = (1/R1 + 1/R2 + ... + 1/Rn) * i`
 
+* Spänningen i ett system kommer att vara konstant
+    * Om en transistor finns med i syftemet, räkna inte med den
+            * Se 2021, 5.4 om du vill se mer info 
+                * Dess spänning är ett resultat av de andra komponenterna och de andra komponenterna har en konstant spänning i beleive
 ### Kondensator
 ```
 i = δq/δt
@@ -352,5 +356,26 @@ Förklaring:
     * V_GS är negativ då V_in är hög eftersom 
         * V_GS = V_G - V_S = 0 - V_DD = -V_DD
 
+### Förbrukad effekt
+* Som vanligt:
+### Effekt
+* `p(t) = i(t) * v(t)`
+    * DVS vårt fall:
+        * `p(t) = i_D(t) * v_DS`
+
+## Diod
+### Begrepp
+* Hur den fungerar:
+    * Dioden leder ström i en riktning
+        * Riktning = från anod till katod
+        * DVS den riktningen som pilen pekar
+    * Dioden leder inte ström i andra riktningen
+    * DVS enbart om v(t) > 0 leder den ström
+
+* Ideal: 
+
+* Framspänningsfall: 0.7V
+    * DVS om v(t) > 0.7V leder den ström
+    * DVS om v(t) < 0.7V leder den inte ström
 
 
