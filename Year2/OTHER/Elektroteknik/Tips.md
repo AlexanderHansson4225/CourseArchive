@@ -9,6 +9,13 @@
 6. Laplace
 7. Kolla igenom formelsamlingen
 
+
+### Ej kan lösa
+- Kolla lösningmetoder
+- I fall av att jag inte kan lösa, även med hambley, kompendium, formelsamling osv
+    - Kolla lösningar på gamla tentor, labbar, uppgifter
+- Kolla med copilot
+
 ### Kolla rimligthet
 - Kolla att värde vid t=0 och t=infinity är densamma som min ekvation ger
 - Lös med flera olika metoder i mån av tid
@@ -28,3 +35,9 @@
 
 ### Trick
 - Kan dra slutsatser om inre resistanser på icke ideella källor genom att vänta lång tid, räkna bort kapacitatorer och sedan räkna ut resistansen
+- Kan inte lösa kapacitans i krets? Gör theveninekvivalent
+    - Ersätt ofta strömkällor med spänningskällor
+- Att hantera olinjära komponenter (dioder, transistorer...)
+    - Thevenin på resten av kretsen
+    - Grafiskt  (kolla upp)
+    
