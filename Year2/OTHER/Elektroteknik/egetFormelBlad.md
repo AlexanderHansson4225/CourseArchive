@@ -30,6 +30,16 @@
             * Se 2021, 5.4 om du vill se mer info 
                 * Dess spänning är ett resultat av de andra komponenterna och de andra komponenterna har en konstant spänning i beleive
 ### Kondensator
+* Kolla 9.7b) i boken för standardlösning
+* Kan se det som en spänningskälla
+
+* DC: Dess resistans är noll
+    * Notera dock att den påverkar spänningen
+    * DVS kan använda dess impedans (s-domän, icke jw) för att räkna ut spänningen
+        * Så använd den i spänningsdelning exempelvist
+        * Tänk kapitel 13
+* AC: Den har impedans, som agerar som resistans
+    * Det är ju då omega kommer in i bilden
 ```
 i = δq/δt
 q = C*v
@@ -58,7 +68,17 @@ p(t) = abs(vC (t))^2/R
 **Hur mycket energi lagras i en krets**
 * kondenstor + spole...?
 
-### Induktans
+**Generell lösning RC**
+- Se anteckningar
+men i korthet:
+```
+v(t) = V0*e^(-t/RC)
+```
+- Notera då även i(t) = v(t)/R
+
+### Spole / induktans (inductor)
+* DC: Dess resistans är noll (essentially)
+* AC: Räkna med impedans
 * Spänningen:
   * `v(t) = L * di(t)/dt`
   * För att hitta strömmen genom induktansen
@@ -241,8 +261,6 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
 
 * Bilden nedan visar hur 1/N till N/N bitar kommer att kvantiseras
 
-
-
 ![image](images/kvantisering.png)
 ## Filter
 ### Grundläggande
@@ -263,6 +281,8 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
 * Andra gradens RC filter
     * H(s) = (1/1+R1C1s) * (1/1+R2C2s)
     * Härlett från det ovan
+    * H(s) = H1(s) * H2(s)
+    * H(s)_db = H1(s)_db + H2(s)_db
 
 * Skriv V_ut(t) i termer av V_in(t)
     1. Gör som vanligt med H(S) eller spänningsdelning
@@ -298,6 +318,7 @@ Kräver att L och C har samma impedans med olika tecken, och vi får resonans vi
 ![image](images/mos.png)
 ![image](images/matta.png)
 strypt, linärt och mättat syftar på I_D
+* Se grafiska lösningar i slidsen
 
 ### Förenklat
 * K = kW/2L
@@ -406,5 +427,19 @@ Förklaring:
 * Framspänningsfall: 0.7V
     * DVS om v(t) > 0.7V leder den ström
     * DVS om v(t) < 0.7V leder den inte ström
+
+## Olinjära komponenter
+### Process (samt loadlinje)
+* Förenkla allt som är linjärt med thevenin
+* Gör en grafisk lösning
+    * Plotta i_D = f(v_D) -> motsvarar genom och över det olinjära
+    * V_t - R_t * i_D = v_D = f-1(i_D)
+    * Rita linjen genom 
+        1. punkterna I_D = 0 och V_D = V_t
+        2. i_D = V_t / R_t och V_D = 0
+    * Skärningspunkten är lösningen
+
+### Fungerar även för transistorer
+![image](images/loadline.png)
 
 
