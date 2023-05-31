@@ -118,7 +118,6 @@ data Season =
     -- tror du måstr ha alla eller en?
     -- iaf annars kan man inte göra dom grejerna
 
-
 -- Field labelling
 data SamePoint = SamePoint Double Double
 
@@ -317,14 +316,14 @@ demoSeq2 = do
     putStrLn seqResult
 
 -- Demo av par och force
-parSort :: (Ord a) => [a] -> [a]
-parSort (x:xs) = force grtr ‘par‘ 
-        (force lesser ‘pseq‘ 
-        (lesser ++ x:grtr))
-    where 
-        lesser = parSort [y | y <- xs, y < x]
-        grtr = parSort [y | y <- xs, y >= x]
-parSort _ = []
+-- parSort :: (Ord a) => [a] -> [a]
+-- parSort (x:xs) = force grtr ‘par‘ 
+--         (force lesser ‘pseq‘ 
+--         (lesser ++ x:grtr))
+--     where 
+--         lesser = parSort [y | y <- xs, y < x]
+--         grtr = parSort [y | y <- xs, y >= x]
+-- parSort _ = []
 
     
     
