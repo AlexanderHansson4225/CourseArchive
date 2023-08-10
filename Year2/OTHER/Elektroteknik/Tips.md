@@ -2,7 +2,7 @@
 ### Lösningsmetoder
 1. Spänning- eller strömdelning
 2. Thevenin- eller Norton-ekvivalent
-3. Spänningsvandring
+3. Spänningsvandring (KVL)
 4. Nodanalys
 5. Kolla upp vad som gäller för komponenter
     - No joke, bara kolla relevanta funktioner

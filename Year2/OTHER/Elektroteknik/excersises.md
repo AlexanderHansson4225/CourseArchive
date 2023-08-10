@@ -74,5 +74,4 @@ Att hitta arbetslinjen:
 - För 3 parallellkopplade resistanser gäller:
     -  i<sub>3</sub> = (1/R<sub>3</sub>)/(1/R<sub>1</sub> + 1/R<sub>2</sub> + 1/R<sub>3</sub>)
 
-- Om kopplingen varit på "länge" så kommer inte någon ström gå genom kapacitorn (alltid?) pga den är "full" med laddning
-
+- Om kopplingen varit på "länge" så kommer inte någon ström gå genom kapacitorn (alltid?) pga den är "full" med laddning!

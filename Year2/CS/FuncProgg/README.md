@@ -247,13 +247,13 @@ String = [Char]
 `"hello"` is the same as ['h','e','l','l','o']
 
 ### List comprehensions
-```
+```Haskell
 allIntPairs = [(i,j) | i <- [0..], j <- [0..i]]
 ```
-gives all pairs of integers where the first element is less than or equal to the second element.
+Gives all pairs of integers where the first element is less than or equal to the second element.
 ---
 ### Type synonyms
-```
+```Haskell
 type Name = String
 type Age = Int
 type Person = (Name, Age)
@@ -263,7 +263,7 @@ Mostly nice for documenation
 
 data is an enumurated type
 
-```
+```Haskell
 data Color =
   Red | Green | Blue | Yellow |
   Cyan | Magenta | White | Black
@@ -272,7 +272,7 @@ data Price = Euro Int Int | Dollar Int Int
 ```
 
 **Pattern matching with enumurated types**
-```
+```Haskell
 complement :: Color -> Color
 complement Red = Cyan
 complement Green = Magenta
@@ -282,12 +282,12 @@ Takes a color and returns the complement of that color.
 
 **Recursive type definitions**  
 
-```
+```Haskell
 data intTree = IntEmpty | IntNode Int intTree intTree
 ```
 
 or polymorphic version:
-```
+```Haskell
 data Tree a = Empty | Node a (Tree a) (Tree a)
 ```
 

@@ -99,7 +99,7 @@ P = U*I
     * Identifierbara anslutningspunkter
 
 ### Spänning 
-![Image](images/Screenshot%20from%202023-03-22%2020-35-52.png) 
+![Image](images/Screenshot%20fro m%202023-03-22%2020-35-52.png) 
 
 ### Ledare och noder
 * Ledare: Anses beräknas vara ideala
@@ -370,7 +370,7 @@ Vi får då en spänning över R: V<sub>s</sub>v(t)
 
 Då får vi 
 ```
-v(t) = R*i(t)  -- Se till att du förstår varför
+v(t) = R*i(t)
 i(t) = C*δv(t)/δt
 => v(t) = -R*C*δv(t)/δt
 
@@ -386,8 +386,41 @@ v(t) = V_s*e^(-t/RC)*u(t)
 Todo: För att se hela uträckningen, hur vi kom fram till v(t) = V_s*e^(-t/RC)*u(t)
 - se 9.7
 
-# Föreläsningar missade
-## MOS-transitstorn
+# S-domänen
+* Fungerar annorlunda med likström och växelström i beleive
+## Generell Tanke
+Kan överföra t-domän till s-domän
+
+i(t) = C*δv(t)/δt
+=>
+I(s) = CsV(s) - V(0-)
+=> räkna V genom exempelvist spänningsdelning
+=> räkna sedan I(s) om det är det de söker
+
+Lättare än alternativet att räkna I(s) = V(s)/Z(s)
+
+* Notera att allt fungerar på samma sätt
+  - Ex nodanalys finns även i S-domänen
+  - Fortfarrande linjärt - superposition fungerar
+
+* Undvik diff.ekv i t-domän
+  - Kan räkna i s-domän istället
+
+## Impedans
+Generaliserar resistans till impedans
+- Z(s) = V(s)/I(s)
+
+- Z_c(s) = 1/sC
+
+Samma regler som för resistanser gäller:
+V(s) = Z_R1(s)/(Z_R1(s) + Z_R2(s)) * V_in(s)
+
+## Överföringsfunktion
+H(s) = V_ut(s)/V_in(s) -- överföringsfunktion
+
+V_ut(s) = H(s)*V_in(s)
+
+# MOS-transitstorn
 * Förstärkning
   * Krävs överallt
 

@@ -33,6 +33,15 @@
 * Kolla 9.7b) i boken för standardlösning
 * Kan se det som en spänningskälla
 
+```
+v(t) = R*i(t)
+i(t) = C*δv(t)/δt
+=> v(t) = -R*C*δv(t)/δt
+```
+
+Notera: f(x)=kf'(x) => f(x)=Const*e^(x/k)
+Tror R:et man syftar på är resistansen som är seriekopplad med kondensatorn
+
 * DC: Dess resistans är noll
     * Notera dock att den påverkar spänningen
     * DVS kan använda dess impedans (s-domän, icke jw) för att räkna ut spänningen
@@ -45,6 +54,7 @@ i = δq/δt
 q = C*v
     => i = C*δv/δt
 ```
+
 * Seriekoppling: `1/C = 1/C1 + 1/C2 + ... + 1/Cn`
 * Parallelkoppling: `C = C1 + C2 + ... + Cn`
 
@@ -137,7 +147,9 @@ Ger medeleffekt
 ### Spänningsdelning
 * Vill veta hur mycket spänning som går över R_1
 * `v_1 = v * R_1 / (R_1 + R_2)`
-* ...more applicable to series circuits
+
+* Note that this only works if the resistors are in series
+    * If they are in parallel, the voltage over both is the same as the voltage over the whole circuit
 
 
 ### Strömdelning
@@ -189,6 +201,7 @@ I allafall V_lsb / 2 för avrundning och V_lsb för trunkering
 * Kortslut alla spänningskällor
 * Avbryt kablar in i alla strömkällor
 
+* Alternativt räkna V_infinity/I_0
 ### V_t
 * Ersätt resistorer där det ej går ström med kortslutningar (per URI)
 * Beräkna V_A mha nodanalys och eventuellt superposition
@@ -196,6 +209,7 @@ I allafall V_lsb / 2 för avrundning och V_lsb för trunkering
 
 ### I_n
 I_n = V_t / R_t
+Alternativt räkna I_O
 
 ## Signaler, frekvenser
 ### Effektivvärde
@@ -443,4 +457,3 @@ Förklaring:
 ![image](images/loadline.png)
 
 
-§
