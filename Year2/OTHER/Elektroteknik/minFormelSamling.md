@@ -1,23 +1,22 @@
-# Formelblad
+# Formelsamling
+- https://lucris.lub.lu.se/ws/portalfiles/portal/133569346/main.pdf 
+    - boken
 - https://canvas.education.lu.se/courses/22921/files/3393193?module_item_id=816009 
-
-- https://www.eit.lth.se/fileadmin/eit/courses/ess010/appadda_mod13.pdf
-
+    - adda kompendium
 
 
-## Grundläggande
-### Grundlagar
+# Grundlagar
 * `f = 1/T`
 
-### Ström
+# Ström
 * `i = δq / δt`
     * `δq` är laddningsskillnaden
 
-### spänning
+# spänning
 ->(+ -)->
    * Om pilen representerar strömmens riktning så potentialen till höger lägre
 
-### Resistans
+# Resistans
 * `R=V/I=ρ*l/A`
     * `ρ` är resistivitet
 
@@ -25,13 +24,17 @@
 
 * Parallellkoppking: `v = (1/R1 + 1/R2 + ... + 1/Rn) * i`
 
-* Spänningen i ett system kommer att vara konstant
-    * Om en transistor finns med i syftemet, räkna inte med den
-            * Se 2021, 5.4 om du vill se mer info 
-                * Dess spänning är ett resultat av de andra komponenterna och de andra komponenterna har en konstant spänning i beleive
-### Kondensator
-* Kolla 9.7b) i boken för standardlösning
-* Kan se det som en spänningskälla
+# Kondensator
+* Trög för ändringar i v(t)
+
+*Standardlösning för ett RC system i DC:*  
+ - Härledd av diff.ekv
+v_C(t) = V(t)(1-*e^(-t/RC))  
+c_R(t) = V_0*e^(-t/RC)
+
+*Lösning i AC:*  
+- Dator
+- H(jw)
 
 ```
 v(t) = R*i(t)
@@ -39,16 +42,6 @@ i(t) = C*δv(t)/δt
 => v(t) = -R*C*δv(t)/δt
 ```
 
-Notera: f(x)=kf'(x) => f(x)=Const*e^(x/k)
-Tror R:et man syftar på är resistansen som är seriekopplad med kondensatorn
-
-* DC: Dess resistans är noll
-    * Notera dock att den påverkar spänningen
-    * DVS kan använda dess impedans (s-domän, icke jw) för att räkna ut spänningen
-        * Så använd den i spänningsdelning exempelvist
-        * Tänk kapitel 13
-* AC: Den har impedans, som agerar som resistans
-    * Det är ju då omega kommer in i bilden
 ```
 i = δq/δt
 q = C*v
@@ -69,55 +62,45 @@ p(t) = i(t)*v(t)
 Alternativ 2: 
 
 ```
-p(t) = abs(vC (t))^2/R
+p(t) = v_C(t)^2/R
 ```
+- Notera att v_c(t) kan göras om till ström om vi inte hanterar en seriekoppling 
 
-**Hur mycket energi lagras i en kondensator**  
+**Hur mycket energi lagras i en kodensator**  
 * `w(t) =  1/2*C*v(t)^2`
 
-**Hur mycket energi lagras i en krets**
-* kondenstor + spole...?
+# Spole
+* Trög för ändringar i i(t)
 
-**Generell lösning RC**
-- Se anteckningar
-men i korthet:
+*Standardlösning för ett RL system i DC:*  
+ - Härledd av diff.ekv
+i_L(t) = i_oo(t)(1-*e^(-t/tau))  
+- tau = L/R
+
+*Lösning i AC:*  
+- Dator
+- H(jw)
+
 ```
-v(t) = V0*e^(-t/RC)
+v(t) = L * di(t)/dt
 ```
-- Notera då även i(t) = v(t)/R
 
-### Spole / induktans (inductor)
-* DC: Dess resistans är noll (essentially)
-* AC: Räkna med impedans
-* Spänningen:
-  * `v(t) = L * di(t)/dt`
-  * För att hitta strömmen genom induktansen
-    * Lös v(t) = ?, hitta startvärde i(0)
-    * `i(t) = C + integral(from 0 to t, v(t) dt) / L`
-    * Detta är lösningen så länge det går ström genom induktansen
-        * Kan sätta dom gränsena utifrån lösningen av frågan
-        * Om det går ström genom induktansen i början, lös ekvationen, och kolla hur länge det går ström igenom induktansen
+```
+i(t) = Const + integral(from 0 to t, v(t) dt) / L
+```
 
-* Kort sagt lösa ström genom spole:
-    * Om ström är större än noll i början, hitta v(t), lös för i(t). Så länge den är större än noll, använd den lösningen
-        
+* Seriekoppling: `L = L1 + L2 + ... + Ln`
+* Parallelkoppling: `1/L = 1/L1 + 1/L2 + ... + 1/Ln` ---
+
+**Hur mycket effekt levereras till induktor**   ---- 
 
 
-* Lagrad energi:
-  * `W = 1/2 * L * i(t)^2`
+```
+p(t) = v_L(t)^2/R
+```
 
-* Notera:
-    * i(t) = integral(from 0 to t, v(t) dt) / L
-        * DVS strömmen kan inte ändra sig omedelbart  
-
-
-* Notera att om vi har en spänning över en induktans så kommer strömmen att öka linjärt, dvs över lång tid är den oändlig, dvs v(t) noll
-
-* Om jag kommer till att skillnad i i(t) = oändlig
-    * v(t) = oändlig
-    * DVS i(t) bevaras som den var precis innan, ändringen
-    * Allt annat är "normalt"
-
+**Hur mycket energi lagras i en induktor**  
+* `W = 1/2 * L * i(t)^2`
 
 
 ### Effekt
@@ -138,66 +121,14 @@ Ger medeleffekt
 
 * Gör grundläggande superposition
 
+# Delning
+## Spänningsdelning
+* `v_1 = v_tot * (R1 / (R1 + R2))`
 
-### Sidenote
-![image](images/sidenote.png)
-    - Notera att detta är spänningen över både
-        - Borde ju vara samma som över C
-## Delning
-### Spänningsdelning
-* Vill veta hur mycket spänning som går över R_1
-* `v_1 = v * R_1 / (R_1 + R_2)`
+## Strömdelning
+* `i_1 = i_tot * (R2 / (R1 + R2))`
 
-* Note that this only works if the resistors are in series
-    * If they are in parallel, the voltage over both is the same as the voltage over the whole circuit
-
-
-### Strömdelning
-* Vill veta hur mycket ström som går genom R_1
-* `i_1 = i * R_2 / (R_1 + R_2)`
-
-### Mer komplex spänningsdelning
-* R1 och R2 är i serie
-* R3 och R4 är i serie
-* V1 ligger över allt
-
-* Vill ha spänningen över R1:
-    * `v_R2 = v_1 * R_1 / (R_1 + R_2)`
-    * Tror det går för de är parallellt
-    * DVS över båda är samma som för hela kretsen, dvs v_1
-
-## Frekvenser och amplituder
-* V_pp = 2 * amplitude (point to point voltage)
-
-Gul: Insignal till A/D
-Orangea: Utsignal från D/A
-
-![image](images/adda.png)
-
-### Vad är samplingfrekvens 
-* Räkna antalet hold. Glöm inte den sista i intervallet. Den räknas med. 
-
-### Maxialt fel
-Vad är maximal spänningsskillnad mellan insignalen till A/D-omvandlaren och utsignalen
-från D/A-omvandlaren direkt efter sampling?
-- De sitter i serie
-- Se bild i slides av vad de gör för steg.
-
-I allafall V_lsb / 2 för avrundning och V_lsb för trunkering
-
-### Decibel (tror detta stämmer)
-- `20 * log_10 (v_eff_2 / v_eff_1)` -> dB
-- `20 * log_10 (v_eff)` -> dBV
-    - dvs v_max = v_eff * sqrt(2)
-
-**Tror detta stämmer bättre**
-* `abs(H(jɷ))dB = 20log_10(abs(H(jɷ)))`
-    * Medför: 10log_10(p1/p2)
-
-### Fasvektorer
-𝑉0∠𝜃 <-> 𝑉0(cos 𝜔𝑡 + 𝜃)
-
-## Thevenin och Norton
+# Thevenin och Norton
 ### R_t
 * Kortslut alla spänningskällor
 * Avbryt kablar in i alla strömkällor
@@ -212,19 +143,24 @@ I allafall V_lsb / 2 för avrundning och V_lsb för trunkering
 I_n = V_t / R_t
 Alternativt räkna I_O
 
-## Signaler, frekvenser
-### Effektivvärde
-* Genomsnittlig effekt i en signal
 
-* Fyrkantsvåg: V_eff = (amplitude)^2 tror jag
-    * notera att (amp(t))^2 = amplitude^2
+# Fasvektorer
+𝑉0∠𝜃 <-> 𝑉0(cos 𝜔𝑡 + 𝜃)
 
-### Medeleffekt
-* Medeleffekt (i form av värme som en resistans ger ut)
-    * P = V * I = V^2 / R = I^2 * R
-    * Occilerande: P = V_eff^2 / R
+# Spektrumanalys
+## Decibel (tror detta stämmer)
+- `20 * log_10 (v_eff_2 / v_eff_1)` -> dB
+    - v_eff_2 är värdet
+    - v_eff_1 är den vi jämför med
+- `20 * log_10 (v_eff)` -> dBV
+    - dvs v_max = v_eff * sqrt(2)
+    - Notera om vi får dbV och gör till V, så får vi v_eff
+    * Representerar hur det förhåller sig relativt till 1 V
+        * ex tänk v_eff/1 = v_eff
+    * Detta vi plottar i grafen - de olika nivåerna
+        * notera att k=1 hamnar på 20log(v_rms)
 
-### Frekvensdiagram
+## Frekvensdiagram
 * Frekvens på x-axeln, effekt på y axeln
 
 1. f_s = sampelfrekvens
@@ -242,14 +178,30 @@ Alternativt räkna I_O
 
 * Signaler med f_n = n × f_s + f_blue
     * Oskiljbara från f_blue
+    * aliasing
+    * viker/speglas vid f_s/2
+        * de som viker in sig måste vara lägre än 1/2 V_lsb
+
+* Nollpunktsfel: `abs(m-m0)`
+    * m0 är det ideala
+    * alternativt: 'abs(m/k)
+        * m, k är icke ideala
+
+* förstärkningsel:
+    * (k-k0)/ k = ...%
+
+* kvantiseringsfel:
+    * fel pga avrundning
+    * ex för trunkering: V_lsb
+    * vid avrundning: V_lsb/2
 
 ## Omvandlare
-* Tar in -> AD -> D/A -> Ut
+
 ### Analog till digital
 * Tar analoga värden och gör dem digitala (binära)
 
-V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)  
-    * V_ref är referensspänningen  
+V_lsb = V_ref / (2^n-1) = (V_FS-offset() / (2^n-1)  
+    * V_ref är referensspänningen (tillåtna ingångsspänningar)
     * V_FS är omfånget av spänningen  
         * Full-scale voltage   
 
@@ -269,6 +221,8 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
     - A_SB är nödvändig dämpning i stoppbandet
     - Glöm ej avrunda uppåt. Så 4.4 blir ordning 5
 
+- mycket annat bra i kompendiyumet
+
 ### Kvantisering
 * V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)  
     * V_ref är referensspänningen  
@@ -277,11 +231,24 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
 
 * Bilden nedan visar hur 1/N till N/N bitar kommer att kvantiseras
 ![image](images/kvantisering.png)
+
+
 ### Digital till analog
 * Representerar en binär signal med en spänning
 
+# AC
+* omega påverkar överföringen, och därmed p(t)
+* v_ut = H(jw) * v_in
+* v_ut_eff = abs(H(jw)) * v_in_eff
 
-## Filter
+## Effekt / värme
+- Räkna vanligt p(t)
+    - Men med hänsyn till omega vid överföring
+- p är även samma som P = Re{S}
+- kan inte summera två effektivvärden
+    -  räkna p(t), summera dem. räkna v_eff ur det
+
+# Filter
 ### Grundläggande
 * Dämpningen vid brytfrekvensen är -3dB
     * Dämpningen vid brytfrekvensen är 1/sqrt(2) = 0.707
@@ -292,31 +259,20 @@ V_lsb = V_ref / (2^n-1) = V_FS / (2^n-1)
 
 * H(S) = V_ut(s)/V_in(s)
 
-* Första gradens RC filter
-    * H(s) = v_ut(s)/v_in(s)
-    * v_ut(s) = (1/sC)/(R+1/sC) * v_in(s)
-    * H(s) = 1/(1+RCs)
-        
-* Andra gradens RC filter
-    * H(s) = (1/1+R1C1s) * (1/1+R2C2s)
-    * Härlett från det ovan
-    * H(s) = H1(s) * H2(s)
-    * H(s)_db = H1(s)_db + H2(s)_db
-
-* Skriv V_ut(t) i termer av V_in(t)
-    1. Gör som vanligt med H(S) eller spänningsdelning
-    2. Dock glöm ej avtt även kolla w i insignalen
-    3. Uttryck dina imaginära v_ut med A *vinkelgrej* vinkel
-    4. Använd superposition och slå ihop dina två v_ut
-
 ### Dämpning och förstärkning
-tror man beräknar det genom:
 1. att sätta in s = jw
 2. beräkna 20log_10(abs(H(jw)))
     - w är vinkelfrekvensen
         - w = 2*pi*f = 2*pi*440k exempevis
     - w_b är brytfrekvensen
-        - w_b = 2*pi*f_b = 2 * pi * 1/(R*C)
+        - w_b = 1/(R*C)
+        - alternativt samma som resonansfrekvensen
+
+### Resonans vid frekvensen
+Kräver att L och C har samma impedans med olika tecken, och vi får resonans vid:
+* 1/2𝜋√𝐿𝐶
+    * Notera även att de tar ut varandra
+
 
 2. Alternativt: 20log_10(abs(H(jw))) = 
     - 20log_10(abs(H(jw_b)))
@@ -329,15 +285,22 @@ tror man beräknar det genom:
     * C är kapacitans
     * Förläng med L och C med j vid förenkling
 
-### Resonans vid frekvensen
-Kräver att L och C har samma impedans med olika tecken, och vi får resonans vid:
-* 1/2𝜋√𝐿𝐶
 
 ## MOS
 ![image](images/mos.png)
 ![image](images/matta.png)
 strypt, linärt och mättat syftar på I_D
 * Se grafiska lösningar i slidsen
+
+Trivia:
+* i(t) mot gate = 0 pga oxidlagret
+    * mycket användbart även utanför trivia
+* symmetrisk
+* s & B ofta ihopkopplade
+* dopingen avgör villken transistor
+    * reistiviteten och riktningen på i_D då också
+* småsignal på 219
+    * C_g sida 223 (mest relevant vid höga frekvenser)
 
 ### Förenklat
 * K = kW/2L
@@ -386,8 +349,7 @@ strypt, linärt och mättat syftar på I_D
     * Kan approximeras som en MOS med newL = 2L
 
 T3 och T4 är seriekopplade  
-Blanda inte ihop hur seriekopplade komponenter och seriekopplade transistorer ser ut
-![image](images/serie.png)
+Blanda inte ihop hur seriekopplade komponenter och seriekopplade transistorer ser ut  
 
 ### Tidsberäkningar
 * "Vilken tog längst tid"
@@ -402,19 +364,9 @@ Blanda inte ihop hur seriekopplade komponenter och seriekopplade transistorer se
 * DVS inaktiv (ex om PMOS får 0) -> ingen värme
 * Om en transistor med total paracitkapacitans C byter håll så blir energiförbrukningen
     * E = 1/2 * C * V_DD^2
-    
+* T1 leder och "avbryts" av T2
+    * T1 utvecklar värme
 
-### Inverterare
-![image](images/inverter.png)  
-Förklaring:
-* Angående NMOS
-    * När V_in är hög (dvs = V_DD) så -> V_GS > 0 -> Kan leda ström -> Kortslutning till jord -> V_ut = 0
-    * V_GS är positiv då V_in är hög eftersom 
-        * V_GS = V_G - V_S = positiv - 0 = positiv
-* Angående PMOS
-    * När V_in är låg (dvs = 0) -> V_GS < 0 -> Kan leda ström -> Kortslutning till V_DD -> V_ut = V_DD
-    * V_GS är negativ då V_in är hög eftersom 
-        * V_GS = V_G - V_S = 0 - V_DD = -V_DD
 
 ### Förbrukad effekt
 * Som vanligt:
@@ -423,15 +375,15 @@ Förklaring:
     * DVS vårt fall:
         * `p(t) = i_D(t) * v_DS`
 
+### Utecklad värme
+- beror på C_g
+    - räkna p(t) some en vanlig kapacitans
+
 ## Diod
 * Tänk också på att den kan bli en kortslutning
     * Dra inte för snabb slutsats om kapacitanser och spolar
 * DVS om ström går mot en diod så vet vi att den har satisfactory spänning för att leda ström
 
-### Centralt
-* Om det går ström igenom dioden så är spänningen inställd på framspänningsfall
-    * Spänningen underskrider aldrig framspänningsfallet
-    * Se lösningen 2021.6.2 för mer info
 ### Begrepp
 * Hur den fungerar:
     * Dioden leder ström i en riktning
@@ -460,5 +412,12 @@ Förklaring:
 
 ### Fungerar även för transistorer
 ![image](images/loadline.png)
+
+# Begrepp
+* belastad
+    * extra tillagd komponent, antingen i serie eller parallellt
+    * Noggranhet, upplösning, v_lsb
+    * se kompendium
+
 
 
