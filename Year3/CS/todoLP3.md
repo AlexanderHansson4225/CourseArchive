@@ -11,3 +11,8 @@
 - Quiz
 
 - Homework (Frivilligt)
+
+### Hum Hum kursen
+- Projekt
+- Alla bilder läggs ut på canvas
+- Instuderingsfrågor med (för att förstå det mest centrala)
