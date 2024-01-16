@@ -138,6 +138,21 @@
 
 ## **Assurance and evaluation**
 -  Is it working?
+- Who should evluate?
+
+### Alternative 1: One givernment body
+- fair, since the same body does all evals
+- Not all products are accepted for eval
+- Slow, for the same reason
+
+### Alternaive 2: Private evaluators
+- More difficult to make it fair: Will they be consistent. Not fair if they get the same certificate then
+- *Repeatability* Re-eval by the same team
+- *Reproduceability*: Re-eval by a diffrent teeeam
+- Forumulation of criteria is important, so there is no room for interpretation
+- More evaluators -> faster evaluations. 
+
+
 
 
 
