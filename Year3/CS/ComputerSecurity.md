@@ -8,7 +8,7 @@
 
 # CIA 
 
-## **Confidentiality**
+## **(C)onfidentiality**
 **What**
 - Prevent unauthorized disclosure of info
 - Related to **reading** data
@@ -24,7 +24,7 @@
 2. Access control
 - Only the correct person can access the data
 
-## **Integrity**
+## **(I)ntegrity**
 **What**
 - Prevent unauthorized modification of information
 - Related to the **writing** of data
@@ -43,7 +43,7 @@
 
 *Many tools*: CRCs, hash functions, MAC, Digital Signatures
 
-## **Availability**
+## **(A)vailability**
 * Assures that sustems work promplty and service is not denied to authorized users
 
 **Two aspects'**
@@ -62,8 +62,85 @@
     - Ability to check that the user is who they say they are
 - Accountability
     - If someone does something, we can trace that back to them
-- Nonrepudiations
+- Nonrepudiation
     - If someone did something, they can say that they did not do it. 
+        1. Nonrepudiation of origin: Ensures that the originator of information cannot successfully deny having sent the information
+        2. Npnrepudiation of receipt. Emsires that the recipent of info cant successfully deny havinh received that info
+
+
+# Assets of Computer Systems
+- Security is about protecting assets
+
+**Assets**
+1. Hardware
+2. Software
+3. Data
+4. Communicaton lines and networks
+
+# Vulnerablities, Threats nd Attacs
+
+## **Threats**
+* Hypothetical events *capable* of exploiting vulnerabilities
+    - Can create loss of C, I or A
+
+* Potential secuirty harm to and asset or a resource
+    - Person or event
+    - Deliberate, accidental or an act of nature
+
+## **Vunerability**
+* An issue that *can* result in a successfu attack
+* Intehrent weakness in the design, implementation, config etc
+* Allows a threat to be realized
+
+### **Categories**
+* Leaky - Lost of C
+* Corruption - Loss of I
+* ????  - Loss of A
+
+## **Attack**
+* Caries out: Threat is carried out
+
+### Types of attacks
+*  Passive attack
+    - Atempt to learn or make use of secret info without affecting the resources
+
+* Active attack
+    -   Attempt to alter system resources or affect theoperation
+
+### Origin
+- Insider attack
+    - By an entity inside the secuirty system
+- Outsider attack
+    - ...
+
+# Computer Security Statetegy
+
+## **Specification/Policy**
+- What do we want
+
+## **Implementation**
+**(Based on a stolen password example)**
+
+### Prevention
+- Use up-to-date software
+- Validate all use input from webforms and open APIs
+
+### Detect
+- Reports from users about strange activity from their account
+- Convient way for users to make reports
+
+### Response
+- tell all users to change password
+- Know how to handle media etc
+
+### Recovery
+- Analyze attack and look over the prevention mechanism
+
+## **Assurance and evaluation**
+-  Is it working?
+
+
+
 
 
 
