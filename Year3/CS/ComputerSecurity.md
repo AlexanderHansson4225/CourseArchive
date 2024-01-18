@@ -152,6 +152,19 @@
 - Forumulation of criteria is important, so there is no room for interpretation
 - More evaluators -> faster evaluations. 
 
+### Common criteria of governing bodies
+- Seperation of functionality and assurance.
+- Uses protection profiles to identify andc ollect security requirements relevnt to certin areas.
+    - Like a checklist for quality
+- Evaluation assurance level (EAL1 to EAL7) is used to define the degree of confidence
+- CC evaluation required by some public sector companies
+
+**Crisism**
+- Expensive (sometimes 10-40% of development costs)
+- Time delay
+- Only applies to one version and one configuration
+    - *Assurance continuity* allows minor changes
+
 
 
 
