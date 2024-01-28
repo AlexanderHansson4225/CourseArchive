@@ -1,4 +1,4 @@
-# Lokala/regionala Luftförorenignar
+# Föreläsning 2: Lokala/regionala Luftförorenignar
 ## Fotokemisk smog
 - Soppa av fotokemiska oxidanerter, flyktiga ämnen, partiklar osv
 - Invesion: Extremt stabil skiktning
@@ -104,3 +104,175 @@ Minskade utsläpp i sverige, EU och Nordmaerika men mycket dålig luftkvalitet i
 
 ## Bra bild 35/37 i förl 2
 ## Bra komihåg slide 37/37 i förl 2
+
+# Föreläsning 3
+ - Skipped
+
+# Föreläsning 4: Naturresurser och hållbarhet
+## Flöden, fonder, lager
+Resurs _ teknisk möjlighet aatt utvinnas
+### Flödesresurser
+- Kan ej lagras
+- Påverkas i liten utsträckning av människan 
+- Ex solstrålning
+
+### Fondresurser
+- "Räntan på kapitalet"
+- Kan överutnyttjas
+- Ex växter, djur osv
+
+### Lagerresurs
+- Äntliga råvaror
+- Återvinbar: Vissa mineraler, sand, grid
+- Icke-återvinningsbar: Fossil energi
+- Klyvbar (radioaktiva)
+
+## Äganderätt till mineraltillgångar
+### Rättprinciper/filosofier
+- Förlängs/överlåtelse: Staten äger alla mineraler
+- Res nillius: "Sak uan ägare": Finder is keeper
+- Pars fundi: Mineral är en delmängd av jorden och tillhör markägaren
+
+### I sverige skiljer man på markägarmineral och koncessionmineral
+- Markägarmineral tillhör markägaren (lågt värde, stor volym)
+- Koncessionsminerl regleras av minerallagen
+- Möjligt för en 3e part att propektera och utbinna på annans mark
+    - Ekonomisk kompension baserat på värdet på det som bryts
+
+## Betydelse av minerlhalt
+- För att få 10g rent behövs 20 gram järnmalm utbinnas men 3-10 ton guldmalm utvinnas
+
+### Miljöpåverkan vid gruvdrift process
+- Dagbrott/Open pit mine
+- Gruvdamm/tallings dam (ständ topp)
+
+## Kritiska resurser
+- Mineraler bedöms från de två dimensionerna:
+1. Sårbarhet: Möjlighet att subsituera på kort sikt
+2. Supply risk: Sannolikhet för avbrott eller beroende av fåtal producenter
+
+- Vissa metaller utvinns som bi-produkter vilket för det svårt att öka utbinningstakten
+
+### Kinesisk dominans inom sällsyna jordartsmetaller (REE)
+- Har kontroll över 60% av tillförseln och kan kontrollera exporten
+
+### Europen critical mineral act
+- Har pekt ut 34 råmaterial: Huvudsakligen REE
+- Målsättning för inhemsk självförsäning: % försärning av utvinning, raffinerg, återvinning 
+- Målsättning på max 65% från ett enskilt land och utveckla sammarbeten
+
+## Substituion
+- Försöker subsituera vissa material
+### Möjligheter och begränsningar
+Substitut finns på olika nivåer:
+- Använt ämne (LI eller Na batterier)
+- Teknik (batterier eller vätgas)
+- System (personbilar eller kollektivtefik)
+
+- FYsisk resursbrist, prisökningar kan vara drivkrafter
+- På kort sikt ger det ofta sämre prestand, men kan vara "good enough"
+
+- På lång sikt kan innovation och teknikutveckling ta frma nya möjligheter
+
+## Resursförbelsen: Lokalt överskott på lagerresurs när det råder global knapphet
+- Lokalt överskott av ändliga resuser 
+    - Mellanstatliga konflikter
+- Konfliktmineral, inomstatliga konflikter
+    - Mineral som utvinns i orohärdar och finanserar konflikte
+    - Regler finns för sårbarhet
+        - EU: Enda uppstöm berärs (importärer, smältverk), ej tillverkare/färdiga produkter
+    - Andra resurser omfattas ej men anses av vissa att ha liknande problem: diamanter, olja, kobolt
+
+## Sand
+- Globalt det med utvunna mineralet
+    - Nödvändig för betong (2/3 av alla byggnader i världen)
+- All sand går ej att använda
+- Betydande resurs men brist på användbar lätt tillgänglig sand
+- Muddrig från havsbotten, kuster och floder
+    - Erosions av städer, påverkar koralrev
+- San till betong går att tillverka (krossa berg) men till högre kostnad än naturliga 
+
+## Överutnuttjande av vatten: ex Odling av vete i ökenlandskap
+
+## Mark
+- Ma, bete, fibrer, kemikalier(?)
+- Sänka för miljöpåverkan av mänslig aktivitet
+### Klimatförändringar
+- Ökad co2 koncentration kan öka bioproduktionen
+- Högre tempraturer på varma platser, torka, oväder sänker produktionen och leder till större variotion i avkastning
+- Osäkert om anpassning ät tillrcäkligt för att kompensera på sikt
+- Internationell handel möjliggör hantering av lokala variationer men sprider risker till andra platser
+
+### Ökad avkastning: Exempel med spannmål
+- Mindre mark behöver tas i anspråk för att producera en viss mängd mat men kan orsaka andra problem
+    - Utarmning av jorden
+    - "Yieldgap"
+
+## Fisk - En fondresurs (FAO)
+- Viktig proteinkälla i fattiga kustnära områden
+- Totala konsumtionen ökar
+
+
+## Ekonomisk värdering
+- Vanligen antropocentrisk utgångspunk: Naturens enda värde består i dess nytta för människan
+
+- Ekosystemtjönser
+    - Monetärt värde på något som kan saknas marknadspris
+    - Försörjande (vatten), reglerande (luftrening), kulturell (rekreation), stödjande (bildning av jordmån)
+
+- Olika metoder ger olika värdesskattningar
+    - Revealed preference methods: hur människor agera
+    - Stated preference methods: Vad människor anger
+
+
+## Ekologiska fotavtryck
+- Ett mått på hur mycket av jordens *biologiskt produktiva yta* människan tar i anspråk
+    - Biokapacitet, den förmåga ekosystemet har att producera biologiskt material användbart för människan
+    - Mark för att absorbera koldioxidutsläpp
+
+- Illustrativt men omdebatterat: "Äpplen och päron"
+
+## Slide om resursbegränsningar historiskt sätt: Förl 4 slide 35
+
+## Några motargument mpot resursbegränsningar
+- Männsklighetens uppfinningsrikedom möjliggör lösninar som vi idag inte känner till
+- Antar att tillgänglig naturresurser vida överstiger männskligheten efterfrågan
+- Möjlighet att substituera naturresurser med humankapital
+    - Antar att befolkningstillväxten ökar humankapitalet och detta mer än kompserar för färre naturesurser per capita
+
+## Hotelling's rule - milöekonomi
+- Den mest ekonomiskt fördelaktiga utvinnen
+    - Äganderätter
+    - Substuerbarhet
+    - Aktärer beter sig "ekonomiskt rationellt"
+        - Utvinn och sälj nu eller väna och föränta
+- Priser kommer öka över tid men ingen brist uppstår
+
+## The hubbert peak
+- Totala möngden reserver är känd
+    - Låg teknologisk utvecklig (fix depletion rate)
+- Utvinningen ökar till randvilkore som sätts av depletion rate utgör en begränsning
+- Ingen prisprognos görs
+
+## Cirkulär ekonomi . samma nytt med lägre resursutvinning
+### Minskning
+- Narrowing the loop: Minska storleken på förden genom ex dematerialisering
+- Closing the loop: Ökad återvinning
+- Slowing the loop: Föräng livslängden
+
+- Strategierna kan vara i konflikt med varandra: Viktigt med helhetsperspektiv
+
+### Stategier
+- Delningsekonomi: Fler som använder samma produkt
+. Sälja tjänst istället för produkt
+
+## Materilvärdesförluster vid återvinning
+- Återvinning säger inget om materialvärdet efter åtvinning
+    - Vanligt med nedgradering: Nya metaller används för att upprätthålla materialkvalitén och späda ut återvunnet material
+
+- Om primär utvinning ska minska sälls större krav på bibehåller materialvärde efter återvinning
+
+
+
+
+
