@@ -407,8 +407,79 @@ Metaller finns naturlgt i miljön. Vissa är livsviktiga men människan har öka
 - Elektronik, batterier m.m
 
 ### Organiska miljögifter
+- Halogenerande kolväten: Kolväten där väte byts ut mot klor, flour eller brom
+- Syntetiskt framställda för fylla funktion i produkt
+- OFa låg toxicitet, men kan vara PBT
 
+#### PFAS
+"Evighetskemikalier"
+- Högflourerende kolväten
+- Fett, vatten och smutsavvisande
+- Brandskum, textilier, kastruller, hygienprodukter
+- Elektronik
+----
+- **Vissa extremt svårnedbrydbara och bioackumuleras****
+- Kopplat till skador på lever, sköldkörteln, viss cancer
+- vissa PFAS ämnen är förbjudna
 
+### Bromerade flamskyddmedel
+Grupp av ämnen, för hindra och fördröja brand
+- Elektisk utrustning, textilier och möbler
+- **Är PBT.**, en del ör hormonstörande
+- Vissa förbjudna
+- Läcker sakta ut i inomhusluften
+
+## Repetion
+Koffein och DDT är ungefär lika toxiskt. Varför är det farligt att dricka DDT på samm sätt som kaffe?
+- Skulle gissa att det beror på koncentrationen? Kaffe har lägre.
+
+## Hur hamnar miljögifter i miljln
+- Ämnen i varor: Tillverkning, användning
+- Medveten spridning (ex bekämpningsmedel)
+- Oavsiktlig spridning (Ex ved/kol)
+
+### Människan exponeras via
+1. Livmedel (speciellt fisk)
+2. Luften 
+3. Drickvatten (PFAS i vissa vattentäkter)
+
+### Reglering
+1. Globala konventioner
+2. EU-gemensam kemikalielagstiftning (REACH)
+    - Tillverkning/import av ämnen om mer än 1 ton per år får endast ske om ämnet är regristrerat
+    - Vissa ämnen får inte användas utan tillstånd
+
+3. RoHS-direktivet specifikt för elektroniksektorn
+
+#### RoHS-direktivet
+- Ersätt och begränsa farliga kemiska ämnen i elektrisk och elektronisk utrusning
+- Företag måste se till att gränsvärderna fyls
+
+**Ämnen som regleras**
+1. KVicksilver
+2. Kadmium
+3. Bly
+4. Sexbärt krom
+5. vssa bromerande flamskyddsmedel
+6. Vissa mjukgörare
+
+## Utveckling av giftfri miljö i sverige
+- Giftfri miljö är ett av sveriges miljömål
+- Utslöpp av toxiska metaller har minskat kraftift
+- Halterna i blod och modersmjölj har minskat sedn 1990
+- Minska dioxinhalter i Östersjöfisk
+- Ökad förekomst av vissa cancerformer, allergi, astma
+    - Oklar koppling till miljögifter
+
+## Utmaning för reglering
+> 100 000 ämnen registrerade hos EU:s kemikaliemyndighet
+• Ökad konsumtion och mångfald av varor och global handel (import
+från utanför EU)
+• "Gamla synder” (tex i bottensediment)
+• Otillräcklig kunskap om:
+    - Sammanlagrings- och synergieffekter
+    - Nya ämnen som ersätter reglerade ämnen
+    - Nanomaterial? Annat
 
 
 
