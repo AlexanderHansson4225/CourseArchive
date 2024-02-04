@@ -366,6 +366,48 @@ Substitut finns på olika nivåer:
 ## Digitalisering av energisektion (IoT)
 Skapa förutsättning för flexibel elanvändning och användning fv lager -> möjliggör ökad andel förnybar el
 
+# Miljögifter och riskkemikalier
+## Vad kännetecknar miljögift/riskkemikalie?
+* Alla föroreningar med negativa miljl och hälsoeffekter är inte miljögifter
+* Tre centrala egenskapaer att beakta (PBT)
+    1. (P)ersisten (svårnerbrytbar)
+    2. (B)ioackumulerande
+    3. (T)oxiskt - giftigt för orgaismer
+
+* Särskilt farliga ämnen: PBT-ämnen och sådana som är mutgena, reporoduktiontoxiska eller cancerogena
+
+### Peristens
+- Långhalveringsid
+- Kan färdas långt
+
+### Bioackulering
+- Oftast fettlösligt och eller perisisten ämne som organismen har svårt att göra sig av med
+* Lagras fettvävnad och med tiden byggs en högre koncentration hos organismen
+
+#### Biomagnifiering
+Besläktat med bioackumulering
+- Anrikning i näringskedjan: Koncentrationen ökar uppåt i näringskedjan
+- Snabbare upptag via födan än eliminering
+
+### Toxicitet
+- Allting är giftig i en viss koncentration
+- Vilka bör undvikas då?
+     - Ekotoxilogiska tester med dos-respons. Kollar efter 50% dödligthet hos plankton. 
+     - Epidemiologiska studier görs. Men orsak-verkan är ofta svår att fastställa
+
+#### Hormonstörande ämnen
+Vissa ömnen har låg toxicitet men stör kroppens hormonsystem. 
+- Kan orsaka fotplantning, ge fosterskador, diabetes, cancer osv
+
+#### Toxiska metaller (tungmetaller)
+Metaller finns naturlgt i miljön. Vissa är livsviktiga men människan har ökat halterna
+- Grundämnen dvs bryts inte ner
+- Icke-essentiella metaller (kvicksilver, bly etc)
+- Kvicksilver kan spridas långt, omvandlas till metylkvicksilver i miljön. Skadar centrala nervsystemet
+- Elektronik, batterier m.m
+
+### Organiska miljögifter
+
 
 
 
