@@ -331,5 +331,42 @@ Substitut finns på olika nivåer:
 ### Datacenter - en växande näring i Norden
 - Få elavbrott, goda internetförbindelser, låga elpriser, kallt klimat, förnybar el, låg risk för naturkatastrofer
 
+### Datatrafik och elanvänding i IT
+- Datacenter utgör 1% av global elanvändning (220-320 TWH per år)
+- Datanärverk (ca 300 tWH per år)
+- Mindre energi för kyla globalt
+- Stora datacenter (hyperscale) ofta mer energieffektiva
+- Parallell trend med edgecomputing
+    - decentraliserad databehandling
+
+### Energieffektivisering i datacenter
+- Effektivare servrar (fler beräkningar per energienhet)
+- "stand-by" försluster minskas genom annorlunda driftstategi
+- Minska elbehovet för kyla
+    - utnyttja frikyla (kall uteluft, sjövatten osv)
+    - Ersött luftkulning med vätskebaserade kylsystem
+
+## Energieffektivisering på systemnivå
+- Koppla ihop med värmekonsumenter tex fjärrvärmesystem
+- Om ett system kräver kylning och ett kräver värme: Koppla ihop dem
+
+## Elsystem under förändring
+- Vind och sol prod. ökar kraftigt
+- Elektifiering med el eller vätgas ersätter fossila bränselen (industriprocesser eller transportsektorn)
+
+## Flexibilitetslösning för elsystem i balans
+- Flexibel elanvändning
+     - minskad elnvönding vid underskott, värmepumpar, elbilar etc
+- Energilager (batterier, vätgas etc)
+- Flexibel elproduktion
+    - Vattenkraftverk med magasin, kraftvärmeverk
+- Nätförstäkning (geografisk utvigning)
+     - Minska flaskhalsar
+
+## Digitalisering av energisektion (IoT)
+Skapa förutsättning för flexibel elanvändning och användning fv lager -> möjliggör ökad andel förnybar el
+
+
+
 
 
