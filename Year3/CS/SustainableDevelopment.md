@@ -272,7 +272,64 @@ Substitut finns på olika nivåer:
 
 - Om primär utvinning ska minska sälls större krav på bibehåller materialvärde efter återvinning
 
+# Energisystem och hållbarhet
+**Energisystemet är mer än elproduktion**
 
+## Hållbarhetsproblem globalt
+* 1 miljard människor saknar **tillgång** till säker och effektiv energi (ex el)
+    * Påverkar hälsa och välbefinnande
+* Stora **miljöproblem** kopplade till energitillförseln
+    * Klimatpåverkan
+    * Försurning
+* Stora **hälsoproblem** kopplade till förbränning
+    * Partiklar, skadliga kolväten, marknära ozon osv
+* Många länder/regioner är beroende av import av fossila bränslen
+    * Ekonomiska och säkerhetsmässiga risker
+
+## Energipolitikens tre grundpelare
+* Mål som finns i årtioende men tolkas annorlunda över tid
+* Nettonollutsläpp i Sverige 2045
+    * 2050 i EU
+* Växthusgasutsläppen från användning av fossila bränslen måste ner mot noll fram till 2050
+
+## Principiella stategier för att uppnå energisystem med liten påverkar
+1. Minska **energianvändningen**
+2. Ersätt fossila bränsen med **förnybar energi**
+3. Ersätt fossila bränslen med **kärnkraft**
+4. Använd **Koldioxidavskiljning och lagring** vid förbränning av fossila bränsel
+
+### Minska energianvändningen
+1. Effektiisering
+2. Beteendeförändringar
+
+### Förnybara energikällor
+1. Sol, vindkraft - stor utbyggnadspotential
+    - Men användning av kritiska metaller, påverkar landskap, ger buller
+2. Vattenkraft - liten utbyggnadspotential
+    - Mycket stor effekt på lokala ekosystem
+
+3. bioenergi - viss utbyggnadspotential
+    - biomassa (fondresurs) för omvandling till fjärrbärme, biodrivmeldel
+    - Inga nettoutslöpp, men ger kväveoxider och utsläpp kopplat till insatsvaror
+    - Eventuella negativa effekter på biologisk mångafald och markanvändning
+    - Processen: SKIP
+
+### Kärnkraft
+    - Koldioxidfri drift och uteffekt
+    - Olycksrisk med radioaktiv avfall
+    - Uran har smuttsig brytning
+    - Radioakivt avfall - slutförvaring
+
+### Koldioxidinfång och lagring
+    - Infångning av koldioxid från rökgaser
+    - Storskalig, kräver stora punktkällor och lager
+    - Inte speciellt utforskad tech
+    - Lräver internationella överenskommelser kring lagring och ansvar
+    - Kräver mycket energi
+
+## Energianvändning i IT
+### Datacenter - en växande näring i Norden
+- Få elavbrott, goda internetförbindelser, låga elpriser, kallt klimat, förnybar el, låg risk för naturkatastrofer
 
 
 
