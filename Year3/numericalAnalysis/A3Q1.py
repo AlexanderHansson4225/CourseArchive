@@ -39,11 +39,14 @@ def run(numIterations):
 
 result = run(8)
 
-print(error(iterations[5]))
-print(error(iterations[4]))
 
-print(error(iterations[5]/error(iterations[4]))) #1.58
-print("Iteration 5 (rounded to 2 decimals):", [round(elem, 2) for elem in iterations[7]])
+
+print(error(iterations[5])) # 0.2976814736262332
+print(error(iterations[4])) # 0.5548246619249623
+
+print(error(iterations[5]/error(iterations[4]))) # 1.58
+print("Iteration 6 (rounded to 2 decimals):", [round(elem, 2) for elem in iterations[7]])
+# Iteration 6 (rounded to 2 decimals): [1.27, 0.95, 0.88]
 
 
 
