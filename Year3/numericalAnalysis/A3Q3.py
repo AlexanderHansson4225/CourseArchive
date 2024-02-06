@@ -55,7 +55,7 @@ def roundToNDecimals(Matrix, N):
 
 result = run(10)
 
-print(result[10])
-rounded_result = result[10].applyfunc(lambda x: round(x, 2))
+print(result[9])
+rounded_result = result[9].applyfunc(lambda x: round(x, 2))
 print(rounded_result)
-print(NormTwo(result[24]))
+print(NormTwo(result[9]))
