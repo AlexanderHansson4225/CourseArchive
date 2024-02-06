@@ -24,7 +24,7 @@ def NEXTITER(M):
 
 def NormTwo(n):
     n_numpy = np.array(n, dtype=float)  
-    return np.linalg.norm(n_numpy, 2)  
+    return np.linalg.norm(n_numpy, 2)
 
 def error(x):
     return NormTwo(r-x)
