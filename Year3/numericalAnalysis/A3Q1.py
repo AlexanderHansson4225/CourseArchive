@@ -31,7 +31,6 @@ def error(x):
 
 iterations = [START]
 
-# Define run function
 def run(numIterations):
     for i in range(1, numIterations):
         next_iteration = NEXTITER(iterations[i-1])
