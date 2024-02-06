@@ -39,8 +39,6 @@ def run(numIterations):
 
 result = run(8)
 
-
-
 print(error(iterations[5])) # 0.2976814736262332
 print(error(iterations[4])) # 0.5548246619249623
 
