@@ -37,15 +37,14 @@ def run(numIterations):
         iterations.append(next_iteration)
     return iterations
 
-result = run(8)
 
-print(error(iterations[5])) # 0.2976814736262332
-print(error(iterations[4])) # 0.5548246619249623
+A = START
+for _ in range(6):
+    A = NEXTITER(A)
 
-print(error(iterations[5]/error(iterations[4]))) # 1.58
-print("Iteration 6 (rounded to 2 decimals):", [round(elem, 2) for elem in iterations[7]])
-# Iteration 6 (rounded to 2 decimals): [1.27, 0.95, 0.88]
+B = START
+for _ in range(5):
+    B = NEXTITER(B)
 
-
-
-
+error_ratio = error(A) / error(B)
+print(error_ratio) # 0.2082442422257944

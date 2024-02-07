@@ -38,24 +38,14 @@ def NormTwo(n):
 
 def NEXTITER(x):
     return -(L + D).inv() @ U @ x +  (L + D).inv() @ b
-    
-iterations = [INIT]
-def run(numIterations):
-    for i in range(1, numIterations):
-        next_iteration = NEXTITER(iterations[i-1])
-        iterations.append(next_iteration)
-    return iterations
 
-def roundToNDecimals(Matrix, N):
-    for i in range(len(Matrix)):
-        for j in range(len(Matrix[0])):
-            Matrix[i][j] = round(Matrix[i][j], N)
-    return Matrix
+A = INIT
+for _ in range(10):
+    A = NEXTITER(A)
+
+print(NormTwo(A)) # 0.2423322718321624
 
 
-result = run(10)
 
-print(result[9])
-rounded_result = result[9].applyfunc(lambda x: round(x, 2))
-print(rounded_result)
-print(NormTwo(result[9]))
+
+
