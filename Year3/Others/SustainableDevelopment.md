@@ -481,5 +481,68 @@ från utanför EU)
     - Nya ämnen som ersätter reglerade ämnen
     - Nanomaterial? Annat
 
+#  Avfallshantering
+## Svensk husshållsavfall och behandlingsmetoder
+### Materialåtervinning
+- Metaller, papper, glass plast
+- Glas och metaller kan i teorin återvinnas i all oändlighet
+    - så länge de inte förorenas
+- Papper och plast nedgraderas vid återvinning
+- Många plastsorter, svårt att återvinna
+- Återvinning försvåras av:
+    1. Legeringar (metaller) och laminat (papper)
+    2. Innehåll av miljögifter/förbjudna ämnen
 
+- Stigande återvinningsmål i EU (t.ex olika slags förpackningar)
+
+### Biologisk behandling
+- Rötning (matavfall, livsmedelsindustriavfall)
+    - biogödsel (gödsel för åkermark) - återvinning av näringsämnen
+    - biogas (fordonsbränsle) - energiåtervinning
+
+- Kompost ( trädgådsavfall)
+    - Kompostjord
+
+## Förbränning med energiåtervinning
+- Utvinna el och fjärrvärme 
+    - Nuttan beror på alternativ energiproduktion
+- Giftig aska som resprodukt (måste deponeras)
+- Rökgasrening viktig (dioxiner huvudproblem)
+
+## Deponering
+- Tidigaste behandlingsmetoden 
+    - Dominerar globalt
+- Risk för läckage av giftiga ämnen och metan
+    - Nedbrytning av organiskt material
+    - ffa omoderna deponier
+
+- Bör primärt användas för att få bort farliga ämnen från kretsloppet
+
+- EU-reglering
+    - FÖrbud mot deponering av organiskt avfall och brännbart
+
+## EU avfallshierarki
+- Undvika att avfall uppkommer
+- Återanvändning
+- Materialåtervinning
+- Energiåtervinning
+- Deponering
+    - Ev förbränning utan energiutvinning
+
+### Syfte
+- Förbättra resurseffektivitet
+- Minimera de negativa effekter av uppkoms och hantering av avfall
+
+## Ansvarsfördelning i Sverige
+### Insamling och återvinning
+- Kommunerna
+    - Avfall från hushåll, kontor, skolor osv
+    - Producenterna
+        - Vissa produktgrupper, ex elektronik
+    - Verksamhetsutövare
+        - Avfall från industri, byggsektorn
+        - Avfallet som inte faller på de två övriga, ex byggavfall
+### Alla ansvarar för sortering och ev inlämning till återvinningsstationer
+
+## Producentanvsvar för vissa produkter
 
