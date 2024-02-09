@@ -72,3 +72,25 @@ x_{k+1} = THETA(x_k)
 
 ## Stopping criterion for fixed point iteration
 **OKLART**
+
+# E2Q2: Newton raphson
+## Finished?
+When f'(x_k) = 0, we are finished
+Alternativly if x_{k+1} is the same as x_k => finished
+
+## Stopping criterion for Newton-Raphson
+```python
+abs(f.subs(x, x0)) > tol
+
+```
+
+# E2Q5: LU decomposition
+## Solving
+Använd formel givet i slidsen. Lecture 8
+
+## Exists?
+Doesnt exist om en nämnare blir 0.
+
+# E3E2: LU decomposition with pivoting
+## Solving
+How is L, U and P solved?
