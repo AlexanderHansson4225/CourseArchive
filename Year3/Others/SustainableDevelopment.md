@@ -545,4 +545,82 @@ från utanför EU)
 ### Alla ansvarar för sortering och ev inlämning till återvinningsstationer
 
 ## Producentanvsvar för vissa produkter
+- Omfattar företag som säljer, importerar, tillverkar eller på anant sätt för in produkter till Sverige
+- Ansvarar för (bekostar) att samla in och ta hand om utjänta produkter
+    - Utförs av 
+        1. Egna materialbolag ex Recipo
+        2. Kommunen
+
+- Motivera produkter att ta fram produkter som är resurssnåla
+- Lätta att återvinna och fria från miljöfarliga ämnen
+
+### Exempel på produkter
+- Förpackningar
+- Elektronik
+- Batterier
+- Däck
+- Bilar
+
+## Cirkuär ekonomi
+- Nuare begrepp som påminner om avfallshierarkin
+- Minska samhällets användning av jungfriliga resurser och miljöpåverkar genom:
+    1. Minimera uppkomsten av avfall
+    2. Hålla varor i användning länge på marknaden
+    3. Använda återvinningsbara samt förnybara resurser och system
+
+### Utmanning för cirkulär ekonomi
+- Konsumtionsmönster och vanor
+    - Vill vi äga eller använda
+    - Är vi beredda på att köpa dyrare som håller längre
+
+- Produkter sällan designade för cirkuläritet (reperation, återvinning m.m)
+
+- Nedgradering av materialen
+
+- Ekonomiska aspekter
+    - Reperationer är ofta dyr
+    - Jungfruliga råvaror är ofta billiga
+
+## Elskrot
+- Globalt cirka 55 miljoner ton per 
+- Ökad konsumtion och ofta kort livslängd
+
+- Förlänga livslängden
+    - Reparera
+    - Secondhand
+    - Återvinning
+
+### Hur återvinns mobiltelefoner (divere teknik) i b.la Sverige
+- Farliga avfall
+    - Komponenter med ex kvicksilver, bly, kadmium
+
+- Kretskort
+    - Återvinning av guld och silver
+
+- Batterier
+    - SOrteras utifrån batterikemi
+    - Återvinning av batterihölje och delvis v svart massa med tex nickel, mangan, kobolt
+- De mesta av elektronikskrotets vikt återvinns
+    - Främst glas, koppar, aluminium, järn
+    - Låg återvinning av sällsynta jordartsmetaller
+        - Ofta i små volymer och energikrävande att återvinna
+
+### Viktiga regleringar kring elskrot 
+- EU's RoHs direktiv (se annan förl. )
+- EU's WEEE direktiv
+    - Separa insamling
+        - Producentansvar för elavfall
+    - Hårda krav på export
+- Baselkonventionen
+    - Förbud mot export av farligt avfall från OECD och EU länder till övriga
+    - Ska förhindra avfallsexport till lämnder som saknar infrastruktur att hantera  på hälso- och miljösäkert sätt
+
+### Globala flöden av elskrot (inkl. illegal export)
+- 5 Mt (utav 55 Mt) handlas internationellt
+
+**Godkänd handel**
+- Ex kretskort som importeras till västvärden och Kina
+
+**Illegal handel**
+- Second-hand elektronik (ibland trasig) och ibland med inblandad elskrot
 
