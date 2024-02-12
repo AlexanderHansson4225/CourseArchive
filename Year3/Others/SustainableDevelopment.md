@@ -624,3 +624,57 @@ från utanför EU)
 **Illegal handel**
 - Second-hand elektronik (ibland trasig) och ibland med inblandad elskrot
 
+# Hållbar utveckling i ett företagsperspektiv
+## Hållbar utveckling i företag
+- CSR (corporate social responsibility) = företagens samhällsansvar
+- Från en början självreglering
+     - Undvika stadlig reglering
+- Miljömässigt, social och ekonomiskt ansvar
+- Mer än att räta sig efter rådande lagar och regler
+- Frivilligt, men alltmer legala krav
+    - Ex hållbarhetsredovisning
+- Från fokus på egen verksamhet till **hela värdekedjan**
+
+## Företagens drivkrafter kopplat till HU
+- Konkurrensfördelar/bygga ett positivt varumärke
+    - Utifrån kunder, medarbetare, investerare
+- Hållbarhet som en strategisk inriktning
+- Miljömarkering, certifier
+- Krav från kunder, lagstiftning, investerare
+- RIskminimering
+     - Undvika skandaler och felaktiga investeringar
+
+## Ansvarsområde och deraas styrmedel
+### Miljömässigt ansvarstagande: Styrmedel
+- Resursanvändning
+    - Material, energi. 
+- Avfall, buller, användning/utsläpp av kemikalier/miljögifter
+- Värdekedjan
+- Verktyg
+    - Miljöledningssystem
+    - Livscykelanlys + Eco-design i en senare föreläsning
+
+### Ekonomiskt ansvarstagande
+- Ekonomisk riskhantering och långsiktighet
+- God affärsetik
+    - Ingen korruption, mutor
+    - Inte ljuga, vilseleda
+    - Främja sund konkurrens
+    - Transparens angående skattebetalningar
+- Inte överutnyttja (ändliga) resurser
+
+### Socialt ansvarstagande
+- Säkerhet och hälsa
+    - Både anställda och konsumenter
+- SKälig lön och arbetsvillkor
+- Inget barnarbete/tvångsarbete
+- Rätt till fackligt engagemang
+- Ingen diskriminering
+    - Kön, etnicitet, religion, sexuell läggning etc
+- Mångfald
+- Politiskt ansvar? (ex lobbyism)
+- Rimlig/positiv påverkan på samhället, speciellt localt
+    - T.ex i "one factory towns"
+
+
+
