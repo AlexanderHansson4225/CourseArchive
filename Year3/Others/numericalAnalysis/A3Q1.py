@@ -48,3 +48,4 @@ for _ in range(5):
 
 error_ratio = error(A) / error(B)
 print(error_ratio) # 0.2082442422257944
+# 0.2082
