@@ -676,5 +676,26 @@ från utanför EU)
 - Rimlig/positiv påverkan på samhället, speciellt localt
     - T.ex i "one factory towns"
 
+## Hållbarhetsredovisning inom EU
+- 2017: >250 ansälld
+    - BEskriva arbetet kring miljö, personal, MR, anti-korruption
+    - Granskas av revisor
 
+- Nytt direktiv 2022:
+    - Dubbel väsentlighetsnalys
+    - DVS skärpta krav på mer jämförbr dta för at motverka grönmålning
+- Global Reportin initiative (GRI)
+    - Exempel på ett ramverk för hållbarhetsredovisning
+    - Economic, environmental, social
 
+## Mer lagstiftning på gång
+- EU direktiv 2023:
+    - ANgående tillbördig företagsamhet (Corporate SUstainability due diligence)
+    - > 500 anställd som verkar på EU marknd
+    - Vs tillbörlig aktsamhet i sin verksamhet **och värdekedja** i syfte att motverka negativa effekter på MR och miljö
+
+- Ecodesign direktiv fick revidering 2022
+    - Tidigare minimikrav på energiprestanda hos ffa elektroniska produkter
+    - Nu många produktgrupper och fler krav
+    - Digitala produktpass
+        - Produkterna ska taggas med data som är relevanta för deras cirkulära hantering och hållbarhetsprestanda
