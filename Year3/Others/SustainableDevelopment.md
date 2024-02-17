@@ -702,6 +702,7 @@ från utanför EU)
 
 
 # Miljöverktyg
+- Svårt att följa slidsen i denna föreläsning. Se över dem igen
 ## Digitalisering
 1. Informera
 2. Ersätta 
@@ -741,3 +742,14 @@ Råvaruproduktion -> framställning -> transport -> användning -> avfallshanter
 - Inventering: Samla in data. Olika kemiklier exempelvis
 - Klassificering: Hur påverkar det miljön
 
+## Miljöledningssystem
+### För företag
+- ISO 14001
+
+### Verksamhet
+
+## Molntjänster & elanvändning
+- Idag cirka 4% av världens elanvändning
+- FÖRVÄNTAS öka till 9% 2030
+
+OSV
