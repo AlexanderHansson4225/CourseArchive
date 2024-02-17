@@ -771,7 +771,7 @@ Det övergrippande målet är att till näst generation överlämna ett samhäll
 
 - Delmålen är exempelvis ökad resurseffektivitet, ökad återanvändning, ökad återvinning osv
 
-#### Målkonflikter
+**Målkonflikter**
 - Sker ofta mellan olika miljömål
 
 Ex 1. Målkonflikt mellan klimatmål och biologisk mångfald
@@ -810,3 +810,96 @@ Offentliga satsning på forskning och innovation, statliga investeringar, offent
 - Produktkrav
 - Planeringskrav
 - etc
+
+**Miljöbalkens allmänna hänsynsregler**
+
+Alla som bedriver verksamhet ska:
+- Ha nödvändiga kunskaper
+- Genomföra skyddsåtgärder
+- Använda bästa möjliga teknik
+
+etc
+
+**Individuell tillståndsprövning**
+- Viss utpekad miljöfarlig verksamhet kräver tillstånd
+- Bästa teknik ska användas
+- Kostnader ska vara skäliga i förhållande till nyttan
+- TIllstånd ger ökad förutsägbarhet för verkamheten
+
+**Potentiella fördelar**
+- Kan innehålla integrerad prövning av flera mål vid stora investeringar
+- Förbud lämpliga för att fasa ut farliga ämnen
+- Kange lägre kostnader för enskilda och företag än ett pris på utsläpp
+- Prouktregleringar kan hantera informationsproblemen
+
+**Potentiella nackdelar**
+- Kräver mycket kunskap hos regleraren
+- Ger itne samma incitament för ständiga förvättringar som ett prisstyrmedel
+
+### Ekonomiska styrmedel
+1. Styrningsprincip: Ekonomiskt incitament
+2. Typer av ekonomiska styrmedel
+- Skatter
+- Subventioner
+- Avgifter
+- Värdepapperisering (ex Handel med utsläppsrätter)
+
+**Vad och vem bestämmer de ekonomiska styrmedelens storlek**
+- Kan styras av uppskattade miljökostnader
+- Skattad nivå för måluppffyllelse
+- Budgetbehov/resriktioner
+
+- Nivå kan bestämmas av beslutfattare (ex skatter)
+- Kan vara marknadsbaserad (ex handel med utsläppsrätter)
+
+**System med överlåtbar utsläppsrätter**
+Utdelning av utsläppsrätter till företag (gratis eller försäljning)
+- Krav att företagen ska ha lika många utsläppsrätter som utsläpp
+    - Annars sanktion
+
+- Anläggning med undeskott kan köpa fler eller minska usläppen
+
+## EU's system för handel med utsläppsrätter
+- Berör storskaliga stationära utsläppskällor och flyg
+- Regelverk bestäms på EU-nivå men integreras i nationell lagstiftning
+
+### EU's direktiv - regelverk
+- KRav på tillstånd för utsläpp
+- Krav att inneha utsläppsrätter motsvarande utsläppen
+- Annars påföljd
+- Regler för hur rätter fördelas
+- Rätter kan sparas mellan åren
+
+### Tilldelningsregler
+- Uktionering huvudsaklig metod
+- Stor andel gratis tilldelning
+- Generös tilldelning till verksamheter som är utsatt för internationell konkurrens
+
+## Bidrag och subventioner - exempel
+- Stöd till breda miljöprogram
+- Stöd ill specifik energiteknik
+- Miljöbilspremie
+- Skatttenedsättning för biodrivmedel
+- relbidrag till odling av energiskog
+
+### Potentiella fördelar
+- Uppfattas politiskt positivt
+- Kan vara lösning för att få igång nischade marknader
+- kn stimulera aktivitet som ger spin-off effekter
+
+### Potentiella nackdelar
+- Konsumterna får inte betala fulla kostnaden för energin
+- Risk för "felaktiga" satsningar
+- Dyrt för stten
+- Kn komm i konflikt med statsstödsregler
+
+## Information och normbildning
+- Miljömärkning
+- Energirådgivning
+- Visioner och färdplaner - bygga normer
+- Informationskampanjer som styrmedel: Kan öka acceptans
+
+
+
+
+
