@@ -9,9 +9,9 @@
  */
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h>
+#include <unistd.h> 
 
-#define PROGRAM "/usr/bin/xterm"
+#define PROGRAM "/usr/bin/xterm" //
 
 int main()
 {
@@ -19,6 +19,7 @@ int main()
   int status;
 
   pid = fork();
+  printf("pid: %d\n", pid);
 
   if (pid == 0)
   {
@@ -38,10 +39,10 @@ int main()
   else
   {
     /* This is parent process. Wait for child to complete */
-    if (waitpid(pid, &status, 0) != pid)
-    {
-      status = -1;
-    }
+    //if (waitpid(pid, &status, 0) != pid)
+    //{
+    //  status = -1;
+    //}
   }
 
   return status;

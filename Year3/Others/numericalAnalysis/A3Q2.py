@@ -46,4 +46,5 @@ A = INIT
 for _ in range(25):
     A = NEXTITER(A)
 
-print(NormTwo(A)) # 0.3857691503983052
+print(NormTwo(A)) # 0.38573062068606473
+# 0.3857

@@ -44,7 +44,7 @@ for _ in range(10):
     A = NEXTITER(A)
 
 print(NormTwo(A)) # 0.2423322718321624
-
+# 0.2423
 
 
 

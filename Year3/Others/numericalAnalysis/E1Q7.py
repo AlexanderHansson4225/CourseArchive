@@ -10,4 +10,4 @@ def solve(x):
         return solve(next)
     
     
-print(solve(1))
+print(solve(1)) 

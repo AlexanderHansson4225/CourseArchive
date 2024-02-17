@@ -699,3 +699,45 @@ från utanför EU)
     - Nu många produktgrupper och fler krav
     - Digitala produktpass
         - Produkterna ska taggas med data som är relevanta för deras cirkulära hantering och hållbarhetsprestanda
+
+
+# Miljöverktyg
+## Digitalisering
+1. Informera
+2. Ersätta 
+- Ersätta transport till fysiskt möte till digitalt
+3. Intensifiera
+- Samutnyttja lokaler, fordon osv
+4. Effektivisera
+
+## Livscykelanalys
+Råvaruproduktion -> framställning -> transport -> användning -> avfallshantering
+
+### Geogrfisk systemgränser
+- Kina är mer de första 2, 3 stegen
+- Sverige är mer de sista 2 stegen
+
+### Ekodesign
+- = livscykelproduktion
+- Se bra bild
+
+### Nyttan med livscykelnlys
+- Jämföra olika produkter
+- Miljömärkning
+- Analysera ny teknik och nya system
+- Investeringsunderlag
+- Underlag för politiska styrmedel
+
+### Arbetsätt för livscykelanalys
+- Består av fyra steg
+    1. Mål och avgränsning
+    2. Livscykelinventering
+    3. Livscykelbedömning (miljöpåverkansbedömning)
+    4. Tolkning
+
+- samt ett exempel (LCA av en mobiltelefon)
+
+#### Miljöpåverkansbedömning
+- Inventering: Samla in data. Olika kemiklier exempelvis
+- Klassificering: Hur påverkar det miljön
+

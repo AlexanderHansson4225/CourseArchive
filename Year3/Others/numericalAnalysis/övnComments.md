@@ -94,3 +94,4 @@ Doesnt exist om en nämnare blir 0.
 # E3E2: LU decomposition with pivoting
 ## Solving
 How is L, U and P solved?
+- P is the permutation matrix
