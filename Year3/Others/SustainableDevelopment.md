@@ -753,3 +753,60 @@ Råvaruproduktion -> framställning -> transport -> användning -> avfallshanter
 - FÖRVÄNTAS öka till 9% 2030
 
 OSV
+
+# Styrmedel. Miljöpolitikens verktyg
+## Olika nivåer att lösa miljöproblem
+Företag, marknad, staten, inviden
+
+### De sammanhängande nivåerna
+Mål ---Politik---> Styrmedel -> åtgärder -> Påverkan på miljön
+
+## Miljömålen
+### Generationsmålet
+Det övergrippande målet är att till näst generation överlämna ett samhälle där de stora miljöproblemen är lösta, utan att orsaka ökade miljö- och hälsoproblem utanför Sveriges gränser.
+
+### Sveriges miljömål
+- 16 mmål och 20 delmål
+- Angående frisk luft, giftfri miljö, ingen övergödning etc
+
+- Delmålen är exempelvis ökad resurseffektivitet, ökad återanvändning, ökad återvinning osv
+
+#### Målkonflikter
+- Sker ofta mellan olika miljömål
+
+Ex 1. Målkonflikt mellan klimatmål och biologisk mångfald
+
+- Sker även ofta konflikter med andr mål, ex ekonomiska mål
+
+- De är inte lltid melln målen utan mellan de _stategier_ som används för att nå målen. Det som ibland porteras som en målkonflikt handlar ibland om intressekonflikt
+
+## Åtgärder
+Byte av bränsle, utsläppsrening, minskad konsumption etc. 
+
+## Olika sätt att lösa miljöproblem
+1. Frivilliga åtgärder
+2. Ekonomiska styrmedel
+3. Lagstiftningm / tvång
+
+### Tre huvudtyper av styrmedel
+1. Regleringar
+2. Ekonomiska styrmedel (subventioner, skatter, avgifter)
+3. Information och normbildning (ex miljömärkning, kampnjer, visioner)
+
+**Yttligare sätt att påverka**
+Offentliga satsning på forskning och innovation, statliga investeringar, offentlig upphandling, fysisk planering
+
+### Faktoer som påverkar val av styrmedel lämplighet
+- Kostnader
+- Måluppfyllelse
+. Fördelnningsaspekter
+- Rättsäkerhet, transparens, förutsägbarhet
+
+## Beskrning av olika typer av styrmedel
+### Regleringar
+1. Styrningsprincip: Tvingande
+2. Typer av regleringar
+- Förbud
+- Produktkrav
+- Planeringskrav
+- etc
